@@ -18,5 +18,14 @@
     <ClCompile Include="Introduction to Algorithm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="1.Insert_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2.selection_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="3.bubble_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
