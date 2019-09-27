@@ -27,5 +27,8 @@
     <ClCompile Include="3.bubble_sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="4.merge sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
