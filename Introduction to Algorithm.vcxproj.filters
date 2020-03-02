@@ -30,5 +30,8 @@
     <ClCompile Include="4.merge sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="counting_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
