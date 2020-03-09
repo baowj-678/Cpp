@@ -33,5 +33,8 @@
     <ClCompile Include="counting_sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Strassen.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
