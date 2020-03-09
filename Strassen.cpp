@@ -16,7 +16,7 @@ int main()
 			A[i][j] = B[i][j] = 1;
 		}
 	}
-	print((double**)A, 8);
+	print(A, 8);
 }
 
 double** matrix_mul(double** A, double** B, int n)
@@ -46,6 +46,7 @@ double** matrix_mul(double** A, double** B, int n)
 
 void print(double** M, int n)
 {
+	M = (double(*)[n])M;
 	for (int i(0); i < n; i++)
 	{
 		for (int j(0); j < n; j++)
