@@ -30,14 +30,34 @@
     <ClCompile Include="4.merge sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="counting_sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Strassen.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="5.random_quick_sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="6.radix_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="7.counting_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="basic_array_function.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="linked_list.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="8.bucket_sort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="basic_array_function.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="linked_list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

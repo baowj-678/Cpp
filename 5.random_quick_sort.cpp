@@ -1,11 +1,10 @@
 #include <iostream>
 #include <cstdlib>
+#include "basic_array_function.h"
 using namespace::std;
 
 
 int* random_quick_sort(int* nums, int left, int right);
-void print(int* nums, int n);
-int* generate(int n);
 int main()
 {
 	int n = 90;
@@ -47,28 +46,3 @@ int* random_quick_sort(int* nums, int left, int right)
 	return nums;
 }
 
-void print(int* nums, int n)
-{
-	for (int i(0); i < n; i++)
-	{
-		cout << nums[i] << " ";
-	}
-	cout << endl;
-}
-int* generate(int n)
-{
-	int* nums = new int[n];
-	for (int i(0); i < n; i++)
-	{
-		nums[i] = i;
-	}
-	for (int i(0); i < n/2; i++)
-	{
-		int p = rand() % n;
-		int q = rand() % n;
-		int temp = nums[p];
-		nums[p] = nums[q];
-		nums[q] = temp;
-	}
-	return nums;
-}
