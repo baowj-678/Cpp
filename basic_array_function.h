@@ -2,7 +2,7 @@
 #ifndef BASIC_ARRAY_FUNC
 #define BASIC_ARRAY_FUNC
 
-typedef int element;
+typedef char element;
 void array_print(element* nums, int n);
 void array_print_two_dim(element** nums, int x, int y);
 element* array_generate(int n);
