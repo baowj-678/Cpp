@@ -2,7 +2,7 @@
 #include <time.h>
 using namespace::std;
 
-void insertSort(int* s, int n)//从大到小
+void insertSort(int* s, int n)
 {
 	for (int i(1); i < n; i++)
 	{
