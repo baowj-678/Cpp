@@ -57,6 +57,9 @@
     <ClCompile Include="SLC.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="matrix_mul.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic_array_function.h">
