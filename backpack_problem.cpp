@@ -30,7 +30,7 @@ int backpack(int w[], int v[], int n, int Weight)
 			P[i][j] = value1 > value2 ? value1 : value2;
 		}
 	}
-	array_print_two_dim(P, n + 1, Weight + 1);
+	//array_print_two_dim(P, n + 1, Weight + 1);
 	value = P[n][Weight];
 	del_two_dim_array(P, n + 1);
 	return value;

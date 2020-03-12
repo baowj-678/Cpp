@@ -21,11 +21,12 @@ char* SLC(string A, string B, int a, int b)
 {
     if(a == 0 || b == 0)
         return 0;
+    // init the data
     char** Max = create_two_dim_array(a, b);
     char** Record = create_two_dim_array(a, b);
     int i, j, k, length;
     k = 0;
-    //init
+    //init the matrix
     for(i = 0; i < a; i++)
     {
         if(A[i] == B[0])
@@ -78,10 +79,12 @@ char* SLC(string A, string B, int a, int b)
             }
         }
     }
-    cout << "Max:" << endl;
+
+    /*cout << "Max:" << endl;
     array_print_two_dim(Max, a, b);
     cout << "Record:" <<endl;
-    array_print_two_dim(Record, a, b);
+    array_print_two_dim(Record, a, b);*/
+
     i = a - 1, j = b - 1;
     k = Max[i][j];
     length = 0;
@@ -94,7 +97,6 @@ char* SLC(string A, string B, int a, int b)
             ans[k--] = A[i];
             i--;
             j--;
-            // cout<<A[i]<<" ";
         }
         else if(Record[i][j] == 't')
         {
@@ -105,11 +107,11 @@ char* SLC(string A, string B, int a, int b)
             j--;
         }
     }
-    // del_two_dim_array(Max, a + 1);
-    // del_two_dim_array(Record, a);
-    for(i = 0; i < Max[i][j]; i++)
-        cout << ans[i] << " ";
+    for(i = 0; i < Max[a - 1][b - 1]; i++)
+        cout << ans[i];
     cout << endl;
+    del_two_dim_array(Max, a);
+    del_two_dim_array(Record, a);
     return ans;
 }
 
