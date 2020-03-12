@@ -1,12 +1,8 @@
 #include <iostream>
+#include <iomanip>
 #include "linked_list.h"
 
 using namespace::std;
-struct NODE
-{
-	element val;
-	struct NODE* next;
-};
 
 pNode create_from_array(element nums[], int n)
 {

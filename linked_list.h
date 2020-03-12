@@ -13,4 +13,10 @@ pNode insert_to_tail(pNode head, element x);
 pNode linked_list_sort(pNode head);
 void linked_list_print(pNode head);
 
+struct NODE
+{
+	element val;
+	struct NODE* next;
+};
+
 #endif // !LINKED_LIST

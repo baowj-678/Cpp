@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "basic_array_function.h"
 
 using namespace::std;
@@ -11,7 +12,7 @@ void array_print(element* nums, int n)
 	}
 	cout << endl;
 }
-element* array_generate(int n)
+element* array_generate_int(int n)
 {
 	element* nums = new element[n];
 	for (int i(0); i < n; i++)
@@ -22,7 +23,7 @@ element* array_generate(int n)
 	{
 		int p = rand() % n;
 		int q = rand() % n;
-		int temp = nums[p];
+		element temp = nums[p];
 		nums[p] = nums[q];
 		nums[q] = temp;
 	}
@@ -67,9 +68,28 @@ void array_print_two_dim(element** nums, int x, int y)
 	{
 		for (j = 0; j < y; j++)
 		{
-			printf("%4d", nums[i][j]);
+			cout << setw(5) << nums[i][j];
 		}
 		cout << endl;
 	}
 	cout << endl;
+}
+
+element* array_generate_double(int n, double begin, double end)
+{
+	element* nums = new element[n];
+	double delta = (end - begin) / n;
+	for (int i(0); i < n; i++)
+	{
+		nums[i] = begin + i * delta;
+	}
+	for (int i(0); i < n / 2; i++)
+	{
+		int p = rand() % n;
+		int q = rand() % n;
+		element temp = nums[p];
+		nums[p] = nums[q];
+		nums[q] = temp;
+	}
+	return nums;
 }
