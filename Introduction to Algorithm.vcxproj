@@ -178,12 +178,14 @@
     <ClCompile Include="backpack_problem.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="basic_array_function.cpp" />
     <ClCompile Include="Introduction to Algorithm.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="linked_list.cpp" />
-    <ClCompile Include="matrix_mul.cpp" />
+    <ClCompile Include="matrix-chain_multiplication_problem.cpp" />
+    <ClCompile Include="matrix_mul.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="SLC.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

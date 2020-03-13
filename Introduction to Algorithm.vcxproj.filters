@@ -42,9 +42,6 @@
     <ClCompile Include="7.counting_sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="basic_array_function.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="linked_list.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -58,6 +55,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="matrix_mul.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix-chain_multiplication_problem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
