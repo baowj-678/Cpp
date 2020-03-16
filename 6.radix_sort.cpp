@@ -3,16 +3,28 @@
 using namespace::std;
 
 int* radix_sort(int *sum, int n, int space[8][100]);
-int main()
+int main_radix_sort()
 {
 	int n;
-	n = 90;
-	int* nums = generate(n);
+	int nums[100];
 	int space[8][100];
-	print(nums, n);
-	radix_sort(nums, n, space);
-	print(nums, n);
-	
+	cout << "Radix sort:" << endl << "n:" << endl;
+	cin >> n;
+	for (; n != 0;)
+	{
+		for (int i(0); i < n; i++)
+			cin >> nums[i];
+		radix_sort(nums, n, space);
+		cout << "ans:" << endl;
+		for (int i(0); i < n; i++)
+		{
+			cout << nums[i] << " ";
+		}
+		cout << endl;
+		cout << "n:" << endl;
+		cin >> n;
+	}
+	return 0;
 }
 
 int* radix_sort(int* nums, int n, int space[8][100])

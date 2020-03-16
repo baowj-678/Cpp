@@ -7,15 +7,21 @@ using namespace::std;
 pNode bucket_sort(pNode head);
 int main()
 {
-	int n = 100;
-	// generate a random n-long array
-	element* nums = array_generate_double(n, 0, 8);
-	array_print(nums, n);
-	// create a linked-list from the random array
-	pNode head = create_from_array(nums, n);
-	linked_list_print(head);
-	head = bucket_sort(head);
-	linked_list_print(head);
+	cout << "Bucket sort:\n" << "n:\n";
+	int n;
+	cin >> n;
+	double nums[100];
+	for (; n != 0;)
+	{
+		for (int i(0); i < n; i++)
+			cin >> nums[i];
+		pNode head = create_from_array(nums, n);
+		head = bucket_sort(head);
+		cout << "ans:\n";
+		linked_list_print(head);
+		cout << "n:\n";
+		cin >> n;
+	}
 }
 
 pNode bucket_sort(pNode head)
@@ -57,17 +63,33 @@ pNode bucket_sort(pNode head)
 		bucket_head[i] = linked_list_sort(bucket_head[i]);
 	}
 	// put out the bucket
-	n--;
-	for (i = 0; i < n; i++)
+	bool is_head = false;
+	for (i = 0; i < n - 1; i++)
 	{
+		if (bucket_head[i] == NULL)
+		{
+			continue;
+		}
+		else
+		{
+			if (is_head == false)
+			{
+				is_head = true;
+				head = bucket_head[i];
+			}
+		}
 		for (temp = bucket_head[i]; temp->next != NULL; temp = temp->next)
 			;
-		if (temp != NULL)
-			temp->next = bucket_head[i + 1];
+		for (int j(i + 1); j < n; j++)
+		{
+			if (bucket_head[j] != NULL)
+			{
+				temp->next = bucket_head[j];
+				break;
+			}
+		}
 	}
-	temp = bucket_head[0];
 	if (bucket_head != NULL)
-		delete(bucket_head);
-	//
-	return temp;
+		delete[] pNode(bucket_head);
+	return head;
 }

@@ -76,7 +76,7 @@ void array_print_two_dim(element** nums, int x, int y)
 	{
 		for (j = 0; j < y; j++)
 		{
-			cout << setw(5) << nums[i][j];
+			cout << setw(13) << nums[i][j] << " ";
 		}
 		cout << endl;
 	}

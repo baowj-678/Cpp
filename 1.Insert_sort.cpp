@@ -15,21 +15,27 @@ void insertSort(int* s, int n)
 	}
 }
 
-int main()
+int main_insert_sort()
 {
+	cout << "Insert sort" << endl << "n: " << endl;
 	int n;
-	clock_t begin, end;
 	cin >> n;
-	int* s = new int[n];
-	for (int i(0); i < n; i++)
+	while (n != 0)
 	{
-		cin >> s[i];
+		int* s = new int[n];
+		for (int i(0); i < n; i++)
+		{
+			cin >> s[i];
+		}
+		insertSort(s, n);
+		cout << "ans:" << endl;
+		for (int i(0); i < n; i++)
+		{
+			cout << s[i] << " ";
+		}
+		cout << endl;
+		cout << "n:" << endl;
+		cin >> n;
 	}
-	begin = clock();
-	insertSort(s, n);
-	end = clock();
-	for (int i(0); i < n; i++)
-	{
-		cout << s[i] << " ";
-	}
+	return 0;
 }

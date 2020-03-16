@@ -52,17 +52,24 @@ void mergeSort(int s[], int begin, int end)
 
 int main()
 {
+	cout << "Merge sort:" << endl << "n:" << endl;
 	int n;
-	cout << "please input n:" << endl;
 	cin >> n;
-	int* s = new int[n];
-	for (int i(0); i < n; i++)
+	while (n != 0)
 	{
-		cin >> s[i];
-	}
-	mergeSort(s, 0, n - 1);
-	for (int i(0); i < n; i++)
-	{
-		cout << s[i] << " ";
+		int* s = new int[n];
+		for (int i(0); i < n; i++)
+		{
+			cin >> s[i];
+		}
+		mergeSort(s, 0, n - 1);
+		cout << "ans:" << endl;
+		for (int i(0); i < n; i++)
+		{
+			cout << s[i] << " ";
+		}
+		cout << endl;
+		cout << "n:" << endl;
+		cin >> n;
 	}
 }

@@ -5,24 +5,26 @@ using namespace::std;
 int counting_sort(int* s, int n);
 int getk(int* s, int n);
 
-int main() 
+int main_counting_sort() 
 {
+	cout << "Counting sort" << endl << "n:" << endl;
 	int n;
-	cout << "please input n:\n";
 	cin >> n;
 	int s[100];
-	cout << "Please input Numbers:\n";
-	for (int i(0); i < n; i++)
+	for (; n != 0;)
 	{
-		cin >> s[i];
+		for (int i(0); i < n; i++)
+		{
+			cin >> s[i];
+		}
+		counting_sort(s, n);
+		cout << "ans:" << endl;
+		for (int i(0); i < n; i++)
+			cout << s[i] << " ";
+		cout << endl;
+		cout << "n:" << endl;
+		cin >> n;
 	}
-	cout << "the numbers you want to sort is:\n";
-	for (int i(0); i < n; i++)
-		cout << s[i] << " ";
-	counting_sort(s, n);
-	cout << "the numbers sorted are:\n";
-	for (int i(0); i < n; i++)
-		cout << s[i] << " ";
 	return 0;
 }
 
