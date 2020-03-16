@@ -5,7 +5,7 @@
 using namespace::std;
 
 pNode bucket_sort(pNode head);
-int main()
+int main_bucket_sort()
 {
 	cout << "Bucket sort:\n" << "n:\n";
 	int n;

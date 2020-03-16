@@ -50,7 +50,7 @@ void mergeSort(int s[], int begin, int end)
 }
 
 
-int main()
+int main_merge_sort()
 {
 	cout << "Merge sort:" << endl << "n:" << endl;
 	int n;
