@@ -23,5 +23,12 @@ int main_counting_sort();
 pNode bucket_sort(pNode head);
 int main_bucket_sort();
 
+//quick sort
+int* quick_sort(int* nums, int left, int right);
+int main_quick_sort();
+
+//random quick sort
+int* random_quick_sort(int* nums, int left, int right);
+int main_random_quick_sort();
 #endif // !SORT_ALGORITHM
 

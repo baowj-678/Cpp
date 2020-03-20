@@ -1,17 +1,31 @@
+#include "sort_algorithm.h"
 #include <iostream>
-#include <cstdlib>
-#include "basic_array_function.h"
+
 using namespace::std;
-
-
 int* random_quick_sort(int* nums, int left, int right);
-int main()
+
+int main_random_quick_sort()
 {
-	int n = 90;
-	int* nums = generate(n);
-	print(nums, n);
-	random_quick_sort(nums, 0, n - 1);
-	print(nums, n);
+	cout << "Random Quick sort" << endl << "n: " << endl;
+	int n;
+	cin >> n;
+	while (n != 0)
+	{
+		int* s = new int[n];
+		for (int i(0); i < n; i++)
+		{
+			cin >> s[i];
+		}
+		random_quick_sort(s, 0, n - 1);
+		cout << "ans:" << endl;
+		for (int i(0); i < n; i++)
+		{
+			cout << s[i] << " ";
+		}
+		cout << endl;
+		cout << "n:" << endl;
+		cin >> n;
+	}
 	return 0;
 }
 
@@ -21,7 +35,10 @@ int* random_quick_sort(int* nums, int left, int right)
 	int q = right;
 	if (p >= q)
 		return nums;
-	int key = nums[right];
+	int temp = rand() % (right - left + 1) + left;
+	int key = nums[temp];
+	nums[temp] = nums[right];
+	nums[right] = key;
 	while (true)
 	{
 		while (p < right && nums[p] <= key)
@@ -45,4 +62,3 @@ int* random_quick_sort(int* nums, int left, int right)
 	random_quick_sort(nums, p + 1, right);
 	return nums;
 }
-

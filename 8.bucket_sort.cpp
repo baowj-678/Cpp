@@ -22,6 +22,7 @@ int main_bucket_sort()
 		cout << "n:\n";
 		cin >> n;
 	}
+	return 0;
 }
 
 pNode bucket_sort(pNode head)

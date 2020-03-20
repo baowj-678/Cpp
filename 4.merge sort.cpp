@@ -72,4 +72,5 @@ int main_merge_sort()
 		cout << "n:" << endl;
 		cin >> n;
 	}
+	return 0;
 }
