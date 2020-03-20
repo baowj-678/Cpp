@@ -178,6 +178,8 @@
     <ClCompile Include="backpack_problem.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="graph.cpp" />
+    <ClCompile Include="graph_node.cpp" />
     <ClCompile Include="Introduction to Algorithm.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -202,6 +204,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic_array_function.h" />
+    <ClInclude Include="graph.h" />
+    <ClInclude Include="graph_node.h" />
     <ClInclude Include="linked_list.h" />
     <ClInclude Include="sort_algorithm.h" />
   </ItemGroup>
