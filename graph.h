@@ -16,6 +16,8 @@ public:
     //print adjacency list(distance)
     void printAdjList(int w = 4);
     bool setAdjListFromMatrix();
+    //get values of edges
+    void setEdgesFromMatrix();
     int** BFS(int vertex);
     int** DFS(int vertex);
     GraphNode* MSTkruskal();

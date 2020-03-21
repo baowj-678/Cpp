@@ -75,6 +75,12 @@
     <ClCompile Include="graph_node.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="graph_edge.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="closest_pair_of_point.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic_array_function.h">
@@ -90,6 +96,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="graph_node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="graph_edge.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

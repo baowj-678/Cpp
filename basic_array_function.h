@@ -76,7 +76,7 @@ void array_print_two_dim(element** nums, int x, int y)
 	{
 		for (j = 0; j < y; j++)
 		{
-			cout << setw(13) << nums[i][j] << " ";
+			cout << setiosflags(ios::left) << setw(6) << nums[i][j];
 		}
 		cout << endl;
 	}
@@ -103,5 +103,15 @@ element* array_generate_double(int n, double begin, double end)
 	return nums;
 }
 
+template<typename element>
+element** array_two_dim_generate_double(int n, double begin, double end)
+{
+	element** array = new element * [n];
+	for (int i(0); i < n; i++)
+	{
+		array[i] = array_generate_double<element>(n, begin, end);
+	}
+	return array;
+}
 #endif // !BASIC_ARRAY_FUNC
 

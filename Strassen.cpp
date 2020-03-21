@@ -1,16 +1,18 @@
 #include <iostream>
 #include "basic_array_function.h"
+#include <time.h>
 using namespace::std;
 
 double** matrix_mul(double** A, double** B, double** C, int n);
 double** strassen(double** A, double** B, double** C,int n);
-double** add(double** A, double** B, double** C, int n);
-double** sub(double** A, double** B, double** C, int n);
+
 int main()
 {
-	int n = 10;
+	clock_t begin, end;
+	int n = 256;
 	double** A = create_two_dim_array<double>(n, n);
 	double** B = create_two_dim_array<double>(n, n);
+	double** C = create_two_dim_array<double>(n, n);
 	for (int i(0); i < n; i++)
 	{
 		for (int j(0); j < n; j++)
@@ -19,8 +21,17 @@ int main()
 			B[i][j] = 1;
 		}
 	}
-	//A = matrix_mul(A, B, n);
-	array_print_two_dim(A, n, n);
+	double time = 0;
+	int m;
+	for (int k = 4; k <= 256; k *= 2)
+	{
+		begin = clock();
+		m = 1000;
+		for (int i(0); i < m; i++)
+			C = matrix_mul(A, B, C, k);
+		end = clock();
+		cout << ((double)end - begin) / CLOCKS_PER_SEC << ",";
+	}
 }
 
 double** matrix_mul(double** A, double** B, double** C, int n)
@@ -45,14 +56,18 @@ double** matrix_mul(double** A, double** B, double** C, int n)
 			C[i][k] = row[k];
 		}
 	}
+	delete[]row;
 	return C;
 }
 
 
 double** strassen(double** A, double** B, double** C, int n)
 {
-	if (n == 2)
-		matrix_mul(A, B, C, 2);
+	if (n == 1)
+	{
+		C[0][0] = A[0][0] * B[0][0];
+		return C;
+	}
 	int newsize = n / 2;
 	// get memory
 	double** S1 = create_two_dim_array<double>(newsize, newsize);
@@ -122,29 +137,5 @@ double** strassen(double** A, double** B, double** C, int n)
 	del_two_dim_array<double>(S12, newsize);
 	del_two_dim_array<double>(S13, newsize);
 	del_two_dim_array<double>(S14, newsize);
-	return C;
-}
-
-double** add(double** A, double** B, double** C, int n)
-{
-	for (int i(0); i < n; i++)
-	{
-		for (int j(0); j < n; j++)
-		{
-			C[i][j] = A[i][j] + B[i][j];
-		}
-	}
-	return C;
-}
-
-double** sub(double** A, double** B, double** C, int n)
-{
-	for (int i(0); i < n; i++)
-	{
-		for (int j(0); j < n; j++)
-		{
-			C[i][j] = A[i][j] - B[i][j];
-		}
-	}
 	return C;
 }

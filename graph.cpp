@@ -247,30 +247,36 @@ bool Graph::destroyEdgeSpace()
 	return true;
 }
 
-GraphNode* Graph::MSTkruskal()
+void Graph::setEdgesFromMatrix()
 {
 
+}
+
+
+GraphNode* Graph::MSTkruskal()
+{
+	return nullptr;
 }
 GraphNode* Graph::MSTprim()
 {
-
+	return nullptr;
 }
 using namespace::std;
-int main()
-{
-	streambuf* backup;
-	ifstream fin("C:\\Users\\WILL\\Desktop\\in.txt");
-	backup = cin.rdbuf();
-	cin.rdbuf(fin.rdbuf());
-	Graph g = Graph(5, 10);
-	g.setMatrixIsAdj();
-	cin.rdbuf(backup);
-	g.printAdjMatrix();
-	g.setAdjListFromMatrix();
-	g.printAdjList();
-	g.BFS(1);
-	
-}
+//int main()
+//{
+//	streambuf* backup;
+//	ifstream fin("C:\\Users\\WILL\\Desktop\\in.txt");
+//	backup = cin.rdbuf();
+//	cin.rdbuf(fin.rdbuf());
+//	Graph g = Graph(5, 10);
+//	g.setMatrixIsAdj();
+//	cin.rdbuf(backup);
+//	g.printAdjMatrix();
+//	g.setAdjListFromMatrix();
+//	g.printAdjList();
+//	g.BFS(1);
+//	
+//}
 
 /*
 0 1 0 0 1
