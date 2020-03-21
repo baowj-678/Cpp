@@ -21,10 +21,9 @@ class GraphNode
 {
 private:
 	int vertex;
-	int length;
+	int distance;
 	Color color;
 	GraphNode* next;
-
 public:
 	GraphNode(int vertex);
 	GraphNode(int vertex, int length);

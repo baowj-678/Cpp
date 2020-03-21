@@ -85,6 +85,22 @@ void Graph::setMatrixIsAdj()
 	}
 }
 
+void Graph::setMatrixDistance()
+{
+	if (this->adj_matrix == nullptr)
+		this->getMatrixSpace();
+	std::cout << "Please input adjacency matrix(distance, -1:INF)\n";
+	for (int i(0); i < this->num_v; i++)
+	{
+		for (int j(0); j < this->num_v; j++)
+		{
+			int temp;
+			std::cin >> temp;
+			this->adj_matrix[i][j].setLength(temp);
+		}
+	}
+}
+
 void Graph::printAdjMatrix(int w)
 {
 	if (this->adj_matrix == nullptr)
@@ -217,6 +233,28 @@ bool Graph::setAdjListFromMatrix()
 	return true;
 }
 
+Edge* Graph::getEdgeSpace()
+{
+	this->edges = new Edge[this->num_e];
+	return this->edges;
+}
+
+bool Graph::destroyEdgeSpace()
+{
+	if (this->edges == nullptr)
+		return true;
+	delete[]this->edges;
+	return true;
+}
+
+GraphNode* Graph::MSTkruskal()
+{
+
+}
+GraphNode* Graph::MSTprim()
+{
+
+}
 using namespace::std;
 int main()
 {

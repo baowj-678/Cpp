@@ -4,7 +4,7 @@
 GraphNode::GraphNode(int vertex) 
 {
 	this->vertex = vertex;
-	this->length = 1;
+	this->distance = 1;
 	this->next = nullptr;
 	this->color = White;
 }
@@ -13,13 +13,13 @@ GraphNode::GraphNode(int vertex, int length)
 {
 	this->color = White;
 	this->vertex = vertex;
-	this->length = length;
+	this->distance = length;
 	this->next = nullptr;
 }
 GraphNode::GraphNode()
 {
 	this->vertex = -1;
-	this->length = -1;
+	this->distance = -1;
 	this->color = White;
 	this->next = nullptr;
 }
@@ -46,12 +46,12 @@ Color GraphNode::getColor()
 
 void GraphNode::setLength(int length)
 {
-	this->length = length;
+	this->distance = length;
 }
 
 int GraphNode::getLength()
 {
-	return this->length;
+	return this->distance;
 }
 
 int GraphNode::printVertex()
