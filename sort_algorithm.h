@@ -12,8 +12,8 @@ void mergeSort(int s[], int begin, int end);
 int main_merge_sort();
 
 //radix sort
-int* radix_sort(int* sum, int n, int space[8][100]);
-int main_radix_sort();
+int* radix_sort(int* sum, int n, int space[8][10000]);
+//int main_radix_sort();
 
 //counting sort
 int counting_sort(int* s, int n);

@@ -60,7 +60,10 @@ int counting_sort(int* s, int n)
 	{
 		s[i] = B[i];
 	}
+	free(C);
+	free(B);
 	return 0;
+
 }
 
 int getk(int* s, int n)
