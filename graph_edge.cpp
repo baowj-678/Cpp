@@ -4,7 +4,7 @@ Edge::Edge(EdgeDistance d, int f, int t)
 {
 	this->distance = d;
 	this->from = f;
-	this->to = to;
+	this->to = t;
 	this->next = nullptr;
 }
 
@@ -19,4 +19,29 @@ Edge::Edge()
 void Edge::setNext(Edge* next)
 {
 	this->next = next;
+}
+
+int Edge::getFrom()
+{
+	return this->from;
+}
+
+int Edge::getTo()
+{
+	return this->to;
+}
+
+EdgeDistance Edge::getDistance()
+{
+	return this->distance;
+}
+
+Edge* Edge::getNext()
+{
+	return this->next;
+}
+
+bool Edge::cmp(Edge* A, Edge* B)
+{
+	return A->distance > B->distance;
 }

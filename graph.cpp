@@ -6,18 +6,22 @@
 #define		NIL		-1
 #define		INF		-1
 
-Graph::Graph(int v, int e)
+Graph::Graph(bool isOriented, int v, int e)
 {
 	this->num_v = v;
 	this->num_e = e;
 	this->adj_list = NULL;
 	this->adj_matrix = NULL;
+	this->edges = nullptr;
+	this->isOriented = isOriented;
 }
 
 Graph::~Graph()
 {
 	this->destroyListSpace();
 	this->destroyMatrixSpace();
+	this->destroyEdgeSpace();
+
 }
 
 GraphNode** Graph::getMatrixSpace()
@@ -233,9 +237,9 @@ bool Graph::setAdjListFromMatrix()
 	return true;
 }
 
-Edge* Graph::getEdgeSpace()
+Edge** Graph::getEdgeSpace()
 {
-	this->edges = new Edge[this->num_e];
+	this->edges = new Edge*[this->num_e];
 	return this->edges;
 }
 
@@ -249,34 +253,83 @@ bool Graph::destroyEdgeSpace()
 
 void Graph::setEdgesFromMatrix()
 {
-
+	if (this->adj_matrix == nullptr)
+		return;
+	if (this->edges != nullptr)
+		return;
+	Edge* temp = nullptr;
+	Edge* head = nullptr;
+	this->num_e = 0;
+	if (this->isOriented == true)
+	{
+		//oriented graph
+		for (int i(0); i < this->num_v; i++)
+		{
+			for (int j(0); j < this->num_v; j++)
+			{
+				if (this->adj_matrix[i][j].getLength() != INF)
+				{
+					temp = new Edge(adj_matrix[i][j].getLength(), i, j);
+					temp->setNext(head);
+					head = temp;
+					this->num_e++;
+				}
+			}
+		}
+	}
+	else
+	{
+		//not oriented graph
+		for (int i(0); i < this->num_v; i++)
+		{
+			for (int j(i); j < this->num_v; j++)
+			{
+				if (this->adj_matrix[i][j].getLength() != INF)
+				{
+					temp = new Edge(adj_matrix[i][j].getLength(), i, j);
+					temp->setNext(head);
+					head = temp;
+					this->num_e++;
+				}
+			}
+		}
+	}
+	if (this->num_e == 0)
+		return;
+	this->getEdgeSpace();
+	for (int i = 0; head != nullptr; head = head->getNext(), i++)
+	{
+		this->edges[i] = head;
+	}
 }
 
-
-GraphNode* Graph::MSTkruskal()
+void Graph::printEdges()
 {
-	return nullptr;
+	std::cout << "\nEdges(From, Distance, To):\n";
+	Edge** temp = this->edges;
+	for (int i(0); i < this->num_e; i++)
+	{
+		std::cout << "(" << temp[i]->getFrom() + 1 << "," << temp[i]->getDistance() << "," << temp[i]->getTo() + 1 << ")  ";
+	}
 }
-GraphNode* Graph::MSTprim()
-{
-	return nullptr;
-}
+
 using namespace::std;
-//int main()
-//{
-//	streambuf* backup;
-//	ifstream fin("C:\\Users\\WILL\\Desktop\\in.txt");
-//	backup = cin.rdbuf();
-//	cin.rdbuf(fin.rdbuf());
-//	Graph g = Graph(5, 10);
-//	g.setMatrixIsAdj();
-//	cin.rdbuf(backup);
-//	g.printAdjMatrix();
-//	g.setAdjListFromMatrix();
-//	g.printAdjList();
-//	g.BFS(1);
-//	
-//}
+int main()
+{
+	streambuf* backup;
+	ifstream fin("C:\\Users\\WILL\\Desktop\\in.txt");
+	backup = cin.rdbuf();
+	cin.rdbuf(fin.rdbuf());
+	Graph g = Graph(false, 5, 10);
+	g.setMatrixDistance();
+	g.printAdjMatrix();
+	cin.rdbuf(backup);
+	g.setEdgesFromMatrix();
+	g.printEdges();
+	//g.setAdjListFromMatrix();
+	//g.printAdjList();
+	//g.BFS(1);
+}
 
 /*
 0 1 0 0 1

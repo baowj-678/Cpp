@@ -5,7 +5,7 @@
 class Graph 
 {
 public:
-    Graph(int v, int e);
+    Graph(bool isOriented, int v, int e);
     ~Graph();
     //set adjacency matrix using 0-1 for not connecting and connecting
     void setMatrixIsAdj();
@@ -18,6 +18,8 @@ public:
     bool setAdjListFromMatrix();
     //get values of edges
     void setEdgesFromMatrix();
+    //print edges
+    void printEdges();
     int** BFS(int vertex);
     int** DFS(int vertex);
     GraphNode* MSTkruskal();
@@ -31,16 +33,17 @@ private:
     //
     GraphNode* adj_list;
     //store edges
-    Edge* edges;
+    Edge** edges;
     int num_v;
     int num_e;
+
 
     //functions
     GraphNode** getMatrixSpace();
     bool destroyMatrixSpace();
     GraphNode* getListSpace();
     bool destroyListSpace();
-    Edge* getEdgeSpace();
+    Edge** getEdgeSpace();
     bool destroyEdgeSpace();
 };
 
