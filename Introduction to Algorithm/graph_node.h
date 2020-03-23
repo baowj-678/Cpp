@@ -1,9 +1,11 @@
 #pragma once
 #ifndef _GRAPH_NODE_
 #define _GRAPH_NODE_
-#define		INF		-1
+#define		INF		21474836473
 #define		YES		1
 #define		NO		0
+typedef int Distance;
+
 enum Color
 {
 	Black,
@@ -21,7 +23,7 @@ class GraphNode
 {
 private:
 	int vertex;
-	int distance;
+	Distance distance;
 	GraphNode* next;
 public:
 	GraphNode(int vertex);
@@ -29,12 +31,11 @@ public:
 	GraphNode();
 	int getVertex();
 	int printVertex();
-	Color getColor();
-	int getLength();
+	Distance getDistance();
 	GraphNode* getNext();
 	void setVertex(int vertex);
 	void setColor(Color color);
-	void setLength(int length);
+	void setDistance(int length);
 	void setNext(GraphNode* next);
 };
 

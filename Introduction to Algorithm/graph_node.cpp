@@ -32,12 +32,12 @@ int GraphNode::getVertex()
 	return this->vertex;
 }
 
-void GraphNode::setLength(int length)
+void GraphNode::setDistance(int length)
 {
 	this->distance = length;
 }
 
-int GraphNode::getLength()
+int GraphNode::getDistance()
 {
 	return this->distance;
 }

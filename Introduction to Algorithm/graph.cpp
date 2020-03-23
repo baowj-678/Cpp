@@ -3,15 +3,13 @@
 #include <fstream>
 #include <iomanip>
 #include <queue>
-#define		NIL		-1
-#define		INF		-1
 
 Graph::Graph(bool isOriented, int v, int e)
 {
 	this->num_v = v;
 	this->num_e = e;
 	this->adj_list = NULL;
-	this->adj_matrix = NULL;
+	this->distanceMatrix = NULL;
 	this->edges = nullptr;
 	this->isOriented = isOriented;
 }
@@ -19,38 +17,38 @@ Graph::Graph(bool isOriented, int v, int e)
 Graph::~Graph()
 {
 	this->destroyListSpace();
-	this->destroyMatrixSpace();
+	this->destroyDistanceMatrixSpace();
 	this->destroyEdgeSpace();
 
 }
 
-GraphNode** Graph::getMatrixSpace()
+Distance** Graph::getDistanceMatrixSpace()
 {
-	this->adj_matrix = new GraphNode * [this->num_v];
-	if (this->adj_matrix == nullptr)
+	this->distanceMatrix = new Distance * [this->num_v];
+	if (this->distanceMatrix == nullptr)
 		return nullptr;
 	for (int i(0); i < this->num_v; i++)
 	{
-		this->adj_matrix[i] = new GraphNode[this->num_v];
-		if (this->adj_matrix[i] == nullptr)
+		this->distanceMatrix[i] = new Distance[this->num_v];
+		if (this->distanceMatrix[i] == nullptr)
 		{
-			this->adj_matrix = nullptr;
+			this->distanceMatrix = nullptr;
 			return nullptr;
 		}
 	}
-	return adj_matrix;
+	return distanceMatrix;
 }
 
-bool Graph::destroyMatrixSpace()
+bool Graph::destroyDistanceMatrixSpace()
 {
-	if (this->adj_matrix == nullptr)
+	if (this->distanceMatrix == nullptr)
 		return true;
 	for (int i(0); i < this->num_v; i++)
 	{
-		if(this->adj_matrix[i] != nullptr)
-		delete[]this->adj_matrix[i];
+		if(this->distanceMatrix[i] != nullptr)
+		delete[]this->distanceMatrix[i];
 	}
-	delete[]this->adj_matrix;
+	delete[]this->distanceMatrix;
 	return true;
 }
 
@@ -66,48 +64,48 @@ bool Graph::destroyListSpace()
 	return true;
 }
 
-void Graph::setMatrixIsAdj()
+//void Graph::setAdjBoolMatrix()
+//{
+//	if (this->adjMatrix == nullptr)
+//		this->getBoolMatrixSpace();
+//	std::cout << "Please input adjacency matrix(0:not adjacency,1:yes)\n";
+//	for (int i(0); i < this->num_v; i++)
+//	{
+//		for (int j(0); j < this->num_v; j++)
+//		{
+//			int temp;
+//			std::cin >> temp;
+//			if (temp == 1)
+//			{
+//				this->adjDistanceMatrix[i][j].setDistance(YES);
+//			}
+//			else
+//			{
+//				this->adjDistanceMatrix[i][j].setDistance(NO);
+//			}
+//		}
+//	}
+//}
+
+void Graph::setDistanceMatrix()
 {
-	if (this->adj_matrix == nullptr)
-		this->getMatrixSpace();
-	std::cout << "Please input adjacency matrix(0:not adjacency,1:yes)\n";
+	if (this->distanceMatrix == nullptr)
+		this->getDistanceMatrixSpace();
+	std::cout << "Please input adjacency matrix(distance, 21474836473:INF)\n";
 	for (int i(0); i < this->num_v; i++)
 	{
 		for (int j(0); j < this->num_v; j++)
 		{
 			int temp;
 			std::cin >> temp;
-			if (temp == 1)
-			{
-				this->adj_matrix[i][j].setLength(YES);
-			}
-			else
-			{
-				this->adj_matrix[i][j].setLength(NO);
-			}
+			this->distanceMatrix[i][j] = temp;
 		}
 	}
 }
 
-void Graph::setMatrixDistance()
+void Graph::printDistanceMatrix(int w)
 {
-	if (this->adj_matrix == nullptr)
-		this->getMatrixSpace();
-	std::cout << "Please input adjacency matrix(distance, -1:INF)\n";
-	for (int i(0); i < this->num_v; i++)
-	{
-		for (int j(0); j < this->num_v; j++)
-		{
-			int temp;
-			std::cin >> temp;
-			this->adj_matrix[i][j].setLength(temp);
-		}
-	}
-}
-
-void Graph::printAdjMatrix(int w)
-{
-	if (this->adj_matrix == nullptr)
+	if (this->distanceMatrix == nullptr)
 		return;
 
 	std::cout << std::endl;
@@ -119,80 +117,14 @@ void Graph::printAdjMatrix(int w)
 		std::cout << std::setiosflags(std::ios::left) << std::setw(w) << i + 1;
 		for (int j(0); j < this->num_v; j++)
 		{
-			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << this->adj_matrix[i][j].getLength();
+			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << this->distanceMatrix[i][j];
 		}
 		std::cout << std::endl;
 	}
 	std::cout << std::endl;
 }
 
-int** Graph::BFS(int vertex)
-{
-	if (this->adj_list == nullptr)
-		return nullptr;
-	//input vertex [0-...)
-	vertex--;
-	//get memory
-	//ans[0][i] = d[i]
-	//ans[1][i] = pi[i]
-	int** ans = new int* [2];
-	if (ans == NULL)
-		return NULL;
-	for (int i(0); i < 2; i++)
-	{
-		ans[i] = new int[this->num_v];
-	}
-	Color* color = new Color[this->num_v];
-	for (int i(0); i < this->num_v; i++)
-	{
-		color[i] = White;
-		ans[0][i] = INF;
-		ans[1][i] = NIL;
-	}
-	color[vertex] = Gray;
-	ans[0][vertex] = 0;
-	ans[1][vertex] = NIL;
-	std::queue<int> Q;
-	Q.push(vertex);
-	for (; Q.empty() == false;)
-	{
-		int u = Q.front();
-		Q.pop();
-		GraphNode* temp = this->adj_list[u].getNext();
-		for (; temp != nullptr; temp = temp->getNext())
-		{
-			int v = temp->getVertex();
-			if (color[v] == White)
-			{
-				color[v] = Gray;
-				ans[0][v] = ans[0][u] + 1;
-				ans[1][v] = u;
-				Q.push(v);
-			}
-		}
-		color[u] = Black;
-	}
-	std::cout << std::endl;
-	std::cout << std::setiosflags(std::ios::left) << std::setw(10) << "name:";
-	for (int i(0); i < this->num_v; i++)
-	{
-		std::cout << std::setiosflags(std::ios::right) << std::setw(4) << i + 1;
-	}
-	std::cout << std::endl;
-	std::cout << std::setiosflags(std::ios::left) << std::setw(10) << "distance:";
-	for (int i(0); i < this->num_v; i++)
-	{
-		std::cout << std::setiosflags(std::ios::right) << std::setw(4) << ans[0][i];
-	}
-	std::cout << std::endl;
-	std::cout << std::setiosflags(std::ios::left) << std::setw(10) << "last_node:";
-	for (int i(0); i < this->num_v; i++)
-	{
-		std::cout << std::setiosflags(std::ios::right) << std::setw(4) << ans[1][i] + 1;
-	}
-	std::cout << std::endl;
-	return ans;
-}
+
 
 void Graph::printAdjList(int w)
 {
@@ -211,9 +143,9 @@ void Graph::printAdjList(int w)
 	std::cout << std::endl;
 }
 
-bool Graph::setAdjListFromMatrix()
+bool Graph::setListFromMatrix()
 {
-	if (this->adj_matrix == NULL)
+	if (this->distanceMatrix == NULL)
 		return false;
 	if (this->adj_list == NULL)
 		this->getListSpace();
@@ -225,7 +157,7 @@ bool Graph::setAdjListFromMatrix()
 		tail = &adj_list[i];
 		for (int j(0); j < this->num_v; j++)
 		{
-			int l = this->adj_matrix[i][j].getLength();
+			int l = this->distanceMatrix[i][j];
 			if(l > 0)
 			{
 				temp = new GraphNode(j, l);
@@ -253,7 +185,7 @@ bool Graph::destroyEdgeSpace()
 
 void Graph::setEdgesFromMatrix()
 {
-	if (this->adj_matrix == nullptr)
+	if (this->distanceMatrix == nullptr)
 		return;
 	if (this->edges != nullptr)
 		return;
@@ -267,9 +199,9 @@ void Graph::setEdgesFromMatrix()
 		{
 			for (int j(0); j < this->num_v; j++)
 			{
-				if (this->adj_matrix[i][j].getLength() != INF)
+				if (this->distanceMatrix[i][j] != INF)
 				{
-					temp = new Edge(adj_matrix[i][j].getLength(), i, j);
+					temp = new Edge(distanceMatrix[i][j], i, j);
 					temp->setNext(head);
 					head = temp;
 					this->num_e++;
@@ -284,9 +216,9 @@ void Graph::setEdgesFromMatrix()
 		{
 			for (int j(i); j < this->num_v; j++)
 			{
-				if (this->adj_matrix[i][j].getLength() != INF)
+				if (this->distanceMatrix[i][j] != INF)
 				{
-					temp = new Edge(adj_matrix[i][j].getLength(), i, j);
+					temp = new Edge(distanceMatrix[i][j], i, j);
 					temp->setNext(head);
 					head = temp;
 					this->num_e++;
@@ -313,6 +245,10 @@ void Graph::printEdges()
 	}
 }
 
+Distance Graph::getAdjDistance(Vertex a, Vertex b)
+{
+	return this->distanceMatrix[a][b];
+}
 using namespace::std;
 int main()
 {
@@ -321,8 +257,8 @@ int main()
 	backup = cin.rdbuf();
 	cin.rdbuf(fin.rdbuf());
 	Graph g = Graph(false, 5, 10);
-	g.setMatrixDistance();
-	g.printAdjMatrix();
+	g.setDistanceMatrix();
+	g.printDistanceMatrix();
 	cin.rdbuf(backup);
 	g.setEdgesFromMatrix();
 	g.printEdges();
