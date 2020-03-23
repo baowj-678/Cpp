@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Introduction to Algorithm.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="1.Insert_sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -30,37 +27,13 @@
     <ClCompile Include="4.merge sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Strassen.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="6.radix_sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="7.counting_sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="linked_list.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="8.bucket_sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="backpack_problem.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="SLC.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="matrix_mul.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="matrix-chain_multiplication_problem.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="optimal_bst.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="sort_algorithm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="5.quick_sort.cpp">
@@ -78,7 +51,34 @@
     <ClCompile Include="graph_edge.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="closest_pair_of_point.cpp">
+    <ClCompile Include="11.backpack_problem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="10.closest_pair_of_point.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="12.matrix_mul.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="13.matrix-chain_multiplication_problem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="14.Strassen.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="15.sort_algorithm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="16.SLC.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="17.optimal_bst.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="18.linked_list.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="19.Introduction to Algorithm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -16,6 +16,20 @@ void array_print(element* nums, int n)
 }
 
 template<typename element>
+element* array_shuffle(element nums[], int n)
+{
+	for (int i(0); i < n / 2; i++)
+	{
+		int p = rand() % n;
+		int q = rand() % n;
+		element temp = nums[p];
+		nums[p] = nums[q];
+		nums[q] = temp;
+	}
+	return nums;
+}
+
+template<typename element>
 element* array_generate_int(int n)
 {
 	element* nums = new element[n];
@@ -92,14 +106,7 @@ element* array_generate_double(int n, double begin, double end)
 	{
 		nums[i] = begin + i * delta;
 	}
-	for (int i(0); i < n / 2; i++)
-	{
-		int p = rand() % n;
-		int q = rand() % n;
-		element temp = nums[p];
-		nums[p] = nums[q];
-		nums[q] = temp;
-	}
+	array_shuffle<element>(nums, n);
 	return nums;
 }
 
@@ -113,5 +120,8 @@ element** array_two_dim_generate_double(int n, double begin, double end)
 	}
 	return array;
 }
+
+
+
 #endif // !BASIC_ARRAY_FUNC
 
