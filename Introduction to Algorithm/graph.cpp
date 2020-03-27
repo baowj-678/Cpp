@@ -6,10 +6,11 @@
 
 Graph::Graph(bool isOriented, int v, int e)
 {
-	this->num_v = v;
-	this->num_e = e;
-	this->adj_list = NULL;
+	this->numVertex = v;
+	this->numEdge = e;
+	this->adjList = NULL;
 	this->distanceMatrix = NULL;
+	this->booleanMatrix = NULL;
 	this->edges = nullptr;
 	this->isOriented = isOriented;
 }
@@ -18,83 +19,87 @@ Graph::~Graph()
 {
 	this->destroyListSpace();
 	this->destroyDistanceMatrixSpace();
+	this->destroyBooleanMatrixSpace();
 	this->destroyEdgeSpace();
 
 }
 
 Distance** Graph::getDistanceMatrixSpace()
 {
-	this->distanceMatrix = new Distance * [this->num_v];
-	if (this->distanceMatrix == nullptr)
-		return nullptr;
-	for (int i(0); i < this->num_v; i++)
+	if (this->distanceMatrix == NULL)
+		this->distanceMatrix = new Distance * [this->numVertex];
+	else
+		return this->distanceMatrix;
+
+	if (this->distanceMatrix == NULL)
+		return NULL;
+	for (int i(0); i < this->numVertex; i++)
 	{
-		this->distanceMatrix[i] = new Distance[this->num_v];
-		if (this->distanceMatrix[i] == nullptr)
+		this->distanceMatrix[i] = new Distance[this->numVertex];
+		if (this->distanceMatrix[i] == NULL)
 		{
-			this->distanceMatrix = nullptr;
+			this->distanceMatrix = NULL;
+			return NULL;
+		}
+	}
+	return this->distanceMatrix;
+}
+
+bool** Graph::getBooleanMatrixSpace()
+{
+	if (this->booleanMatrix == NULL)
+		this->booleanMatrix = new bool* [this->numVertex];
+	else
+		return this->booleanMatrix;
+
+	if (this->booleanMatrix == nullptr)
+		return nullptr;
+	for (int i(0); i < this->numVertex; i++)
+	{
+		this->booleanMatrix[i] = new bool[this->numVertex];
+		if (this->booleanMatrix[i] == nullptr)
+		{
+			this->booleanMatrix = nullptr;
 			return nullptr;
 		}
 	}
-	return distanceMatrix;
+	return this->booleanMatrix;
 }
-
 bool Graph::destroyDistanceMatrixSpace()
 {
-	if (this->distanceMatrix == nullptr)
-		return true;
-	for (int i(0); i < this->num_v; i++)
+	if (this->distanceMatrix != nullptr)
 	{
-		if(this->distanceMatrix[i] != nullptr)
-		delete[]this->distanceMatrix[i];
+		for (int i(0); i < this->numVertex; i++)
+		{
+			if (this->distanceMatrix[i] != nullptr)
+				delete[]this->distanceMatrix[i];
+		}
+		delete[]this->distanceMatrix;
 	}
-	delete[]this->distanceMatrix;
 	return true;
 }
 
 GraphNode* Graph::getListSpace()
 {
-	this->adj_list = new GraphNode[this->num_v];
-	return this->adj_list;
+	this->adjList = new GraphNode[this->numVertex];
+	return this->adjList;
 }
 bool Graph::destroyListSpace()
 {
-	if (this->adj_list != nullptr)
-		delete[]adj_list;
+	if (this->adjList != nullptr)
+		delete[]adjList;
 	return true;
 }
 
-//void Graph::setAdjBoolMatrix()
-//{
-//	if (this->adjMatrix == nullptr)
-//		this->getBoolMatrixSpace();
-//	std::cout << "Please input adjacency matrix(0:not adjacency,1:yes)\n";
-//	for (int i(0); i < this->num_v; i++)
-//	{
-//		for (int j(0); j < this->num_v; j++)
-//		{
-//			int temp;
-//			std::cin >> temp;
-//			if (temp == 1)
-//			{
-//				this->adjDistanceMatrix[i][j].setDistance(YES);
-//			}
-//			else
-//			{
-//				this->adjDistanceMatrix[i][j].setDistance(NO);
-//			}
-//		}
-//	}
-//}
 
 void Graph::setDistanceMatrix()
 {
 	if (this->distanceMatrix == nullptr)
 		this->getDistanceMatrixSpace();
-	std::cout << "Please input adjacency matrix(distance, 21474836473:INF)\n";
-	for (int i(0); i < this->num_v; i++)
+	std::cout << "Please input adjacency matrix(distance, 2147483647:INF)\n";
+	for (int i(0); i < this->numVertex; i++)
 	{
-		for (int j(0); j < this->num_v; j++)
+		for (int j(0); j < this->numVertex; j++)
 		{
 			int temp;
 			std::cin >> temp;
@@ -103,19 +108,48 @@ void Graph::setDistanceMatrix()
 	}
 }
 
+void Graph::setBoolMatrix()
+{
+	if (this->booleanMatrix == nullptr)
+		this->getBooleanMatrixSpace();
+	std::cout << "Please input adjacency boolean matrix(0:false, 1:true)\n";
+	for (int i(0); i < this->numVertex; i++)
+	{
+		for (int j(0); j < this->numVertex; j++)
+		{
+			int temp;
+			std::cin >> temp;
+			if (temp == 0)
+				this->booleanMatrix[i][j] = false;
+			else
+				this->booleanMatrix[i][j] = true;
+		}
+	}
+}
 void Graph::printDistanceMatrix(int w)
 {
 	if (this->distanceMatrix == nullptr)
 		return;
+	std::cout << "\nThe distance matrix is:\n";
+	// print index
+	if(this->index2name.empty() == false)
+		for (int i(-1); i < this->numVertex; i++)
+			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << this->index2name[i];
+	else
+		for (int i(-1); i < this->numVertex; i++)
+			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << i;
+	std::cout << std::endl;
 
-	std::cout << std::endl;
-	for (int i(0); i <= this->num_v; i++)
-		std::cout << std::setiosflags(std::ios::left) << std::setw(4) << i;
-	std::cout << std::endl;
-	for (int i(0); i < this->num_v; i++)
+	for (int i(0); i < this->numVertex; i++)
 	{
-		std::cout << std::setiosflags(std::ios::left) << std::setw(w) << i + 1;
-		for (int j(0); j < this->num_v; j++)
+		// print index
+		if(this->index2name.empty() == false)
+			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << this->index2name[i];
+		else
+			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << i;
+		
+		// print distance
+		for (int j(0); j < this->numVertex; j++)
 		{
 			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << this->distanceMatrix[i][j];
 		}
@@ -124,17 +158,48 @@ void Graph::printDistanceMatrix(int w)
 	std::cout << std::endl;
 }
 
+void Graph::printBooleanMatrix(int w)
+{
+	if (this->booleanMatrix == nullptr)
+		return;
+	std::cout << "\nThe boolean matrix is:\n";
+	// print index
+	if (this->index2name.empty() == false)
+		for (int i(-1); i < this->numVertex; i++)
+			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << this->index2name[i];
+	else
+		for (int i(-1); i < this->numVertex; i++)
+			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << i;
+	std::cout << std::endl;
 
+	for (int i(0); i < this->numVertex; i++)
+	{
+		// print index
+		if (this->index2name.empty() == false)
+			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << this->index2name[i];
+		else
+			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << i;
+
+		// print distance
+		for (int j(0); j < this->numVertex; j++)
+		{
+			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << this->booleanMatrix[i][j];
+		}
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+
+}
 
 void Graph::printAdjList(int w)
 {
-	if (this->adj_list == nullptr)
+	if (this->adjList == nullptr)
 		return;
 	GraphNode* temp = nullptr;
-	for (int i(0); i < this->num_v; i++)
+	for (int i(0); i < this->numVertex; i++)
 	{
 		std::cout << (i + 1) << ":  ";
-		for (temp = this->adj_list[i].getNext(); temp != nullptr; temp = temp->getNext())
+		for (temp = this->adjList[i].getNext(); temp != nullptr; temp = temp->getNext())
 		{
 			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << temp->getVertex() + 1;
 		}
@@ -147,15 +212,15 @@ bool Graph::setListFromMatrix()
 {
 	if (this->distanceMatrix == NULL)
 		return false;
-	if (this->adj_list == NULL)
+	if (this->adjList == NULL)
 		this->getListSpace();
 	GraphNode* temp = nullptr;
 	GraphNode* tail = nullptr;
-	for (int i(0); i < this->num_v; i++)
+	for (int i(0); i < this->numVertex; i++)
 	{
-		this->adj_list[i] = GraphNode(i, 0);
-		tail = &adj_list[i];
-		for (int j(0); j < this->num_v; j++)
+		this->adjList[i] = GraphNode(i, 0);
+		tail = &adjList[i];
+		for (int j(0); j < this->numVertex; j++)
 		{
 			int l = this->distanceMatrix[i][j];
 			if(l > 0)
@@ -171,7 +236,7 @@ bool Graph::setListFromMatrix()
 
 Edge** Graph::getEdgeSpace()
 {
-	this->edges = new Edge*[this->num_e];
+	this->edges = new Edge*[this->numEdge];
 	return this->edges;
 }
 
@@ -191,20 +256,20 @@ void Graph::setEdgesFromMatrix()
 		return;
 	Edge* temp = nullptr;
 	Edge* head = nullptr;
-	this->num_e = 0;
+	this->numEdge = 0;
 	if (this->isOriented == true)
 	{
 		//oriented graph
-		for (int i(0); i < this->num_v; i++)
+		for (int i(0); i < this->numVertex; i++)
 		{
-			for (int j(0); j < this->num_v; j++)
+			for (int j(0); j < this->numVertex; j++)
 			{
 				if (this->distanceMatrix[i][j] != INF)
 				{
 					temp = new Edge(distanceMatrix[i][j], i, j);
 					temp->setNext(head);
 					head = temp;
-					this->num_e++;
+					this->numEdge++;
 				}
 			}
 		}
@@ -212,21 +277,21 @@ void Graph::setEdgesFromMatrix()
 	else
 	{
 		//not oriented graph
-		for (int i(0); i < this->num_v; i++)
+		for (int i(0); i < this->numVertex; i++)
 		{
-			for (int j(i); j < this->num_v; j++)
+			for (int j(i); j < this->numVertex; j++)
 			{
 				if (this->distanceMatrix[i][j] != INF)
 				{
 					temp = new Edge(distanceMatrix[i][j], i, j);
 					temp->setNext(head);
 					head = temp;
-					this->num_e++;
+					this->numEdge++;
 				}
 			}
 		}
 	}
-	if (this->num_e == 0)
+	if (this->numEdge == 0)
 		return;
 	this->getEdgeSpace();
 	for (int i = 0; head != nullptr; head = head->getNext(), i++)
@@ -239,7 +304,7 @@ void Graph::printEdges()
 {
 	std::cout << "\nEdges(From, Distance, To):\n";
 	Edge** temp = this->edges;
-	for (int i(0); i < this->num_e; i++)
+	for (int i(0); i < this->numEdge; i++)
 	{
 		std::cout << "(" << temp[i]->getFrom() + 1 << "," << temp[i]->getDistance() << "," << temp[i]->getTo() + 1 << ")  ";
 	}
@@ -250,21 +315,76 @@ Distance Graph::getAdjDistance(Vertex a, Vertex b)
 	return this->distanceMatrix[a][b];
 }
 using namespace::std;
+
+void Graph::setBooleanFromDistance()
+{
+	if (this->booleanMatrix == NULL)
+		this->getBooleanMatrixSpace();
+
+	for (int i(0); i < this->numVertex; i++)
+	{
+		for (int j(0); j < this->numVertex; j++)
+		{
+			if (this->getAdjDistance(i, j) == INF)
+				this->booleanMatrix[i][j] = false;
+			else
+				this->booleanMatrix[i][j] = true;
+		}
+	}
+}
+
+bool Graph::destroyBooleanMatrixSpace()
+{
+	if (this->booleanMatrix != NULL)
+	{
+		for (int i(0); i < this->numVertex; i++)
+		{
+			if (this->booleanMatrix[i] != NULL)
+				delete[]this->booleanMatrix[i];
+		}
+		delete[]this->booleanMatrix;
+	}
+	return true;
+}
+
+void Graph::setNameIndexMap(int isDefault)
+{
+	// default
+	if (isDefault)
+	{
+		for (int i(0); i < this->numVertex; i++)
+		{
+			string name = to_string(i + 1);
+			this->name2index[name] = i;
+			this->index2name[i] = name;
+		}
+		return;
+	}
+
+	// input
+	cout << "\nPlease input the NameIndexMap,like :(1 s)\n";
+	int index;
+	string name;
+	for (int i(0); i < this->numVertex; i++)
+	{
+		cin >> index;
+		cin >> name;
+		this->name2index[name] = index - 1;
+		this->index2name[index - 1] = name;
+	}
+}
 int main()
 {
 	streambuf* backup;
 	ifstream fin("C:\\Users\\WILL\\Desktop\\in.txt");
 	backup = cin.rdbuf();
 	cin.rdbuf(fin.rdbuf());
-	Graph g = Graph(false, 5, 10);
+	Graph g = Graph(true, 5, 10);
+	g.setNameIndexMap(false);
 	g.setDistanceMatrix();
-	g.printDistanceMatrix();
+	g.printDistanceMatrix(15);
 	cin.rdbuf(backup);
-	g.setEdgesFromMatrix();
-	g.printEdges();
-	//g.setAdjListFromMatrix();
-	//g.printAdjList();
-	//g.BFS(1);
+	g.getVertexDistance();
 }
 
 /*

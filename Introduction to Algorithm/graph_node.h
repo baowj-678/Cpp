@@ -1,10 +1,7 @@
 #pragma once
 #ifndef _GRAPH_NODE_
 #define _GRAPH_NODE_
-#define		INF		21474836473
-#define		YES		1
-#define		NO		0
-typedef int Distance;
+#include "graph_const.h"
 
 enum Color
 {
@@ -22,20 +19,20 @@ enum YesOrNo
 class GraphNode 
 {
 private:
-	int vertex;
-	Distance distance;
+	Vertex vertex;
+	//Distance distance;
 	GraphNode* next;
 public:
 	GraphNode(int vertex);
 	GraphNode(int vertex, int length);
 	GraphNode();
-	int getVertex();
+	Vertex getVertex();
 	int printVertex();
-	Distance getDistance();
+	//Distance getDistance();
 	GraphNode* getNext();
 	void setVertex(int vertex);
 	void setColor(Color color);
-	void setDistance(int length);
+	//void setDistance(int length);
 	void setNext(GraphNode* next);
 };
 

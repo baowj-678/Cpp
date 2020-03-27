@@ -1,8 +1,7 @@
 #pragma once
 #ifndef _GRAPH_EDGE_
 #define _GRAPH_EDGE_
-#define		INF		-1
-#define		NIL		-1
+#include "graph_const.h"
 typedef int EdgeDistance;
 
 class Edge

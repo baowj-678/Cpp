@@ -7,13 +7,15 @@
 #include <queue>
 
 using namespace::std;
+
 GraphNode* Graph::MSTkruskal()
 {
-	vector<Edge> heap(this->edges, this->edges + this->num_e);
-	make_heap(heap.begin(), heap.end(), Edge::cmp);
-	sort_heap(heap.begin(), heap.end(), Edge::cmp);
+	//vector<Edge> heap(this->edges, this->edges + this->numEdge);
+	//make_heap(heap.begin(), heap.end(), &(Edge::cmp));
+	//sort_heap(heap.begin(), heap.end(), &(Edge::cmp));
 	return nullptr;
 }
+
 GraphNode* Graph::MSTprim()
 {
 	return nullptr;
@@ -21,7 +23,7 @@ GraphNode* Graph::MSTprim()
 
 int** Graph::BFS(Vertex vertex)
 {
-	if (this->adj_list == nullptr)
+	if (this->adjList == nullptr)
 		return nullptr;
 	//input vertex [0-...)
 	vertex--;
@@ -33,10 +35,10 @@ int** Graph::BFS(Vertex vertex)
 		return NULL;
 	for (int i(0); i < 2; i++)
 	{
-		ans[i] = new int[this->num_v];
+		ans[i] = new int[this->numVertex];
 	}
-	Color* color = new Color[this->num_v];
-	for (int i(0); i < this->num_v; i++)
+	Color* color = new Color[this->numVertex];
+	for (int i(0); i < this->numVertex; i++)
 	{
 		color[i] = White;
 		ans[0][i] = INF;
@@ -51,7 +53,7 @@ int** Graph::BFS(Vertex vertex)
 	{
 		int u = Q.front();
 		Q.pop();
-		GraphNode* temp = this->adj_list[u].getNext();
+		GraphNode* temp = this->adjList[u].getNext();
 		for (; temp != nullptr; temp = temp->getNext())
 		{
 			int v = temp->getVertex();
@@ -67,19 +69,19 @@ int** Graph::BFS(Vertex vertex)
 	}
 	std::cout << std::endl;
 	std::cout << std::setiosflags(std::ios::left) << std::setw(10) << "name:";
-	for (int i(0); i < this->num_v; i++)
+	for (int i(0); i < this->numVertex; i++)
 	{
 		std::cout << std::setiosflags(std::ios::right) << std::setw(4) << i + 1;
 	}
 	std::cout << std::endl;
 	std::cout << std::setiosflags(std::ios::left) << std::setw(10) << "distance:";
-	for (int i(0); i < this->num_v; i++)
+	for (int i(0); i < this->numVertex; i++)
 	{
 		std::cout << std::setiosflags(std::ios::right) << std::setw(4) << ans[0][i];
 	}
 	std::cout << std::endl;
 	std::cout << std::setiosflags(std::ios::left) << std::setw(10) << "last_node:";
-	for (int i(0); i < this->num_v; i++)
+	for (int i(0); i < this->numVertex; i++)
 	{
 		std::cout << std::setiosflags(std::ios::right) << std::setw(4) << ans[1][i] + 1;
 	}
@@ -89,22 +91,22 @@ int** Graph::BFS(Vertex vertex)
 
 int** Graph::DFS(Vertex vertex)
 {
-	Color* color = new Color[this->num_v];
-	for (int i(0); i < this->num_v; i++)
+	Color* color = new Color[this->numVertex];
+	for (int i(0); i < this->numVertex; i++)
 		color[i] = White;
-	int** ans = zerosTwoDimMatrix<int>(2, this->num_v);
+	int** ans = zerosTwoDimMatrix<int>(2, this->numVertex);
 	this->DFSvisit(vertex, 0, color, ans);
 	delete[]color;
 	return ans;
 }
 
-int** Graph::DFSvisit(int u, int time, Color color[], int** ans)
+int** Graph::DFSvisit(Vertex u, int time, Color color[], int** ans)
 {
 	color[u] = Gray;
 	time++;
 	ans[0][u] = time;
 	GraphNode* temp = NULL;
-	for (temp = this->adj_list[u].getNext(); temp != NULL; temp = temp->getNext())
+	for (temp = this->adjList[u].getNext(); temp != NULL; temp = temp->getNext())
 	{
 		int v = temp->getVertex();
 		if (color[v] == White)
@@ -114,6 +116,7 @@ int** Graph::DFSvisit(int u, int time, Color color[], int** ans)
 		}
 	}
 	color[u] = Black;
+	return ans;
 }
 
 void Graph::TopoLogicalSort()
@@ -121,10 +124,12 @@ void Graph::TopoLogicalSort()
 
 }
 
-int** Graph::BellmanFord(Vertex s, Vertex v)
+int** Graph::BellmanFordInner(Vertex s, Vertex v)
 {
-	int** ans = zerosTwoDimMatrix<int>(2, this->num_v);
-	for (int i(0); i < this->num_v; i++)
+	// ans[0][i] = d[i]
+	// ans[1][i] = pi[i]
+	int** ans = zerosTwoDimMatrix<int>(2, this->numVertex);
+	for (int i(0); i < this->numVertex; i++)
 	{
 		ans[0][i] = INF;
 		ans[1][i] = NIL;
@@ -132,12 +137,14 @@ int** Graph::BellmanFord(Vertex s, Vertex v)
 	ans[0][s] = 0;
 	if (this->edges == NULL)
 		this->setEdgesFromMatrix();
-	for (int i(1); i < this->num_v; i++)
+	for (int i(1); i < this->numVertex; i++)
 	{
-		for (int j(0); j < this->num_e; j++)
+		for (int j(0); j < this->numEdge; j++)
 		{
 			Edge* temp = this->edges[j];
-			Distance newValue = ans[0][temp->getFrom()] == INF ? INF : ans[0][temp->getFrom()] + this->getAdjDistance(temp->getFrom(), temp->getTo());
+			Distance from = ans[0][temp->getFrom()];
+			Distance between = this->getAdjDistance(temp->getFrom(), temp->getTo());
+			Distance newValue = (from == INF || between == INF) ? INF : from + between;
 			if (newValue < ans[0][temp->getTo()])
 			{
 				ans[0][temp->getTo()] = newValue;
@@ -145,7 +152,7 @@ int** Graph::BellmanFord(Vertex s, Vertex v)
 			}
 		}
 	}
-	for (int i(0); i < this->num_e; i++)
+	for (int i(0); i < this->numEdge; i++)
 	{
 		Edge* temp = this->edges[i];
 		if (ans[0][temp->getTo()] > ans[0][temp->getFrom()] + this->getAdjDistance(temp->getFrom(), temp->getTo()))
@@ -155,4 +162,47 @@ int** Graph::BellmanFord(Vertex s, Vertex v)
 		}
 	}
 	return ans;
+}
+
+void Graph::printWayFromAns(int** ans, Vertex from, Vertex to)
+{
+	Vertex* way = new Vertex[this->numVertex];
+	int index = 0;
+	way[index] = to;
+	while (ans[1][to] != from)
+	{
+		to = ans[1][to];
+		way[++index] = to;
+	}
+	way[++index] = from;
+	cout << "\nThe shortest way is:\n";
+	for (index; index > 0; index--)
+		cout << this->index2name[way[index]] << " -> ";
+	cout << this->index2name[way[0]] << endl << endl;
+}
+
+void Graph::getVertexDistance()
+{
+	while (true)
+	{
+		cout << "\nPlease input two vertexs' names('go out'to exit):\n";
+		string from, to;
+		cin >> from >> to;
+		if (from == "go" && to == "out")
+			break;
+		Vertex f, t;
+		f = this->name2index[from];
+		t = this->name2index[to];
+		int** ans = this->BellmanFordInner(f, t);
+		if (ans == NULL)
+			cout << "\nNo Answer!\n";
+		else
+		{
+			cout << "\nThe shortest distance is:\n" << ans[0][t] << endl;
+			this->printWayFromAns(ans, f, t);
+			delTwoDimMatrix(ans, 2);
+		}
+	}
+	cout << "\nExit Successfully!\n";
+
 }

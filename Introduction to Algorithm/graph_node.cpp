@@ -4,20 +4,17 @@
 GraphNode::GraphNode(int vertex) 
 {
 	this->vertex = vertex;
-	this->distance = 1;
 	this->next = nullptr;
 }
 
 GraphNode::GraphNode(int vertex, int length)
 {
 	this->vertex = vertex;
-	this->distance = length;
 	this->next = nullptr;
 }
 GraphNode::GraphNode()
 {
 	this->vertex = -1;
-	this->distance = -1;
 	this->next = nullptr;
 }
 
@@ -32,15 +29,6 @@ int GraphNode::getVertex()
 	return this->vertex;
 }
 
-void GraphNode::setDistance(int length)
-{
-	this->distance = length;
-}
-
-int GraphNode::getDistance()
-{
-	return this->distance;
-}
 
 int GraphNode::printVertex()
 {
