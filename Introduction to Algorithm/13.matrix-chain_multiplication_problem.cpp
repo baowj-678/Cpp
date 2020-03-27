@@ -28,8 +28,8 @@ int main()
 long long matrix_chain_order(int nums[], int n)
 {
 	// get memory
-	long long** m = create_two_dim_array<long long>(n, n);
-	int** s = create_two_dim_array<int>(n, n);
+	long long** m = zerosTwoDimMatrix<long long>(n, n);
+	int** s = zerosTwoDimMatrix<int>(n, n);
 
 	// init variables
 	int i, j, k, l;
@@ -56,13 +56,13 @@ long long matrix_chain_order(int nums[], int n)
 			}
 		}
 	}
-	array_print_two_dim<long long>(m, n, n);
+	printTwoDimMatrix<long long>(m, n, n);
 	cout << "The order is:\n";
 	print_optimal_parens(s, 0, n - 1);
 	long long ans = m[0][n - 1];
 	// delete memory
-	del_two_dim_array<long long>(m, n);
-	del_two_dim_array<int>(s, n);
+	delTwoDimMatrix<long long>(m, n);
+	delTwoDimMatrix<int>(s, n);
 	return ans;
 }
 

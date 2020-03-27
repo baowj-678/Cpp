@@ -90,22 +90,22 @@ double closestPoint(point* points[], int begin, int end)
 	return dis;
 }
 
-int main()
-{
-	int n;
-	n = 200;
-	point** points = new point*[n];
-	double* x = array_generate_double<double>(n, 0, 10);
-	double* y = array_generate_double<double>(n, 0, 10);
-	for (int i(0); i < n; i++)
-	{
-		points[i] = new point(x[i], y[i]);
-	}
-	sort(points, points + n - 1, cmp_x);
-	printPoints(points, n);
-	cout << endl;
-	cout << "分治算法" << endl;
-	cout << closest(points, 0, n) << endl << endl;
-	cout << "普通算法" << endl;
-	cout << closestPoint(points, 0, n) << endl;
-}
+//int main()
+//{
+//	int n;
+//	n = 200;
+//	point** points = new point*[n];
+//	double* x = array_generate_double<double>(n, 0, 10);
+//	double* y = array_generate_double<double>(n, 0, 10);
+//	for (int i(0); i < n; i++)
+//	{
+//		points[i] = new point(x[i], y[i]);
+//	}
+//	sort(points, points + n - 1, cmp_x);
+//	printPoints(points, n);
+//	cout << endl;
+//	cout << "分治算法" << endl;
+//	cout << closest(points, 0, n) << endl << endl;
+//	cout << "普通算法" << endl;
+//	cout << closestPoint(points, 0, n) << endl;
+//}

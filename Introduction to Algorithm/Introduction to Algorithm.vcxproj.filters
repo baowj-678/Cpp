@@ -81,6 +81,12 @@
     <ClCompile Include="19.Introduction to Algorithm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="20.fast_way.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="graph_algorithm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic_array_function.h">
@@ -99,6 +105,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="graph_edge.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="graph_const.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

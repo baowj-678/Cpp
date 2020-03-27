@@ -15,7 +15,7 @@ int main()
 
 int backpack(int w[], int v[], int n, int Weight)
 {
-	int** P = create_two_dim_array(n + 1, Weight + 1);
+	int** P = zerosTwoDimMatrix(n + 1, Weight + 1);
 	int i(0), j(0), value1(0), value2(0), value(0);
 	for (i = 0; i <= n; i++)
 		P[i][0] = 0;
@@ -32,6 +32,6 @@ int backpack(int w[], int v[], int n, int Weight)
 	}
 	//array_print_two_dim(P, n + 1, Weight + 1);
 	value = P[n][Weight];
-	del_two_dim_array(P, n + 1);
+	delTwoDimMatrix(P, n + 1);
 	return value;
 }

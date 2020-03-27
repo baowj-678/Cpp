@@ -17,9 +17,9 @@ double optimal_bst(int n, double p[], double q[])
 	// get memory
 	int i, j, r, l;
 	double now = 0;
-	double** e = create_two_dim_array<double>(n + 1, n + 1);
-	double** w = create_two_dim_array<double>(n + 1, n + 1);
-	int** root = create_two_dim_array<int>(n, n);
+	double** e = zerosTwoDimMatrix<double>(n + 1, n + 1);
+	double** w = zerosTwoDimMatrix<double>(n + 1, n + 1);
+	int** root = zerosTwoDimMatrix<int>(n, n);
 	//init
 	for (i = 0; i <= n; i++)
 	{
@@ -49,8 +49,8 @@ double optimal_bst(int n, double p[], double q[])
 			}
 		}
 	}
-	array_print_two_dim<double>(e, n + 1, n + 1);
-	array_print_two_dim<double>(w, n + 1, n + 1);
+	printTwoDimMatrix<double>(e, n + 1, n + 1);
+	printTwoDimMatrix<double>(w, n + 1, n + 1);
 	now = e[0][n];
 	//del_two_dim_array<double>(e, n + 1);
 	//del_two_dim_array<double>(w, n + 1);

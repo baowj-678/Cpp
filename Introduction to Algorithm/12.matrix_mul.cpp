@@ -6,8 +6,8 @@ double** matrix_mul(double** A, double** B, int n);
 int main()
 {
 	int n = 10;
-	double** A = create_two_dim_array(n, n);
-	double** B = create_two_dim_array(n, n);
+	double** A = zerosTwoDimMatrix(n, n);
+	double** B = zerosTwoDimMatrix(n, n);
 	for (int i(0); i < n; i++)
 	{
 		for (int j(0); j < n; j++)
@@ -17,7 +17,7 @@ int main()
 		}
 	}
 	A = matrix_mul(A, B, n);
-	array_print_two_dim(A, n, n);
+	printTwoDimMatrix(A, n, n);
 }
 
 //double** matrix_mul(double** A, double** B, int n)

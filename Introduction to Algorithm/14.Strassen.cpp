@@ -10,9 +10,9 @@ int main()
 {
 	clock_t begin, end;
 	int n = 256;
-	double** A = create_two_dim_array<double>(n, n);
-	double** B = create_two_dim_array<double>(n, n);
-	double** C = create_two_dim_array<double>(n, n);
+	double** A = zerosTwoDimMatrix<double>(n, n);
+	double** B = zerosTwoDimMatrix<double>(n, n);
+	double** C = zerosTwoDimMatrix<double>(n, n);
 	for (int i(0); i < n; i++)
 	{
 		for (int j(0); j < n; j++)
@@ -70,20 +70,20 @@ double** strassen(double** A, double** B, double** C, int n)
 	}
 	int newsize = n / 2;
 	// get memory
-	double** S1 = create_two_dim_array<double>(newsize, newsize);
-	double** S2 = create_two_dim_array<double>(newsize, newsize);
-	double** S3 = create_two_dim_array<double>(newsize, newsize);
-	double** S4 = create_two_dim_array<double>(newsize, newsize);
-	double** S5 = create_two_dim_array<double>(newsize, newsize);
-	double** S6 = create_two_dim_array<double>(newsize, newsize);
-	double** S7 = create_two_dim_array<double>(newsize, newsize);
-	double** S8 = create_two_dim_array<double>(newsize, newsize);
-	double** S9 = create_two_dim_array<double>(newsize, newsize);
-	double** S10 = create_two_dim_array<double>(newsize, newsize);
-	double** S11 = create_two_dim_array<double>(newsize, newsize);
-	double** S12 = create_two_dim_array<double>(newsize, newsize);
-	double** S13 = create_two_dim_array<double>(newsize, newsize);
-	double** S14 = create_two_dim_array<double>(newsize, newsize);
+	double** S1 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S2 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S3 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S4 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S5 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S6 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S7 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S8 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S9 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S10 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S11 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S12 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S13 = zerosTwoDimMatrix<double>(newsize, newsize);
+	double** S14 = zerosTwoDimMatrix<double>(newsize, newsize);
 	// clac s
 	for (int i(0); i < newsize; i++)
 	{
@@ -123,19 +123,19 @@ double** strassen(double** A, double** B, double** C, int n)
 			C[newsize + i][newsize + j] = S1[i][j] + S5[i][j] - S7[i][j] - S3[i][j];
 		}
 	}
-	del_two_dim_array<double>(S1, newsize);
-	del_two_dim_array<double>(S2, newsize);
-	del_two_dim_array<double>(S3, newsize);
-	del_two_dim_array<double>(S4, newsize);
-	del_two_dim_array<double>(S5, newsize);
-	del_two_dim_array<double>(S6, newsize);
-	del_two_dim_array<double>(S7, newsize);
-	del_two_dim_array<double>(S8, newsize);
-	del_two_dim_array<double>(S9, newsize);
-	del_two_dim_array<double>(S10, newsize);
-	del_two_dim_array<double>(S11, newsize);
-	del_two_dim_array<double>(S12, newsize);
-	del_two_dim_array<double>(S13, newsize);
-	del_two_dim_array<double>(S14, newsize);
+	delTwoDimMatrix<double>(S1, newsize);
+	delTwoDimMatrix<double>(S2, newsize);
+	delTwoDimMatrix<double>(S3, newsize);
+	delTwoDimMatrix<double>(S4, newsize);
+	delTwoDimMatrix<double>(S5, newsize);
+	delTwoDimMatrix<double>(S6, newsize);
+	delTwoDimMatrix<double>(S7, newsize);
+	delTwoDimMatrix<double>(S8, newsize);
+	delTwoDimMatrix<double>(S9, newsize);
+	delTwoDimMatrix<double>(S10, newsize);
+	delTwoDimMatrix<double>(S11, newsize);
+	delTwoDimMatrix<double>(S12, newsize);
+	delTwoDimMatrix<double>(S13, newsize);
+	delTwoDimMatrix<double>(S14, newsize);
 	return C;
 }

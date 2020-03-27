@@ -22,8 +22,8 @@ char* SLC(string A, string B, int a, int b)
     if(a == 0 || b == 0)
         return 0;
     // init the data
-    char** Max = create_two_dim_array(a, b);
-    char** Record = create_two_dim_array(a, b);
+    char** Max = zerosTwoDimMatrix<char>(a, b);
+    char** Record = zerosTwoDimMatrix<char>(a, b);
     int i, j, k, length;
     k = 0;
     //init the matrix
@@ -110,8 +110,8 @@ char* SLC(string A, string B, int a, int b)
     for(i = 0; i < Max[a - 1][b - 1]; i++)
         cout << ans[i];
     cout << endl;
-    del_two_dim_array(Max, a);
-    del_two_dim_array(Record, a);
+    delTwoDimMatrix(Max, a);
+    delTwoDimMatrix(Record, a);
     return ans;
 }
 

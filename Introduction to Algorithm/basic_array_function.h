@@ -6,7 +6,7 @@
 using namespace::std;
 
 template<typename element>
-void array_print(element* nums, int n)
+void printOneDimArray(element* nums, int n)
 {
 	for (int i(0); i < n; i++)
 	{
@@ -16,7 +16,7 @@ void array_print(element* nums, int n)
 }
 
 template<typename element>
-element* array_shuffle(element nums[], int n)
+element* shuffleOneDimArray(element nums[], int n)
 {
 	for (int i(0); i < n / 2; i++)
 	{
@@ -30,7 +30,7 @@ element* array_shuffle(element nums[], int n)
 }
 
 template<typename element>
-element* array_generate_int(int n)
+element* randomOneDimArrayInt(int n)
 {
 	element* nums = new element[n];
 	for (int i(0); i < n; i++)
@@ -49,7 +49,7 @@ element* array_generate_int(int n)
 }
 
 template<typename element>
-element** create_two_dim_array(int x, int y)
+element** zerosTwoDimMatrix(int x, int y)
 {
 	element** array = new element * [x];
 	if (array != NULL)
@@ -69,7 +69,7 @@ element** create_two_dim_array(int x, int y)
 }
 
 template<typename element>
-bool del_two_dim_array(element** array, int x)
+bool delTwoDimMatrix(element** array, int x)
 {
 	for (int i(0); i < x; i++)
 	{
@@ -83,7 +83,7 @@ bool del_two_dim_array(element** array, int x)
 }
 
 template<typename element>
-void array_print_two_dim(element** nums, int x, int y)
+void printTwoDimMatrix(element** nums, int x, int y)
 {
 	int i, j;
 	for (i = 0; i < x; i++)
@@ -106,7 +106,7 @@ element* array_generate_double(int n, double begin, double end)
 	{
 		nums[i] = begin + i * delta;
 	}
-	array_shuffle<element>(nums, n);
+	shuffleOneDimArray<element>(nums, n);
 	return nums;
 }
 
