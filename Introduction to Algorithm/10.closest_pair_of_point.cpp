@@ -36,10 +36,10 @@ double merge(point* points[], int begin, int end, double dis, int mid)//[begin, 
 			right.push_back(points[i]);
 	}
 	sort(right.begin(), right.end(), cmp_y);
-	for (int i = 0, index; i < left.size(); ++i)  // 遍历左边的点集合，与右边符合条件的计算距离
+	for (unsigned int i = 0, index; i < left.size(); ++i)  // 遍历左边的点集合，与右边符合条件的计算距离
 	{
 		for (index = 0; index < right.size() && left[i]->y < right[index]->y - dis; ++index);
-		for (int j = 0; j < 7 && index + j < right.size(); ++j)
+		for (unsigned int j = 0; j < 7 && index + j < right.size(); ++j)
 		{
 			if (distancePoint(left[i], right[j + index]) < dis)
 				dis = distancePoint(left[i], right[j + index]);

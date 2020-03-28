@@ -3,6 +3,7 @@
 #define BASIC_ARRAY_FUNC
 #include <iostream>
 #include <iomanip>
+#include <stdlib.h>
 using namespace::std;
 
 template<typename element>
@@ -59,6 +60,8 @@ element** zerosTwoDimMatrix(int x, int y)
 			array[i] = new element[y];
 			if (array[i] == NULL)
 				return NULL;
+			else
+				memset(array[i], 0, y*sizeof(element));
 		}
 	}
 	else
@@ -83,14 +86,14 @@ bool delTwoDimMatrix(element** array, int x)
 }
 
 template<typename element>
-void printTwoDimMatrix(element** nums, int x, int y)
+void printTwoDimMatrix(element** nums, int x, int y, int width = 4)
 {
 	int i, j;
 	for (i = 0; i < x; i++)
 	{
 		for (j = 0; j < y; j++)
 		{
-			cout << setiosflags(ios::left) << setw(6) << nums[i][j];
+			cout << setiosflags(ios::left) << setw(width) << nums[i][j];
 		}
 		cout << endl;
 	}
