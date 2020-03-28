@@ -164,7 +164,7 @@ int** Graph::BellmanFordInner(Vertex s, Vertex v)
 	return ans;
 }
 
-void Graph::printWayFromAns(int** ans, Vertex from, Vertex to)
+void Graph::printPathFromPiMatrix(int** ans, Vertex from, Vertex to)
 {
 	Vertex* way = new Vertex[this->numVertex];
 	int index = 0;
@@ -181,7 +181,7 @@ void Graph::printWayFromAns(int** ans, Vertex from, Vertex to)
 	cout << this->index2name[way[0]] << endl << endl;
 }
 
-void Graph::getVertexDistance()
+void Graph::getTwoVertexShortPath()
 {
 	while (true)
 	{
@@ -199,10 +199,118 @@ void Graph::getVertexDistance()
 		else
 		{
 			cout << "\nThe shortest distance is:\n" << ans[0][t] << endl;
-			this->printWayFromAns(ans, f, t);
+			this->printPathFromPiMatrix(ans, f, t);
 			delTwoDimMatrix(ans, 2);
 		}
 	}
 	cout << "\nExit Successfully!\n";
+}
 
+Distance** Graph::apspExtendAlgorithm()
+{
+	Distance** paths = zerosTwoDimMatrix<Distance>(this->numVertex, this->numVertex);
+	Distance** copy = zerosTwoDimMatrix<Distance>(this->numVertex, this->numVertex);
+	if (this->distanceMatrix == NULL)
+	{
+		this->inputDistanceMatrix();
+	}
+	int i, j, k, t;
+	for (i = 0; i < this->numVertex; i++)
+	{
+		for (j = 0; j < this->numVertex; j++)
+		{
+			paths[i][j] = this->distanceMatrix[i][j];
+		}
+	}
+
+	for (t = 1; t < this->numVertex; t++)
+	{
+		for (i = 0; i < this->numVertex; i++)
+		{
+			for (j = 0; j < this->numVertex; j++)
+			{
+				copy[i][j] = INF;
+				for (k = 0; k < this->numVertex; k++)
+				{
+					if (paths[i][k] == INF || this->distanceMatrix[k][j] == INF)
+						continue;
+					else
+					{
+						Distance newDis = paths[i][k] + this->distanceMatrix[k][j];
+						if (newDis < copy[i][j])
+							copy[i][j] = newDis;
+					}
+				}
+			}
+		}
+		for (i = 0; i < this->numVertex; i++)
+		{
+			for (j = 0; j < this->numVertex; j++)
+			{
+				paths[i][j] = copy[i][j];
+			}
+		}
+	}
+	delete[] copy;
+	return paths;
+}
+
+Distance** Graph::apspFloydWarshallAlgorithm()
+{
+	//initialize
+	Distance** distance = zerosTwoDimMatrix<Distance>(this->numVertex, this->numVertex);
+	Distance** copy = zerosTwoDimMatrix<Distance>(this->numVertex, this->numVertex);
+	if (this->distanceMatrix == NULL)
+	{
+		this->inputDistanceMatrix();
+	}
+	int i, j, t;
+	for (i = 0; i < this->numVertex; i++)
+	{
+		for (j = 0; j < this->numVertex; j++)
+		{
+			distance[i][j] = this->distanceMatrix[i][j];
+		}
+	}
+
+	//
+	for (t = 0; t < this->numVertex; t++)
+	{
+		for (i = 0; i < this->numVertex; i++)
+		{
+			for (j = 0; j < this->numVertex; j++)
+			{
+				if (distance[i][t] != INF && distance[t][j] != INF)
+					copy[i][j] = min(distance[i][j], distance[i][t] + distance[t][j]);
+				else
+					copy[i][j] = distance[i][j];
+			}
+		}
+		for (i = 0; i < this->numVertex; i++)
+		{
+			for (j = 0; j < this->numVertex; j++)
+			{
+				distance[i][j] = copy[i][j];
+			}
+		}
+	}
+	delete[] copy;
+	return distance;
+}
+
+void Graph::getAllPairShortPath()
+{
+	Distance** distance;
+	cout << "\nInput \n'1',for Extend algorithm;\n'2',for Floyd Warshall algorithm;\n'0',for exit:\n";
+	int flag;
+	cin >> flag;
+	if (flag == 1)
+		distance = this->apspExtendAlgorithm();
+	else if (flag == 2)
+		distance = this->apspFloydWarshallAlgorithm();
+	else
+		return;
+	string out =  "\nThe shortest distance between vertexs are:\n";
+	this->printDistanceMatrix(5, out, distance);
+	delTwoDimMatrix<Distance>(distance, this->numVertex);
 }

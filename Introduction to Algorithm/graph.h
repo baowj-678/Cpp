@@ -16,7 +16,7 @@ public:
     //set adjacency matrix using distance,-1 for INF
     void inputDistanceMatrix();
     //print adjacency matrix(distance)
-    void printDistanceMatrix(int w = 4);
+    void printDistanceMatrix(int w = 4, std::string info = "\nThe distance matrix is:\n", Distance** distance = NULL);
     // false:input manually; true:0-1,1-2...
     void setNameIndexMap(int isDefault = true);
     //print bool matrix
@@ -35,6 +35,7 @@ public:
     GraphNode* MSTprim();
     void TopoLogicalSort();
     void getTwoVertexShortPath();
+    void getAllPairShortPath();
     //
     Distance getAdjDistance(Vertex a, Vertex b);
     
@@ -70,7 +71,8 @@ private:
     void setBooleanFromDistance();
     void printPathFromPiMatrix(int** ans, Vertex from, Vertex to);
     int** BellmanFordInner(Vertex u, Vertex s);
-    Distance** allPairsShortPathExtendAlgorithm();
+    Distance** apspExtendAlgorithm();//all pairs short path
+    Distance** apspFloydWarshallAlgorithm();
 };
 
 

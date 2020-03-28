@@ -92,23 +92,26 @@ bool Graph::destroyListSpace()
 }
 
 
-void Graph::setDistanceMatrix()
+void Graph::inputDistanceMatrix()
 {
 	if (this->distanceMatrix == nullptr)
 		this->getDistanceMatrixSpace();
-	std::cout << "Please input adjacency matrix(distance, 2147483647:INF)\n";
+	std::string input;
+	std::cout << "Please input adjacency matrix(distance, inf)\n";
 	for (int i(0); i < this->numVertex; i++)
 	{
 		for (int j(0); j < this->numVertex; j++)
 		{
-			int temp;
-			std::cin >> temp;
-			this->distanceMatrix[i][j] = temp;
+			std::cin >> input;
+			if (input == "inf")
+				this->distanceMatrix[i][j] = INF;
+			else
+				this->distanceMatrix[i][j] = atoi(input.c_str());
 		}
 	}
 }
 
-void Graph::setBoolMatrix()
+void Graph::inputBoolMatrix()
 {
 	if (this->booleanMatrix == nullptr)
 		this->getBooleanMatrixSpace();
@@ -126,11 +129,14 @@ void Graph::setBoolMatrix()
 		}
 	}
 }
-void Graph::printDistanceMatrix(int w)
+void Graph::printDistanceMatrix(int w, std::string out, Distance** distance)
 {
-	if (this->distanceMatrix == nullptr)
+	if (distance == NULL)
+		distance = this->distanceMatrix;
+	if (distance == NULL)
 		return;
-	std::cout << "\nThe distance matrix is:\n";
+	std::cout << out;
+	std::string inf = "inf";
 	// print index
 	if(this->index2name.empty() == false)
 		for (int i(-1); i < this->numVertex; i++)
@@ -151,7 +157,10 @@ void Graph::printDistanceMatrix(int w)
 		// print distance
 		for (int j(0); j < this->numVertex; j++)
 		{
-			std::cout << std::setiosflags(std::ios::left) << std::setw(w) << this->distanceMatrix[i][j];
+			if(distance[i][j] == INF)
+				std::cout << std::setiosflags(std::ios::left) << std::setw(w) << inf;
+			else
+				std::cout << std::setiosflags(std::ios::left) << std::setw(w) << distance[i][j];
 		}
 		std::cout << std::endl;
 	}
@@ -380,11 +389,13 @@ int main()
 	backup = cin.rdbuf();
 	cin.rdbuf(fin.rdbuf());
 	Graph g = Graph(true, 5, 10);
-	g.setNameIndexMap(false);
-	g.setDistanceMatrix();
-	g.printDistanceMatrix(15);
+	g.setNameIndexMap(true);
+	g.inputDistanceMatrix();
+	g.printDistanceMatrix(5);
 	cin.rdbuf(backup);
-	g.getVertexDistance();
+	//g.getTwoVertexShortPath();
+	g.getAllPairShortPath();
+	
 }
 
 /*
