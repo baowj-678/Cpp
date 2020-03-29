@@ -18,7 +18,28 @@
     <ClCompile Include="operation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="P-V.cpp">
+    <ClCompile Include="P-V_Critical_Section.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P-V_Mutex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="linux-process_test1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="linux-process_test2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="linux-process_test3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="windows-process_1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoStart.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="windows-thread.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
