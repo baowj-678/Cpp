@@ -87,6 +87,12 @@
     <ClCompile Include="graph_algorithm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="QuickFindUF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickUnionUF.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic_array_function.h">
@@ -108,6 +114,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="graph_const.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickFindUF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickUnionUF.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

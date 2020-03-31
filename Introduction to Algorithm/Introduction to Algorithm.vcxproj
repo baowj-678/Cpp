@@ -213,6 +213,8 @@
     <ClCompile Include="14.Strassen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="QuickFindUF.cpp" />
+    <ClCompile Include="QuickUnionUF.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic_array_function.h" />
@@ -220,6 +222,8 @@
     <ClInclude Include="graph_const.h" />
     <ClInclude Include="graph_node.h" />
     <ClInclude Include="linked_list.h" />
+    <ClInclude Include="QuickFindUF.h" />
+    <ClInclude Include="QuickUnionUF.h" />
     <ClInclude Include="sort_algorithm.h" />
     <ClInclude Include="graph_edge.h" />
   </ItemGroup>
