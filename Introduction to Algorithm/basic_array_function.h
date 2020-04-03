@@ -1,6 +1,4 @@
 #pragma once
-#ifndef BASIC_ARRAY_FUNC
-#define BASIC_ARRAY_FUNC
 #include <iostream>
 #include <iomanip>
 #include <stdlib.h>
@@ -124,7 +122,4 @@ element** array_two_dim_generate_double(int n, double begin, double end)
 	return array;
 }
 
-
-
-#endif // !BASIC_ARRAY_FUNC
 

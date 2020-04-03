@@ -48,7 +48,6 @@ void QuickUnionUF::unionn(std::string p, std::string q)
 void QuickUnionUF::inputMap()
 {
 	std::string name;
-	int id;
 	std::cout << "\nPlease input the element-name its id (from 0 to n - 1):\n";
 	for (int i(0); i < this->num; i++)
 	{

@@ -184,6 +184,8 @@
     <ClCompile Include="20.fast_way.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BST.cpp" />
+    <ClCompile Include="flowGraph.cpp" />
     <ClCompile Include="graph.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
@@ -213,15 +215,21 @@
     <ClCompile Include="14.Strassen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="nodeBST.cpp" />
     <ClCompile Include="QuickFindUF.cpp" />
+    <ClCompile Include="QuickUnionUFWeighted.cpp" />
+    <ClCompile Include="QuickUnionUFWeighted.h" />
     <ClCompile Include="QuickUnionUF.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic_array_function.h" />
+    <ClInclude Include="BST.h" />
+    <ClInclude Include="FlowGraph.h" />
     <ClInclude Include="graph.h" />
     <ClInclude Include="graph_const.h" />
     <ClInclude Include="graph_node.h" />
     <ClInclude Include="linked_list.h" />
+    <ClInclude Include="nodeBST.h" />
     <ClInclude Include="QuickFindUF.h" />
     <ClInclude Include="QuickUnionUF.h" />
     <ClInclude Include="sort_algorithm.h" />

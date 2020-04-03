@@ -17,7 +17,6 @@ QuickFindUF::~QuickFindUF()
 void QuickFindUF::inputMap()
 {
 	std::string name;
-	int id;
 	std::cout << "\nPlease input the element-name its id (from 0 to n - 1):\n";
 	for (int i(0); i < this->num; i++)
 	{

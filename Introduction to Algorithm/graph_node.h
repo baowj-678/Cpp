@@ -1,6 +1,4 @@
 #pragma once
-#ifndef _GRAPH_NODE_
-#define _GRAPH_NODE_
 #include "graph_const.h"
 
 enum Color
@@ -35,6 +33,3 @@ public:
 	//void setDistance(int length);
 	void setNext(GraphNode* next);
 };
-
-
-#endif // !_GRAPH_NODE_

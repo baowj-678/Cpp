@@ -1,10 +1,13 @@
-#ifndef _GRAPH_
-#define _GRAPH_
+#pragma once
 #include "graph_const.h"
 #include "graph_node.h"
 #include "graph_edge.h"
+#include "QuickUnionUFWeighted.h"
 #include <string>
+#include <vector>
 #include <map>
+
+typedef Distance Flow;
 
 class Graph 
 {
@@ -24,7 +27,7 @@ public:
     //print adjacency list(distance)
     void printAdjList(int w = 4);
     bool setListFromMatrix();
-    //get values of edges
+    //
     void setEdgesFromMatrix();
     //print edges
     void printEdges();
@@ -40,7 +43,7 @@ public:
     Distance getAdjDistance(Vertex a, Vertex b);
     
 
-private:
+protected:
     //is oriented graph
     bool isOriented;
     //boolean adjacency matrix
@@ -49,7 +52,7 @@ private:
     Distance** distanceMatrix;
     //adjacency list array
     GraphNode* adjList;
-    //store edges
+    //store edges array/list
     Edge** edges;
     //name to index map
     std::map<std::string, int>name2index;
@@ -66,14 +69,12 @@ private:
     bool destroyBooleanMatrixSpace();
     GraphNode* getListSpace();
     bool destroyListSpace();
-    Edge** getEdgeSpace();
+    void getEdgeSpace();
     bool destroyEdgeSpace();
     void setBooleanFromDistance();
     void printPathFromPiMatrix(int** ans, Vertex from, Vertex to);
     int** BellmanFordInner(Vertex u, Vertex s);
     Distance** apspExtendAlgorithm();//all pairs short path
     Distance** apspFloydWarshallAlgorithm();
+
 };
-
-
-#endif // !_GRAPH_

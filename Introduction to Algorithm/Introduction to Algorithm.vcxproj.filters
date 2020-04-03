@@ -93,6 +93,21 @@
     <ClCompile Include="QuickUnionUF.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="QuickUnionUFWeighted.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickUnionUFWeighted.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="nodeBST.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BST.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="flowGraph.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basic_array_function.h">
@@ -120,6 +135,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="QuickUnionUF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BST.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="nodeBST.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowGraph.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

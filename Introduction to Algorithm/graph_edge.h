@@ -1,6 +1,4 @@
 #pragma once
-#ifndef _GRAPH_EDGE_
-#define _GRAPH_EDGE_
 #include "graph_const.h"
 typedef int EdgeDistance;
 
@@ -23,7 +21,3 @@ public:
 	bool cmp(Edge* A, Edge* B);
 
 };
-
-
-
-#endif // !_GRAPH_EDGE_

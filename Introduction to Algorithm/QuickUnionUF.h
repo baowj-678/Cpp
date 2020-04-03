@@ -1,6 +1,4 @@
 #pragma once
-#ifndef _QUICK_UNION_UF_
-#define _QUICK_UNION_UF_
 #include <string>
 #include <map>
 
@@ -16,6 +14,7 @@ public:
 	bool connect(std::string p, std::string q);
 	void unionn(int p, int q);
 	void unionn(std::string p, std::string q);
+	void pathCompression();
 
 protected:
 	int* id;
@@ -23,8 +22,3 @@ protected:
 	int num;
 };
 
-
-
-
-
-#endif // !_QUICK_UNION_UF_

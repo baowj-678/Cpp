@@ -1,6 +1,4 @@
 #pragma once
-#ifndef SORT_ALGORITHM
-#define SORT_ALGORITHM
 #include "linked_list.h"
 
 //insert sort
@@ -30,5 +28,4 @@ int main_quick_sort();
 //random quick sort
 int* random_quick_sort(int* nums, int left, int right);
 int main_random_quick_sort();
-#endif // !SORT_ALGORITHM
 

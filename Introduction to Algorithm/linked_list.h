@@ -1,6 +1,4 @@
 #pragma once
-#ifndef LINKED_LIST
-#define LINKED_LIST
 
 typedef double element;
 struct NODE;
@@ -18,5 +16,3 @@ struct NODE
 	element val;
 	struct NODE* next;
 };
-
-#endif // !LINKED_LIST

@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <vector>
 #include <queue>
+#include <vector>
 
 using namespace::std;
 
@@ -206,6 +207,7 @@ void Graph::getTwoVertexShortPath()
 	cout << "\nExit Successfully!\n";
 }
 
+// all pairs short path Extend Algorithm
 Distance** Graph::apspExtendAlgorithm()
 {
 	Distance** paths = zerosTwoDimMatrix<Distance>(this->numVertex, this->numVertex);
@@ -255,6 +257,7 @@ Distance** Graph::apspExtendAlgorithm()
 	return paths;
 }
 
+// all pairs short path Floyd Warshall Algorithm
 Distance** Graph::apspFloydWarshallAlgorithm()
 {
 	//initialize
@@ -314,3 +317,4 @@ void Graph::getAllPairShortPath()
 	this->printDistanceMatrix(5, out, distance);
 	delTwoDimMatrix<Distance>(distance, this->numVertex);
 }
+

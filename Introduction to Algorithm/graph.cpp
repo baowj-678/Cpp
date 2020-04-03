@@ -243,12 +243,6 @@ bool Graph::setListFromMatrix()
 	return true;
 }
 
-Edge** Graph::getEdgeSpace()
-{
-	this->edges = new Edge*[this->numEdge];
-	return this->edges;
-}
-
 bool Graph::destroyEdgeSpace()
 {
 	if (this->edges == nullptr)
@@ -259,64 +253,45 @@ bool Graph::destroyEdgeSpace()
 
 void Graph::setEdgesFromMatrix()
 {
-	if (this->distanceMatrix == nullptr)
+	if (this->edges != NULL)
 		return;
-	if (this->edges != nullptr)
+	if (this->distanceMatrix == NULL)
 		return;
-	Edge* temp = nullptr;
-	Edge* head = nullptr;
+	//set edge list
+	Edge* head = NULL;
+	Edge* temp = NULL;
 	this->numEdge = 0;
-	if (this->isOriented == true)
+	for (int i(0); i < this->numVertex; i++)
 	{
-		//oriented graph
-		for (int i(0); i < this->numVertex; i++)
+		for (int j(0); j < this->numVertex; j++)
 		{
-			for (int j(0); j < this->numVertex; j++)
+			if (this->distanceMatrix[i][j] != INF)
 			{
-				if (this->distanceMatrix[i][j] != INF)
-				{
-					temp = new Edge(distanceMatrix[i][j], i, j);
-					temp->setNext(head);
-					head = temp;
-					this->numEdge++;
-				}
+				temp = new Edge(this->distanceMatrix[i][j], i, j);
+				temp->setNext(head);
+				head = temp->getNext();
+				this->numEdge++;
 			}
 		}
 	}
-	else
-	{
-		//not oriented graph
-		for (int i(0); i < this->numVertex; i++)
-		{
-			for (int j(i); j < this->numVertex; j++)
-			{
-				if (this->distanceMatrix[i][j] != INF)
-				{
-					temp = new Edge(distanceMatrix[i][j], i, j);
-					temp->setNext(head);
-					head = temp;
-					this->numEdge++;
-				}
-			}
-		}
-	}
-	if (this->numEdge == 0)
-		return;
+	//set edge array
 	this->getEdgeSpace();
-	for (int i = 0; head != nullptr; head = head->getNext(), i++)
+	for (int i(0); i < this->numEdge; i++, head = head->getNext())
 	{
 		this->edges[i] = head;
 	}
 }
 
+void Graph::getEdgeSpace()
+{
+	if (this->edges != NULL)
+		delete[]this->edges;
+	this->edges = new Edge * [this->numEdge];
+}
+
 void Graph::printEdges()
 {
-	std::cout << "\nEdges(From, Distance, To):\n";
-	Edge** temp = this->edges;
-	for (int i(0); i < this->numEdge; i++)
-	{
-		std::cout << "(" << temp[i]->getFrom() + 1 << "," << temp[i]->getDistance() << "," << temp[i]->getTo() + 1 << ")  ";
-	}
+	//
 }
 
 Distance Graph::getAdjDistance(Vertex a, Vertex b)
