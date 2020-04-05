@@ -17,7 +17,7 @@ void bubbleSort(int* s, int n)
 	}
 }
 
-int main()
+int bubble_sort_main()
 {
 	int n;
 	cin >> n;
@@ -31,4 +31,5 @@ int main()
 	{
 		cout << s[i] << " ";
 	}
+	return 0;
 }

@@ -15,33 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1.Insert_sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="2.selection_sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="3.bubble_sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="4.merge sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="6.radix_sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="7.counting_sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="8.bucket_sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="5.quick_sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="9.random_quick_sort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="graph.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -51,22 +24,7 @@
     <ClCompile Include="graph_edge.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="11.backpack_problem.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="10.closest_pair_of_point.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="12.matrix_mul.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="13.matrix-chain_multiplication_problem.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="14.Strassen.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="15.sort_algorithm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="16.SLC.cpp">
@@ -105,7 +63,55 @@
     <ClCompile Include="BST.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="flowGraph.cpp">
+    <ClCompile Include="FlowGraph.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectionSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BubbleSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MergeSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RadixSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CountingSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BucketSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomQuickSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ClosestPairOfPoint.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BackpackProblem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixMul.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix-Chain_MultiplicationProblem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SortAlgorithm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeRBT.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RedBlackTree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -114,9 +120,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="linked_list.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="sort_algorithm.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="graph.h">
@@ -144,6 +147,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="FlowGraph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SortAlgorithm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RedBlackTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="nodeRBT.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

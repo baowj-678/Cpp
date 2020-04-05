@@ -19,7 +19,7 @@ void selectionSort(int* s, int n)//from small to big
 	}
 }
 
-int main()
+int select_sort_main()
 {
 	int n;
 	cin >> n;
@@ -33,4 +33,5 @@ int main()
 	{
 		cout << s[i] << " ";
 	}
+	return 0;
 }

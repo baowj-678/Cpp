@@ -52,3 +52,8 @@ bool NodeBST::comparator(Key a, Key b)
 {
 	return a > b;
 }
+
+void NodeBST::setParent(NodeBST* parent)
+{
+	this->parent = parent;
+}

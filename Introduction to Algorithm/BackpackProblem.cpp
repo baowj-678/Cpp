@@ -15,7 +15,7 @@ int main()
 
 int backpack(int w[], int v[], int n, int Weight)
 {
-	int** P = zerosTwoDimMatrix(n + 1, Weight + 1);
+	int** P = zerosTwoDimMatrix<int>(n + 1, Weight + 1);
 	int i(0), j(0), value1(0), value2(0), value(0);
 	for (i = 0; i <= n; i++)
 		P[i][0] = 0;

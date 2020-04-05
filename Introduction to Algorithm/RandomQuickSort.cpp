@@ -1,4 +1,4 @@
-#include "sort_algorithm.h"
+#include "SortAlgorithm.h"
 #include <iostream>
 
 using namespace::std;

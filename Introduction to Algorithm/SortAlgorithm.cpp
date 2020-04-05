@@ -1,4 +1,4 @@
-#include "sort_algorithm.h"
+#include "SortAlgorithm.h"
 #include "basic_array_function.h"
 #include <iostream>
 #include <time.h>
