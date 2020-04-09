@@ -269,7 +269,7 @@ void Graph::setEdgesFromMatrix()
 			{
 				temp = new Edge(this->distanceMatrix[i][j], i, j);
 				temp->setNext(head);
-				head = temp->getNext();
+				head = temp;
 				this->numEdge++;
 			}
 		}
@@ -357,21 +357,21 @@ void Graph::setNameIndexMap(int isDefault)
 		this->index2name[index - 1] = name;
 	}
 }
-//int main()
-//{
-//	streambuf* backup;
-//	ifstream fin("C:\\Users\\WILL\\Desktop\\in.txt");
-//	backup = cin.rdbuf();
-//	cin.rdbuf(fin.rdbuf());
-//	Graph g = Graph(true, 5, 10);
-//	g.setNameIndexMap(true);
-//	g.inputDistanceMatrix();
-//	g.printDistanceMatrix(5);
-//	cin.rdbuf(backup);
-//	//g.getTwoVertexShortPath();
-//	g.getAllPairShortPath();
-//	
-//}
+int main()
+{
+	streambuf* backup;
+	ifstream fin("C:\\Users\\WILL\\Desktop\\in.txt");
+	backup = cin.rdbuf();
+	cin.rdbuf(fin.rdbuf());
+	Graph g = Graph(true, 5, 10);
+	g.setNameIndexMap(false);
+	g.inputDistanceMatrix();
+	g.printDistanceMatrix(5);
+	cin.rdbuf(backup);
+	//g.getTwoVertexShortPath();
+	g.getAllPairShortPath();
+	
+}
 
 /*
 0 1 0 0 1

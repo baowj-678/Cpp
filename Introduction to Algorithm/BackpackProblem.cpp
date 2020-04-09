@@ -4,14 +4,14 @@ using namespace::std;
 
 int backpack(int w[], int v[], int n, int Weight);
 
-int main()
-{
-	int w[] = { 3, 4, 5, 6, 7, 8, 9 };
-	int v[] = { 4, 5, 6, 7, 8, 10, 14 };
-	int Weight = 20;
-	cout << backpack(w, v, 7, 20);
-	return 0;
-}
+//int main()
+//{
+//	int w[] = { 3, 4, 5, 6, 7, 8, 9 };
+//	int v[] = { 4, 5, 6, 7, 8, 10, 14 };
+//	int Weight = 20;
+//	cout << backpack(w, v, 7, 20);
+//	return 0;
+//}
 
 int backpack(int w[], int v[], int n, int Weight)
 {

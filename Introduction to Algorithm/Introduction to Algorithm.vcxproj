@@ -196,7 +196,7 @@
     <ClCompile Include="graph_algorithm.cpp" />
     <ClCompile Include="graph_edge.cpp" />
     <ClCompile Include="graph_node.cpp" />
-    <ClCompile Include="19.Introduction to Algorithm.cpp">
+    <ClCompile Include="Introduction to Algorithm.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="18.linked_list.cpp" />

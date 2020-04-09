@@ -57,3 +57,8 @@ void NodeBST::setParent(NodeBST* parent)
 {
 	this->parent = parent;
 }
+
+NodeBST* NodeBST::getParent()
+{
+	return this->parent;
+}

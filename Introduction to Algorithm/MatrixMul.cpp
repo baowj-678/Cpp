@@ -3,22 +3,23 @@
 
 using namespace::std;
 double** matrix_mul(double** A, double** B, int n);
-int main()
-{
-	int n = 10;
-	double** A = zerosTwoDimMatrix(n, n);
-	double** B = zerosTwoDimMatrix(n, n);
-	for (int i(0); i < n; i++)
-	{
-		for (int j(0); j < n; j++)
-		{
-			A[i][j] = 1;
-			B[i][j] = 1;
-		}
-	}
-	A = matrix_mul(A, B, n);
-	printTwoDimMatrix(A, n, n);
-}
+
+//int main()
+//{
+//	int n = 10;
+//	double** A = zerosTwoDimMatrix(n, n);
+//	double** B = zerosTwoDimMatrix(n, n);
+//	for (int i(0); i < n; i++)
+//	{
+//		for (int j(0); j < n; j++)
+//		{
+//			A[i][j] = 1;
+//			B[i][j] = 1;
+//		}
+//	}
+//	A = matrix_mul(A, B, n);
+//	printTwoDimMatrix(A, n, n);
+//}
 
 //double** matrix_mul(double** A, double** B, int n)
 //{

@@ -36,9 +36,6 @@
     <ClCompile Include="18.linked_list.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="19.Introduction to Algorithm.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="20.fast_way.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -112,6 +109,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="RedBlackTree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Introduction to Algorithm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
