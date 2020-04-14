@@ -25,13 +25,33 @@ DWORD WINAPI printTwo(LPVOID lpParameter)
 	return 0;
 }
 
+DWORD WINAPI A(LPVOID lpParameter)
+{
+	int n = 1000;
+	for (int i(1); i <= n; i++)
+	{
+		Sleep(500);
+		std::cout << i << " ";
+	}
+	return 0;
+}
 
+DWORD WINAPI B(LPVOID lpParameter)
+{
+	int n = 1000;
+	for (int i(n); i > 0; i--)
+	{
+		Sleep(500);
+		std::cout << i << " ";
+	}
+	return 0;
+}
 int main()
 {
 	HANDLE hThread[2];
 	DWORD ThreadID;
-	hThread[0] = CreateThread(NULL, 0, printOne, LPVOID(10), 0, &ThreadID);
-	hThread[1] = CreateThread(NULL, 0, printTwo, LPVOID(11), 0, &ThreadID);
+	hThread[0] = CreateThread(NULL, 0, A, LPVOID(0), 0, &ThreadID);
+	hThread[1] = CreateThread(NULL, 0, B, LPVOID(0), 0, &ThreadID);
 	WaitForMultipleObjects(2, hThread, TRUE, INFINITE);
 	return 0;
 }
