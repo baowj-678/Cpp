@@ -1,2 +1,4 @@
-Debug/
-.vs/
+/x64/
+/release/
+/Debug/
+/.vs/
