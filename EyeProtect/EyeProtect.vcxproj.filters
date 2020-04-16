@@ -35,6 +35,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{aa538b6a-5efc-492a-bfbc-cdf615378ffa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -72,11 +75,8 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource1.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
+    <Image Include="bird.jpg">
+      <Filter>Resources</Filter>
+    </Image>
   </ItemGroup>
 </Project>

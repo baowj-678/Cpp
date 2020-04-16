@@ -1,21 +1,27 @@
 #include "SuspendWindow.h"
 #include <qevent.h>
+#include <Windows.h>
 #include <qdebug.h>
+
 
 SuspendWindow::SuspendWindow(QWidget *parent)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
-	this->setWindowOpacity(0.5);
+	//this->setWindowOpacity(0.5);
 	this->hiddenTime = new QTimer();
 	this->updateTime = new QTimer();
 	connect(this->hiddenTime, SIGNAL(timeout()), this, SLOT(LeaveRec()));
 	connect(this->updateTime, SIGNAL(timeout()), this, SLOT(LeaveRec()));
-	this->setBackground("D:/o.jpg");
-	this->setWindowFlags(Qt::FramelessWindowHint);
-	//this->setWindowFlags(Qt::CustomizeWindowHint);
+	//this->setBackground("./bird.jpg");
+	this->setWindowFlags(Qt::FramelessWindowHint | Qt::Tool | Qt::WindowStaysOnTopHint);
+	this->setAttribute(Qt::WA_TranslucentBackground);
 	this->setTime("", "");
 	this->m_isWindowMoveable = false;
+
+	//this->ui.frame->setAttribute(Qt::WA_TranslucentBackground);
+	
+
 }
 
 SuspendWindow::~SuspendWindow()
@@ -31,7 +37,7 @@ void SuspendWindow::mouseMoveEvent(QMouseEvent* event)
 		this->m_point = event->globalPos();
 		this->move(this->x() + dx, this->y() + dy);
 	}
-	this->setWindowOpacity(0.5);
+	//this->setWindowOpacity(0.5);
 	this->hiddenTime->start(1000);
 }
 
@@ -51,7 +57,7 @@ void SuspendWindow::mouseReleaseEvent(QMouseEvent* event)
 
 void  SuspendWindow::LeaveRec()
 {
-	this->setWindowOpacity(0.3);
+	//this->setWindowOpacity(0.3);
 	this->hiddenTime->stop();
 }
 

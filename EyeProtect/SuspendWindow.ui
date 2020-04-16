@@ -6,9 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>271</width>
-    <height>377</height>
+    <width>320</width>
+    <height>540</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑</family>
+    <pointsize>48</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
   </property>
   <property name="mouseTracking">
    <bool>true</bool>
@@ -19,33 +27,78 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QLCDNumber" name="lcdNumber">
+  <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>20</y>
-     <width>201</width>
-     <height>121</height>
+     <x>0</x>
+     <y>0</y>
+     <width>320</width>
+     <height>540</height>
     </rect>
    </property>
-   <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
+   <property name="styleSheet">
+    <string notr="true">QFrame
+{
+    background-color:#ffffff;
+    border:none;
+    border-radius:13px;
+}</string>
    </property>
    <property name="frameShape">
-    <enum>QFrame::Box</enum>
+    <enum>QFrame::StyledPanel</enum>
    </property>
-   <property name="lineWidth">
-    <number>0</number>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
    </property>
-   <property name="midLineWidth">
-    <number>-1</number>
-   </property>
-   <property name="digitCount">
-    <number>2</number>
-   </property>
-   <property name="value" stdset="0">
-    <double>0.000000000000000</double>
-   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>230</y>
+      <width>201</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft JhengHei</family>
+      <pointsize>72</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>123</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>191</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="midLineWidth">
+     <number>-1</number>
+    </property>
+    <property name="digitCount">
+     <number>2</number>
+    </property>
+    <property name="value" stdset="0">
+     <double>0.000000000000000</double>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
