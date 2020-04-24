@@ -43,7 +43,7 @@ int main()
     // for(i=0;i<9;i++)
     // {
     //     printf("i\n");
-    //     usleep(500000);
+        usleep(500000);
     // }
     pthread_create(&thread_A, NULL, A, NULL);
     pthread_join(thread_A, NULL);
