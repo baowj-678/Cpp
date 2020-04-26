@@ -38,8 +38,8 @@ int main()
         //     {
         //         number = i;
         //         is_empty = 0;
-        //         kill(pid, SIGUSR1);
-        //         sleep(1);
+        // kill(pid, SIGUSR1);
+                // sleep(1);
         //     }
         //     if(i == 100)
         //     {
@@ -47,17 +47,24 @@ int main()
         //         sleep(10);
         //     }
         // }
+        sleep(300);
+        wait(NULL);
     }
     //subprocess
     if(pid == 0)
     {
-        printf("\nhello");
         // signal(SIGUSR1, handler_print);
         // signal(SIGUSR2, handler_kill);
-        // while(1){}
-        int i=0;
-        for(;i<100;i++)
-        {}
+        printf("\nhello");
+        int i = 0;
+        for(; i < 100; i++)
+        {
+            printf("hello");
+            sleep(1);
+        }
+        // int i=0;
+        // for(;i<100;i++)
+        // {}
     }
     return 0;
 }
