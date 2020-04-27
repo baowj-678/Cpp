@@ -6,43 +6,39 @@
 
 int main()
 {
-	int size = 600;
-	int centerX = size / 2;
-	int centerY = size / 2;
-	int radius = centerX - 50;
-	int x = centerX - radius;
-	int y = centerY - radius;
-	double sum_time = 100;
-	initgraph(600, 600, SHOWCONSOLE);
+	int size = 500;
+	int sleepTime = 200;
+	int radius = size - 100;
+	int x = 50;
+	int y = 50;
+	double sum_time = 40;
+	initgraph(size, size);
 	setlinecolor(WHITE);
 	moveto(x, y);
+
 	for (int i(0); i<int(sum_time); i++)
 	{
-		x += 2 * radius / sum_time;
-		printf("%d %d\n", x, y);
+		x += radius / sum_time;
 		lineto(x, y);
-		Sleep(10);
+		Sleep(sleepTime);
 	}
 	for (int i(0); i<int(sum_time); i++)
 	{
-		y += 2 * radius / sum_time;
-		printf("%d %d\n", x, y);
+		y += radius / sum_time;
 		lineto(x, y);
-		Sleep(10);
+		Sleep(sleepTime);
 	}
 	for (int i(0); i<int(sum_time); i++)
 	{
-		x -= 2 * radius / sum_time;
-		printf("%d %d\n", x, y);
+		x -= radius / sum_time;
 		lineto(x, y);
-		Sleep(10);
+		Sleep(sleepTime);
 	}
 	for (int i(0); i<int(sum_time); i++)
 	{
-		y -= 2 * radius / sum_time;
-		printf("%d %d\n", x, y);
+		y -= radius / sum_time;
 		lineto(x, y);
-		Sleep(10);
+		Sleep(sleepTime);
 	}
 	Sleep(100000);
 }

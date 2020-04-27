@@ -57,5 +57,29 @@
     <ClCompile Include="CPU.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="experiment_3_q1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_3_q3_son.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_3_q3_parent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_2_q3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_2_q4.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_2_q1.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_2_q2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_2_q5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

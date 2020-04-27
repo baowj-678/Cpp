@@ -1,6 +1,6 @@
-﻿  CPU.cpp
-D:\cpp\cpp algorithm\operation\CPU.cpp(58,29): warning C4101: “cntAvilableMemory”: 未引用的局部变量
-D:\cpp\cpp algorithm\operation\CPU.cpp(58,14): warning C4101: “cntProcessCPU”: 未引用的局部变量
-D:\cpp\cpp algorithm\operation\CPU.cpp(91,10): warning C4101: “iVal”: 未引用的局部变量
-D:\cpp\cpp algorithm\operation\CPU.cpp(178): warning C4715: “GetData”: 不是所有的控件路径都返回值
+﻿  experiment_2_q5.cpp
+D:\cpp\cpp algorithm\operation\experiment_2_q5.cpp(25,25): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+D:\cpp\cpp algorithm\operation\experiment_2_q5.cpp(36,25): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+D:\cpp\cpp algorithm\operation\experiment_2_q5.cpp(47,25): warning C4244: “-=”: 从“double”转换到“int”，可能丢失数据
+D:\cpp\cpp algorithm\operation\experiment_2_q5.cpp(58,25): warning C4244: “-=”: 从“double”转换到“int”，可能丢失数据
   operation.vcxproj -> D:\cpp\cpp algorithm\operation\Debug\operation.exe

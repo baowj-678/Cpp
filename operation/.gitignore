@@ -1,4 +1,9 @@
 /Debug/
+/.vs/
 test
 /.vscode/
 test.c
+operation.sln
+operation.vcxproj
+operation.vcxproj.filters
+operation.vcxproj.user
