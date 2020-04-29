@@ -2,8 +2,9 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+RC_ICONS += logo.ico
 CONFIG += c++11
-CONFIG += console
+
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -18,15 +19,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
 	SuspendWindow.cpp
 
 HEADERS += \
-    mainwindow.h
-	SuspendWindow.c
+	SuspendWindow.h
 
 FORMS += \
-    mainwindow.ui
 	SuspendWindow.ui
 
 # Default rules for deployment.

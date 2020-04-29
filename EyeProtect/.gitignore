@@ -1,4 +1,8 @@
 /x64/
 /release/
 /Debug/
+/debug/
 /.vs/
+EyeProtect.vcxproj.filters
+EyeProtect.vcxproj
+EyeProtect.vcxproj.user

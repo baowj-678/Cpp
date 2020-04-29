@@ -22,14 +22,16 @@ class Ui_SuspendWindow
 {
 public:
     QFrame *frame;
+    QLCDNumber *lcdMinute;
+    QLCDNumber *lcdSecond;
+    QLCDNumber *lcdDivide;
     QLabel *label;
-    QLCDNumber *lcdNumber;
 
     void setupUi(QDialog *SuspendWindow)
     {
         if (SuspendWindow->objectName().isEmpty())
             SuspendWindow->setObjectName(QString::fromUtf8("SuspendWindow"));
-        SuspendWindow->resize(320, 540);
+        SuspendWindow->resize(310, 540);
         QFont font;
         font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font.setPointSize(48);
@@ -40,33 +42,65 @@ public:
         SuspendWindow->setStyleSheet(QString::fromUtf8(""));
         frame = new QFrame(SuspendWindow);
         frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(0, 0, 320, 540));
+        frame->setGeometry(QRect(0, 0, 310, 540));
         frame->setStyleSheet(QString::fromUtf8("QFrame\n"
 "{\n"
-"    background-color:#ffffff;\n"
+"	background-color:rgba(255,255,255,255);\n"
 "    border:none;\n"
 "    border-radius:13px;\n"
 "}"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
-        label = new QLabel(frame);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(60, 230, 201, 171));
+        lcdMinute = new QLCDNumber(frame);
+        lcdMinute->setObjectName(QString::fromUtf8("lcdMinute"));
+        lcdMinute->setGeometry(QRect(30, 80, 251, 121));
+        lcdMinute->setLayoutDirection(Qt::LeftToRight);
+        lcdMinute->setStyleSheet(QString::fromUtf8("QLCDNumber{background:transparent}"));
+        lcdMinute->setFrameShape(QFrame::Box);
+        lcdMinute->setLineWidth(4);
+        lcdMinute->setMidLineWidth(0);
+        lcdMinute->setDigitCount(2);
+        lcdMinute->setProperty("value", QVariant(0.000000000000000));
+        lcdSecond = new QLCDNumber(frame);
+        lcdSecond->setObjectName(QString::fromUtf8("lcdSecond"));
+        lcdSecond->setGeometry(QRect(30, 270, 251, 121));
+        lcdSecond->setLayoutDirection(Qt::LeftToRight);
+        lcdSecond->setStyleSheet(QString::fromUtf8("QLCDNumber{background:transparent}"));
+        lcdSecond->setFrameShape(QFrame::Box);
+        lcdSecond->setLineWidth(0);
+        lcdSecond->setMidLineWidth(-1);
+        lcdSecond->setDigitCount(2);
+        lcdSecond->setProperty("value", QVariant(0.000000000000000));
+        lcdDivide = new QLCDNumber(frame);
+        lcdDivide->setObjectName(QString::fromUtf8("lcdDivide"));
+        lcdDivide->setGeometry(QRect(25, 130, 251, 121));
         QFont font1;
-        font1.setFamily(QString::fromUtf8("Microsoft JhengHei"));
+        font1.setFamily(QString::fromUtf8("Arial"));
         font1.setPointSize(72);
         font1.setBold(true);
         font1.setWeight(75);
-        label->setFont(font1);
-        lcdNumber = new QLCDNumber(frame);
-        lcdNumber->setObjectName(QString::fromUtf8("lcdNumber"));
-        lcdNumber->setGeometry(QRect(30, 30, 191, 121));
-        lcdNumber->setLayoutDirection(Qt::LeftToRight);
-        lcdNumber->setFrameShape(QFrame::Box);
-        lcdNumber->setLineWidth(0);
-        lcdNumber->setMidLineWidth(-1);
-        lcdNumber->setDigitCount(2);
-        lcdNumber->setProperty("value", QVariant(0.000000000000000));
+        font1.setKerning(true);
+        lcdDivide->setFont(font1);
+        lcdDivide->setLayoutDirection(Qt::LeftToRight);
+        lcdDivide->setStyleSheet(QString::fromUtf8("QLCDNumber{background:transparent;}"));
+        lcdDivide->setFrameShape(QFrame::Box);
+        lcdDivide->setLineWidth(0);
+        lcdDivide->setMidLineWidth(-2);
+        lcdDivide->setDigitCount(2);
+        lcdDivide->setProperty("value", QVariant(0.000000000000000));
+        lcdDivide->setProperty("intValue", QVariant(0));
+        label = new QLabel(frame);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(70, 64, 171, 371));
+        label->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"border:3px solid rgb(0, 0, 0);\n"
+"background:transparent;\n"
+"}"));
+        label->setLineWidth(0);
+        label->raise();
+        lcdMinute->raise();
+        lcdSecond->raise();
+        lcdDivide->raise();
 
         retranslateUi(SuspendWindow);
 
@@ -76,7 +110,7 @@ public:
     void retranslateUi(QDialog *SuspendWindow)
     {
         SuspendWindow->setWindowTitle(QCoreApplication::translate("SuspendWindow", "SuspendWindow", nullptr));
-        label->setText(QCoreApplication::translate("SuspendWindow", "123", nullptr));
+        label->setText(QString());
     } // retranslateUi
 
 };
