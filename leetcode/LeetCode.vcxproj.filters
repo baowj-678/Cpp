@@ -114,6 +114,9 @@
     <ClCompile Include="36. 有效的数独.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="45.跳跃游戏（二）.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
