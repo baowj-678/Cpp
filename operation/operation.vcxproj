@@ -184,6 +184,7 @@
     <ClCompile Include="experiment_3_q3_son.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="experiment_4_q1.c" />
     <ClCompile Include="linux-process_test1.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
