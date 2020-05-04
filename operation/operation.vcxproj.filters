@@ -81,7 +81,7 @@
     <ClCompile Include="experiment_2_q5.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="experiment_4_q1.c">
+    <ClCompile Include="experiment_4_q1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
