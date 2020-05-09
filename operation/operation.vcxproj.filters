@@ -84,5 +84,14 @@
     <ClCompile Include="experiment_4_q1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="experiment_4_q2.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_4_q3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_3_q5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
