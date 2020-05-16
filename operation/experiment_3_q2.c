@@ -17,11 +17,6 @@ struct Msg
 
 int sum = 0;
 
-void handler_kill(int signum)
-{
-    exit(0);
-}
-
 void handler_print(int signum)
 {
     key_t key = ftok(".", 5);
@@ -42,7 +37,10 @@ void handler_print(int signum)
         msg->is_empty = 1;
     }
     if(sum >= 100)
+    {
+        printf("My work done!\n");
         exit(0);
+    }
 }
 
 int main()
@@ -59,7 +57,6 @@ int main()
     msg->is_empty = 1;
     pid_t pid;
     signal(SIGUSR1, handler_print);
-    signal(SIGUSR2, handler_kill);
     pid = fork();
     //parent process
     if(pid != 0)
