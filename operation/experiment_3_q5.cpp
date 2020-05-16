@@ -84,16 +84,16 @@ int main()
 	loadimage(&chopImage, _T(CHOP_PIC), 50, 33);
 	loadimage(&phiEatImage, _T(EAT_PIC), 70, 70);
 	loadimage(&phiThinkImage, _T(THINK_PIC), 70, 70);
+	int x;
+	bool isDeadLock;
+	cout << "ÇëÊäÈë£º\nËÀËø£º1\n·ÇËÀËø£º2\n";
+	cin >> x;
+	if (x == 1)
+		isDeadLock = true;
+	else
+		isDeadLock = false;
 	initGraph();
-
-	//while (true)
-	//{
-	//	MOUSEMSG msg = GetMouseMsg();
-	//	cout << "x:" << msg.x << "y:" << msg.y << endl;
-	//}
-	//_getch();
-	//Sleep(1000);
-	beginEating(false);
+	beginEating(isDeadLock);
 }
 
 /************************************************************************************/
@@ -211,7 +211,7 @@ void putChopsticksDeadLock(int philosopherID, int chopstickID)
 	LeaveCriticalSection(&(mutex[chopstickID]));
 }
 
-void beginEating(bool isDeadLock)
+void beginEating()
 {
 	int i;
 	for (i = 0; i < CHOP_SUM; i++)
@@ -224,10 +224,26 @@ void beginEating(bool isDeadLock)
 	DWORD ThreadID;
 	for (i = 0; i < PHI_SUM; i++)
 	{
-		if(isDeadLock)
-			philosophers[i] = CreateThread(NULL, 0, philosopherDeadLock, (LPVOID)(i), 0, &ThreadID);
-		else
-			philosophers[i] = CreateThread(NULL, 0, philosopher, (LPVOID)(i), 0, &ThreadID);
+		philosophers[i] = CreateThread(NULL, 0, philosopher, (LPVOID)(i), 0, &ThreadID);
+	}
+	WaitForMultipleObjects(5, philosophers, false, INFINITE);
+
+}
+
+void beginEatingDeadLock()
+{
+	int i;
+	for (i = 0; i < CHOP_SUM; i++)
+	{
+		InitializeCriticalSection(&(mutex[i]));
+	}
+	rightMutex = CreateSemaphore(NULL, 4, 4, NULL);
+	leftMutex = CreateSemaphore(NULL, 4, 4, NULL);
+
+	DWORD ThreadID;
+	for (i = 0; i < PHI_SUM; i++)
+	{
+		philosophers[i] = CreateThread(NULL, 0, philosopherDeadLock, (LPVOID)(i), 0, &ThreadID);
 	}
 	WaitForMultipleObjects(5, philosophers, false, INFINITE);
 

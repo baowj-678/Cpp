@@ -6,40 +6,39 @@
 void test()
 {
     int i = 0;
-    while (i < 100000)
+    while (i < 10000000)
     {
         i++;
     }
 }
 
-void method_1()
+void method1()
 {
     clock_t start = clock();
     test(); //待测试函数
     clock_t end = clock();
     double runtime = (double)(end - start) / CLOCKS_PER_SEC;
-    printf("%f", runtime);
+    printf("方法一：%f", runtime);
 }
 
-void method_2()
+void method2()
 {
-    LARGE_INTEGER BegainTime;
-    LARGE_INTEGER EndTime;
-    LARGE_INTEGER Frequency;
-    QueryPerformanceFrequency(&Frequency);
-    QueryPerformanceCounter(&BegainTime);
+    LARGE_INTEGER beginTime;
+    LARGE_INTEGER endTime;
+    LARGE_INTEGER frequency;
+    QueryPerformanceFrequency(&frequency);
+    QueryPerformanceCounter(&beginTime);
     test(); //待测试函数
-    QueryPerformanceCounter(&EndTime);
-    double runtime = (double)(EndTime.QuadPart - BegainTime.QuadPart) / Frequency.QuadPart;
-
-    printf("%f", runtime);
+    QueryPerformanceCounter(&endTime);
+    double runtime = (double)(endTime.QuadPart - beginTime.QuadPart) / frequency.QuadPart;
+    printf("方法二：%f", runtime);
 }
 
 int main()
 {
-    method_1();
+    method1();
     printf("\n");
     Sleep(1000);
-    method_2();
+    method2();
     getchar();
 }

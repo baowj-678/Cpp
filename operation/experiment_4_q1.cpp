@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <Windows.h>
 #include <queue>
+#include <set>
+#include <time.h> 
 
 #define TRUE 1
 #define FALSE 0
@@ -13,10 +15,10 @@
 #define QUICK_PAGE  8
 #define clear_period 50
 
-//页框
+//页表项
 typedef struct {
     int pageIndex;     //页号
-    int pageFrameIndex;//页面号
+    int pageFrameIndex;//页框号
     int counter;       //一个周期内访问该页的次数
     int time;          //最近访问时间
 }PageFrame;
@@ -25,22 +27,7 @@ typedef PageFrame* pPageFrame;
 //页表
 PageFrame pf[32];
 
-////页面控制结构
-//typedef struct pfc_struct {
-//    int pn;
-//    int pfn;
-//    struct pfc_struct* next;
-//}pfc_type;
-//
-//pfc_type pfc[32];
-////空闲页头指针，忙页头指针，忙页尾指针
-//pfc_type* freepf_head, * busypf_head, * busypf_tail;
-////缺页次数
 
-
-int quickPageCount;
-//快表页框数
-int errorTime;
 //指令流数组
 int commands[ALL_INSTRUCTION];
 //每条指令的页和页内偏移
@@ -53,33 +40,30 @@ void LRU(int total_pf);
 
 int main()
 {
-    //用进程号作为初始化随机数队列的种子
-    srand(10 * GetCurrentProcessId());
-    int s = (rand() % 320) + 1;
-    //产生指令队列
-    for (int i = 0; i < ALL_INSTRUCTION; i++)
-    {
-        commands[i] = s;
-        commands[i + 1] = commands[i] + 1;
-        commands[i + 2] = (s * rand()) % 320 + 1;
-        commands[i + 3] = commands[i + 2] + 1;
 
-        //将指令序列变成页地址流
-        for (int i = 0; i < ALL_INSTRUCTION; i++)
-        {
-            page[i] = commands[i] / 10;
-            offset[i] = commands[i] % 10;
-        }
-        //用户内存工作区从 4 个页面到 32 个页面
-        for (int i = 4; i < 32; i++)
-        {
-            printf("%2d page frames", i);
-            //计算用 FIFO 置换时，第 i 个页面时的命中率
-            FIFO(i);
-            //计算用 LRU 置换时，第 i 个页面时的命中率
-            LRU(i);
-            printf("\n");
-        }
+//产生指令队列
+for (int i = 0; i < ALL_INSTRUCTION; i += 1)
+{
+    commands[i] = rand()%320 + 1;
+}
+//将指令序列变成页地址流
+for (int i = 0; i < ALL_INSTRUCTION; i++)
+{
+    page[i] = commands[i] / 10;
+    offset[i] = commands[i] % 10;
+}
+
+    //用户内存工作区从 4 个页面到 32 个页面
+    for (int i = 4; i < 32; i++)
+    {
+        printf("%2d page frames ", i);
+        //计算用 FIFO 置换时，第 i 个页面时的命中率
+        FIFO(i);
+        //计算用 LRU 置换时，第 i 个页面时的命中率
+        LRU(i);
+        //
+        OPT(i);
+        printf("\n");
     }
     getchar();
 }
@@ -94,35 +78,33 @@ void initialize(int total_pf)
         pf[i].counter = 0;
         pf[i].time = -1;
     }
-//    for (int i = 0; i < total_pf - 1; i++)
-//    {
-//        pfc[i].next = &pfc[i + 1];
-//        pfc[i].pfn = i;
-//    }
-//    pfc[total_pf - 1].next = NULL;
-//    pfc[total_pf - 1].pfn = total_pf - 1;
-//    freepf_head = &pfc[0];
 }
 
 
-void FIFO(int total_pf)
+void FIFO(int pfTotal)
 {
     //初始化相关数据结构
-    initialize(total_pf);
+    initialize(pfTotal);
     std::queue<int> Q;
+    int PageCount = 0;
+    //现有内存页面数
     int errorTime = 0;
-    //pfc_type* p;
+    //缺页次数
     for (int i = 0; i < ALL_INSTRUCTION; i++)
     {
         //页面失效
-        if (pf[page[i]].pageFrameIndex == INVALID) {
+        if (pf[page[i]].pageFrameIndex == INVALID)
+        {
             //失效次数
             errorTime += 1;
             //无空闲页面
-            if (quickPageCount >= 10)
+            if (PageCount >= pfTotal)
             {
+                //淘汰页面
                 int outPage = Q.front();
+                Q.pop();
                 pf[outPage].pageFrameIndex = INVALID;
+                //调入页面
                 int inPage = page[i];
                 pf[inPage].pageFrameIndex = inPage;
                 Q.push(inPage);
@@ -132,29 +114,31 @@ void FIFO(int total_pf)
                 int inPage = page[i];
                 pf[inPage].pageFrameIndex = inPage;
                 Q.push(inPage);
-                quickPageCount++;
+                PageCount++;
             }
         }
     }
-    printf("FIFO: %6.4f", 1 - (float)errorTime / 320);
+    printf("FIFO: %6.4f", 1 - (float)errorTime / ALL_INSTRUCTION);
 }
 
-/**
- * 最近最少使用
- * total_pf: 用户进程的内存页数
- */
-void LRU(int total_pf)
+void LRU(int pfTotal)
 {
-    initialize(total_pf);
+    initialize(pfTotal);
+    int PageCount = 0;
+    //现有内存页面数
     int presentTime = 0;
+    //当前时间
+    int errorTime = 0;
+    //缺页次数
     for (int i = 0; i < ALL_INSTRUCTION; i++)
     {
         //页面失效
-        if (pf[page[i]].pageFrameIndex == INVALID) {
+        if (pf[page[i]].pageFrameIndex == INVALID)
+        {
             //失效次数
             errorTime++;
             //无空闲页面
-            if (quickPageCount >= QUICK_PAGE) {
+            if (PageCount >= pfTotal) {
                 int min = 32767;
                 int temp;
                 //找出 time 的最小值
@@ -170,20 +154,25 @@ void LRU(int total_pf)
             }
             else
             {
-                //命中，则增加该单元的访问次数
                 pf[page[i]].pageFrameIndex = page[i];
+                PageCount++;
             }
         }
+        //更新访问时间
         pf[page[i]].time = presentTime;
         presentTime++;
     }
-    printf("LRU: %6.4f", 1 - (float)errorTime / 320);
+    printf(" LRU: %6.4f ", 1 - (float)errorTime / ALL_INSTRUCTION);
 }
 
 
-void OPT(int numCommand)
+void OPT(int pfTotal)
 {
-    initialize(numCommand);
+    initialize(pfTotal);
+    int errorTime = 0;
+    //缺页次数
+    int PageCount = 0;
+    //现有内存页面数
     for (int i = 0; i < ALL_INSTRUCTION; i++)
     {
         //页面缺失
@@ -191,9 +180,41 @@ void OPT(int numCommand)
         {
             //失效次数
             errorTime++;
-
-
+            //内存页框已满
+            if (PageCount >= pfTotal)
+            {
+                std::set<int> pages;
+                //淘汰的页面
+                int outPage = 0;
+                for (int j = 0; j < 32; j++)
+                {
+                    if (pf[j].pageFrameIndex != INVALID)
+                        pages.insert(j);
+                }
+                for (int j = i; j < ALL_INSTRUCTION; j++)
+                {
+                    //page[i]在set中
+                    if (pages.size() > 1)
+                    {
+                        pages.erase(page[j]);
+                    }
+                    //只剩最后一个
+                    else
+                    {
+                        break;
+                    }
+                }
+                outPage = *pages.begin();
+                pf[outPage].pageFrameIndex = INVALID;
+                pf[page[i]].pageFrameIndex = page[i];
+            }
+            //
+            else
+            {
+                pf[page[i]].pageFrameIndex = page[i];
+                PageCount++;
+            }
         }
-        //
     }
+    printf(" OPT: %6.4f ", 1 - (float)errorTime / ALL_INSTRUCTION);
 }
