@@ -7,40 +7,52 @@
 #include <stdint.h>
 #include <sys/wait.h>
 
-void mem_addr(unsigned long vaddr, unsigned long* paddr)
+void mem_addr(unsigned long vaddr, unsigned long *paddr)
 {
-    int pageSize = getpagesize(); //µ÷ÓÃ´Ëº¯Êı»ñÈ¡ÏµÍ³Éè¶¨µÄÒ³Ãæ´óĞ¡
-    printf("Ò³Ãæ´óĞ¡Îª%d\n", pageSize);
-
-    unsigned long v_pageIndex = vaddr / pageSize; //¼ÆËã´ËĞéÄâµØÖ·Ïà¶ÔÓÚ0x0µÄ¾­¹ıµÄÒ³ÃæÊı
-    printf("Ò³ÃæÊıÎª£º%u\n", v_pageIndex);
-    unsigned long v_offset = v_pageIndex * sizeof(uint64_t); //¼ÆËãÔÚ/proc/pid/page_mapÎÄ¼şÖĞµÄÆ«ÒÆÁ¿
-    unsigned long page_offset = vaddr % pageSize;            //¼ÆËãĞéÄâµØÖ·ÔÚÒ³ÃæÖĞµÄÆ«ÒÆÁ¿
-    printf("Æ«ÒÆÁ¿Îª£º%x\n", page_offset);
-    uint64_t item = 0;                             //´æ´¢¶ÔÓ¦ÏîµÄÖµ
-    int fd = open("/proc/self/pagemap", O_RDONLY); //ÒÔÖ»¶Á·½Ê½´ò¿ª/proc/pid/page_map
-
-    lseek(fd, v_offset, SEEK_SET);                         //½«ÓÎ±êÒÆ¶¯µ½ÏàÓ¦Î»ÖÃ£¬¼´¶ÔÓ¦ÏîµÄÆğÊ¼µØÖ·ÇÒÅĞ¶ÏÊÇ·ñÒÆ¶¯Ê§°Ü
-    read(fd, &item, sizeof(uint64_t)) != sizeof(uint64_t); //¶ÁÈ¡¶ÔÓ¦ÏîµÄÖµ£¬²¢´æÈëitemÖĞ£¬ÇÒÅĞ¶Ï¶ÁÈ¡Êı¾İÎ»ÊıÊÇ·ñÕıÈ·
-
-    if ((((uint64_t)1 << 63) & item) == 0) //ÅĞ¶ÏpresentÊÇ·ñÎª0
+     //è°ƒç”¨æ­¤å‡½æ•°è·å–ç³»ç»Ÿè®¾å®šçš„é¡µé¢å¤§å°
+    int pageSize = getpagesize();
+    //è®¡ç®—æ­¤è™šæ‹Ÿåœ°å€ç›¸å¯¹äº0x0çš„ç»è¿‡çš„é¡µé¢æ•°
+    unsigned long v_pageIndex = vaddr / pageSize; 
+    printf("è™šæ‹Ÿé¡µå·ä¸ºï¼š%lu\n", v_pageIndex);
+    //è®¡ç®—åœ¨/proc/pid/page_mapæ–‡ä»¶ä¸­çš„åç§»é‡
+    unsigned long v_offset = v_pageIndex * sizeof(uint64_t); 
+    //è®¡ç®—è™šæ‹Ÿåœ°å€åœ¨é¡µé¢ä¸­çš„åç§»é‡
+    unsigned long page_offset = vaddr % pageSize;            
+    printf("é¡µå†…åç§»åœ°å€ï¼š%lx\n", page_offset);
+    uint64_t item = 0;
+    //ä»¥åªè¯»æ–¹å¼æ‰“å¼€/proc/pid/page_map
+    int fd = open("/proc/self/pagemap", O_RDONLY);
+     if (fd<0)
     {
-        printf("page present is 0\n");
+        printf("open /proc/self/pagemap failed\n");
         return;
     }
-    printf("ÎïÀíÒ³ºÅÎª%u\n", ((uint64_t)1 << 63) & item);
-    uint64_t phy_pageIndex = (((uint64_t)1 << 55) - 1) & item; //¼ÆËãÎïÀíÒ³ºÅ£¬¼´È¡itemµÄbit0-54
-    printf("ÎïÀíÒ³ºÅÎª%u\n", item);
-    *paddr = (phy_pageIndex * pageSize) + page_offset; //ÔÙ¼ÓÉÏÒ³ÄÚÆ«ÒÆÁ¿¾ÍµÃµ½ÁËÎïÀíµØÖ·
+
+
+    lseek(fd, v_offset, SEEK_SET);                         //å°†æ¸¸æ ‡ç§»åŠ¨åˆ°ç›¸åº”ä½ç½®ï¼Œå³å¯¹åº”é¡¹çš„èµ·å§‹åœ°å€ä¸”åˆ¤æ–­æ˜¯å¦ç§»åŠ¨å¤±è´¥
+    //è¯»å–å¯¹åº”é¡¹çš„å€¼ï¼Œå¹¶å­˜å…¥itemä¸­ï¼Œä¸”åˆ¤æ–­è¯»å–æ•°æ®ä½æ•°æ˜¯å¦æ­£ç¡®
+    read(fd, &item, sizeof(uint64_t)); 
+
+
+    if ((((uint64_t)1 << 63) & item) == 0) //åˆ¤æ–­presentæ˜¯å¦ä¸º0
+    {
+        printf("page is not present\n");
+        return;
+    }
+    //è®¡ç®—ç‰©ç†é¡µå·ï¼Œå³å–itemçš„bit0-54
+    uint64_t phy_pageIndex = ((((uint64_t)1) << 55) - 1) & item; 
+    printf("ç‰©ç†é¡µæ¡†å·ä¸º%lu\n", phy_pageIndex);
+    *paddr = (phy_pageIndex * pageSize) + page_offset; //å†åŠ ä¸Šé¡µå†…åç§»é‡å°±å¾—åˆ°äº†ç‰©ç†åœ°å€
 }
 
-const int a = 100; //È«¾Ö³£Á¿
+const int a = 100; //å…¨å±€å¸¸é‡
 int main()
 {
-    unsigned long phy = 0; //ÎïÀíµØÖ·
+    unsigned long phy = 0; //ç‰©ç†åœ°å€
 
+    printf("è™šæ‹Ÿåœ°å€ä¸º = %p\n", &a);
     mem_addr((unsigned long)&a, &phy);
-    printf("½ø³ÌidÎª = %d, ĞéÄâµØÖ·Îª = %x , ÎïÀíµØÖ·Îª = %x\n", getpid(), &a, phy);
+    printf("ç‰©ç†åœ°å€ä¸º = %lx\n", phy);
     sleep(10);
     //waitpid();
     return 0;
