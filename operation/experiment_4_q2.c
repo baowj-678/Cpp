@@ -29,7 +29,7 @@ void mem_addr(unsigned long vaddr, unsigned long *paddr)
     }
 
 
-    lseek(fd, v_offset, SEEK_SET);                         //将游标移动到相应位置，即对应项的起始地址且判断是否移动失败
+    lseek(fd, v_offset, SEEK_SET);                         
     //读取对应项的值，并存入item中，且判断读取数据位数是否正确
     read(fd, &item, sizeof(uint64_t)); 
 
@@ -42,7 +42,8 @@ void mem_addr(unsigned long vaddr, unsigned long *paddr)
     //计算物理页号，即取item的bit0-54
     uint64_t phy_pageIndex = ((((uint64_t)1) << 55) - 1) & item; 
     printf("物理页框号为%lu\n", phy_pageIndex);
-    *paddr = (phy_pageIndex * pageSize) + page_offset; //再加上页内偏移量就得到了物理地址
+	//再加上页内偏移量就得到了物理地址
+    *paddr = (phy_pageIndex * pageSize) + page_offset; 
 }
 
 const int a = 100; //全局常量

@@ -234,6 +234,7 @@
     </ClInclude>
     <ClInclude Include="FlowGraph.h" />
     <ClInclude Include="graph.h" />
+    <ClInclude Include="graphData.h" />
     <ClInclude Include="graph_const.h" />
     <ClInclude Include="graph_node.h" />
     <ClInclude Include="linked_list.h" />

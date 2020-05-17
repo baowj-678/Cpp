@@ -43,7 +43,7 @@ public:
     Distance getAdjDistance(Vertex a, Vertex b);
     
 
-protected:
+private:
     //is oriented graph
     bool isOriented;
     //boolean adjacency matrix
@@ -76,5 +76,4 @@ protected:
     int** BellmanFordInner(Vertex u, Vertex s);
     Distance** apspExtendAlgorithm();//all pairs short path
     Distance** apspFloydWarshallAlgorithm();
-
 };

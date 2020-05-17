@@ -338,3 +338,9 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+
+./Introduction to Algorithm.sln
+./Introduction to Algorithm.vcxproj
+./Introduction to Algorithm.vcxproj.filters
+./Introduction to Algorithm.vcxproj.user

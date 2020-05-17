@@ -154,7 +154,49 @@ void drawPutChop(int chopID, int philosopherID)
 
 /*****************************************************************************************/
 
+void thinking(int philosopherID)
+{
+	Sleep((rand() % 4 + 1) * 100);
+}
 
+void eating(int philosopherID)
+{
+	Sleep((rand() % 4 + 1) * 100);
+}
+
+void beginEating(bool isDeadLock)
+{
+	int i;
+	for (i = 0; i < CHOP_SUM; i++)
+	{
+		InitializeCriticalSection(&(mutex[i]));
+	}
+	rightMutex = CreateSemaphore(NULL, 4, 4, NULL);
+	leftMutex = CreateSemaphore(NULL, 4, 4, NULL);
+
+	DWORD ThreadID;
+	for (i = 0; i < PHI_SUM; i++)
+	{
+		if (isDeadLock)
+			philosophers[i] = CreateThread(NULL, 0, philosopherDeadLock, (LPVOID)(i), 0, &ThreadID);
+		else
+			philosophers[i] = CreateThread(NULL, 0, philosopher, (LPVOID)(i), 0, &ThreadID);
+	}
+	WaitForMultipleObjects(5, philosophers, false, INFINITE);
+
+}
+
+/*****************Dead Lock Solution*********************************************/
+
+void getChopsticksDeadLock(int philosopherID, int chopstickID)
+{
+	EnterCriticalSection(&(mutex[chopstickID]));
+}
+
+void putChopsticksDeadLock(int philosopherID, int chopstickID)
+{
+	LeaveCriticalSection(&(mutex[chopstickID]));
+}
 
 DWORD WINAPI philosopherDeadLock(LPVOID lpParameter)
 {
@@ -179,111 +221,45 @@ DWORD WINAPI philosopherDeadLock(LPVOID lpParameter)
 		drawPutChop(rightID, id);
 		//放下左筷子
 		putChopsticksDeadLock(id, leftID);
-		
+
 		//放下右筷子
 		putChopsticksDeadLock(id, rightID);
-		
+
 	}
-}
-
-void thinking(int philosopherID)
-{
-	Sleep((rand() % 4 + 1) * 100);
-}
-
-void eating(int philosopherID)
-{
-	Sleep((rand() % 4 + 1) * 100);
-}
-
-
-/*****************Dead Lock Solution*********************************************/
-
-
-
-void getChopsticksDeadLock(int philosopherID, int chopstickID)
-{
-	EnterCriticalSection(&(mutex[chopstickID]));
-}
-
-void putChopsticksDeadLock(int philosopherID, int chopstickID)
-{
-	LeaveCriticalSection(&(mutex[chopstickID]));
-}
-
-void beginEating()
-{
-	int i;
-	for (i = 0; i < CHOP_SUM; i++)
-	{
-		InitializeCriticalSection(&(mutex[i]));
-	}
-	rightMutex = CreateSemaphore(NULL, 4, 4, NULL);
-	leftMutex = CreateSemaphore(NULL, 4, 4, NULL);
-
-	DWORD ThreadID;
-	for (i = 0; i < PHI_SUM; i++)
-	{
-		philosophers[i] = CreateThread(NULL, 0, philosopher, (LPVOID)(i), 0, &ThreadID);
-	}
-	WaitForMultipleObjects(5, philosophers, false, INFINITE);
-
-}
-
-void beginEatingDeadLock()
-{
-	int i;
-	for (i = 0; i < CHOP_SUM; i++)
-	{
-		InitializeCriticalSection(&(mutex[i]));
-	}
-	rightMutex = CreateSemaphore(NULL, 4, 4, NULL);
-	leftMutex = CreateSemaphore(NULL, 4, 4, NULL);
-
-	DWORD ThreadID;
-	for (i = 0; i < PHI_SUM; i++)
-	{
-		philosophers[i] = CreateThread(NULL, 0, philosopherDeadLock, (LPVOID)(i), 0, &ThreadID);
-	}
-	WaitForMultipleObjects(5, philosophers, false, INFINITE);
-
 }
 
 /**************************Not Dead Lock Solution**************************/
 
-
 void getChopsticks(int philosopherID, int chopstickID)
 {
-	EnterCriticalSection(&(mutex[chopstickID]));
 	//左手边
-	//if (philosopherID == chopstickID)
-	//{
-	//	//WaitForSingleObject(leftMutex, INFINITE);
-	//	EnterCriticalSection(&mutex[chopstickID]);
-	//}
+	if (philosopherID == chopstickID)
+	{
+		WaitForSingleObject(leftMutex, INFINITE);
+		EnterCriticalSection(&mutex[chopstickID]);
+	}
 	////右手边
-	//else
-	//{
-	//	//WaitForSingleObject(rightMutex, INFINITE);
-	//	EnterCriticalSection(&mutex[chopstickID]);
-	//}
+	else
+	{
+		WaitForSingleObject(rightMutex, INFINITE);
+		EnterCriticalSection(&mutex[chopstickID]);
+	}
 }
 
 void putChopsticks(int philosopherID, int chopstickID)
 {
-	LeaveCriticalSection(&(mutex[chopstickID]));
 	//左手边
-	//if (philosopherID == chopstickID)
-	//{
-	//	//ReleaseSemaphore(leftMutex, 1, NULL);
-	//	LeaveCriticalSection(&mutex[chopstickID]);
-	//}
-	////右手边
-	//else
-	//{
-	//	//ReleaseSemaphore(rightMutex, 1, NULL);
-	//	LeaveCriticalSection(&mutex[chopstickID]);
-	//}
+	if (philosopherID == chopstickID)
+	{
+		ReleaseSemaphore(leftMutex, 1, NULL);
+		LeaveCriticalSection(&mutex[chopstickID]);
+	}
+	//右手边
+	else
+	{
+		ReleaseSemaphore(rightMutex, 1, NULL);
+		LeaveCriticalSection(&mutex[chopstickID]);
+	}
 }
 
 DWORD WINAPI philosopher(LPVOID lpParameter)
@@ -306,13 +282,14 @@ DWORD WINAPI philosopher(LPVOID lpParameter)
 		//吃饭
 		drawEat(id);
 		eating(id);
-		//放下左筷子
+
 		drawPutChop(leftID, id);
 		drawPutChop(rightID, id);
+		//放下左筷子
 		putChopsticks(id, leftID);
-		
 		//放下右筷子
 		putChopsticks(id, rightID);
+
 	}
 	return 0;
 }
