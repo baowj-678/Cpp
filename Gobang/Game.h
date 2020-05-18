@@ -16,5 +16,9 @@ private:
 
 private:
 	void putChessman(Point&p, Player&player);
+
+public:
+	Player* getPlayerOne();
+	Player* getPlayerTwo();
 };
 
