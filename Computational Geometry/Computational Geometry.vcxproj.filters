@@ -21,11 +21,14 @@
     <ClCompile Include="Computational Geometry.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="In_Triangle.cpp">
-      <Filter>源文件\convex hull</Filter>
-    </ClCompile>
     <ClCompile Include="Point.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Extreme Point.cpp">
+      <Filter>源文件\convex hull</Filter>
+    </ClCompile>
+    <ClCompile Include="Extreme Edges.cpp">
+      <Filter>源文件\convex hull</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
