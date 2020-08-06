@@ -150,6 +150,7 @@
     <ClCompile Include="Computational Geometry.cpp" />
     <ClCompile Include="Extreme Edges.cpp" />
     <ClCompile Include="Extreme Point.cpp" />
+    <ClCompile Include="Jarvis March.cpp" />
     <ClCompile Include="Point.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

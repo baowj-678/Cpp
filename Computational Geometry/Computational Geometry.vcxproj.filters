@@ -30,5 +30,8 @@
     <ClCompile Include="Extreme Edges.cpp">
       <Filter>源文件\convex hull</Filter>
     </ClCompile>
+    <ClCompile Include="Jarvis March.cpp">
+      <Filter>源文件\convex hull</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
