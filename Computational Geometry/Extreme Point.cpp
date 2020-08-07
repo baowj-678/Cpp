@@ -3,11 +3,7 @@
 //Author: Bao Wenjie
 //Date: 2020/8/4
 //Email: bwj_678@qq.com
-
-#include <iostream>
-#include "..\Computational Geometry\Point.cpp"
-
-using namespace::std;
+#include "convex hull.h"
 
 /**
 * @description: 利用行列式计算三角形面积
@@ -51,6 +47,7 @@ bool InTriangle(Point& a, Point& b, Point& c, Point& p)
 	else
 		return false;
 }
+
 /**
 * 计算凸包
 * @param S: 点的数组

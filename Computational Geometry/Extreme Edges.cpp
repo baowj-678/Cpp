@@ -3,8 +3,7 @@
 //Author: Bao Wenjie
 //Date: 2020/8/4
 //Email: bwj_678@qq.com
-#include "../Computational Geometry/Extreme Point.cpp"
-#include "../Computational Geometry/Point.cpp"
+#include "convex hull.h"
 
 
 /**

@@ -148,10 +148,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Computational Geometry.cpp" />
-    <ClCompile Include="Extreme Edges.cpp" />
+    <ClCompile Include="Extreme Edges.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Extreme Point.cpp" />
-    <ClCompile Include="Jarvis March.cpp" />
+    <ClCompile Include="Gram Scan.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Jarvis March.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Point.h" />
     <ClCompile Include="Point.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="convex hull.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

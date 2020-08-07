@@ -14,9 +14,9 @@
 
 ### 凸包问题目录
 
-| 名称                                     | 详情                      |
-| ---------------------------------------- | ------------------------- |
-| [Extreme Point.cpp](Extreme%20Point.cpp) | **极点方法**$\Theta(n^4)$ |
-| [Extreme Edges.cpp](Extreme%20Edges.cpp) | **极边方法**$\Theta(n^3)$ |
-|                                          |                           |
+| 名称                                     | 详情                              |
+| ---------------------------------------- | --------------------------------- |
+| [Extreme Point.cpp](Extreme%20Point.cpp) | **极点方法**$\Theta(n^4)$         |
+| [Extreme Edges.cpp](Extreme%20Edges.cpp) | **极边方法**$\Theta(n^3)$         |
+| [Jarvis March](Jarvis%20March)           | **Jarvis March**算法$\Theta(n^2)$ |
 

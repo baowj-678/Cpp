@@ -3,12 +3,10 @@
 //Author: Bao Wenjie
 //Date: 2020/8/4
 //Email: bwj_678@qq.com
+#pragma once
+#include "convex hull.h"
 
-#include "../Computational Geometry/Point.cpp"
-#include "../Computational Geometry/Extreme Point.cpp"
 
-int LTL(Point S[], int n);
-void Jarvis_March(Point S[], int n);
 
 
 /**
@@ -37,6 +35,7 @@ void Jarvis_March(Point S[], int n)
 				/* 更新s点 */
 				s = t;
 		k = s;
+	// 如果到达起点
 	} while (ltl != k);
 }
 

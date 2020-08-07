@@ -33,5 +33,16 @@
     <ClCompile Include="Jarvis March.cpp">
       <Filter>源文件\convex hull</Filter>
     </ClCompile>
+    <ClCompile Include="Gram Scan.cpp">
+      <Filter>源文件\convex hull</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.h">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="convex hull.h">
+      <Filter>源文件\convex hull</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
