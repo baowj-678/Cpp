@@ -39,10 +39,19 @@
     <ClCompile Include="Point.h">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Incremental Construction.cpp">
+      <Filter>源文件\convex hull</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="convex hull.h">
       <Filter>源文件\convex hull</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
