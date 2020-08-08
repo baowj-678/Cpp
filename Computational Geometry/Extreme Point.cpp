@@ -54,7 +54,7 @@ bool InTriangle(Point& a, Point& b, Point& c, Point& p)
 * @param n: 点的个数
 * @return void
 **/
-void extremePoint(Point S[], int n)
+void Extreme_Point(Point S[], int n)
 {
 	// 将所有节点初始化为凸包
 	for (int s = 0; s < n; s++)
