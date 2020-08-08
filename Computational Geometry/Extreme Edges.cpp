@@ -37,7 +37,7 @@ bool checkEdge(Point S[], int n, int p, int q)
 * @param S: 所有点的数组
 * @param n: 个数
 */
-void markEE(Point S[], int n)
+void Extreme_Edges(Point S[], int n)
 {
 	// 初始化所有点都不是极点
 	for (int k = 0; k < n; k++)
