@@ -16,6 +16,9 @@
     <Filter Include="源文件\convex hull">
       <UniqueIdentifier>{342d8d22-9bcb-4c2e-a552-a7f30074ae31}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Geometric Intersection">
+      <UniqueIdentifier>{8e28ce75-7a9e-4ed1-9ce2-44c264a394b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Computational Geometry.cpp">
@@ -45,6 +48,9 @@
     <ClCompile Include="Incremental Construction.cpp">
       <Filter>源文件\convex hull</Filter>
     </ClCompile>
+    <ClCompile Include="Interval Intersection Detection.cpp">
+      <Filter>源文件\Geometric Intersection</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="convex hull.h">
@@ -52,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="LinkedList.h">
       <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="geometric intersection.h">
+      <Filter>源文件\Geometric Intersection</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
