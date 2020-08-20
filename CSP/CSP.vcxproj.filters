@@ -30,6 +30,12 @@
     <ClCompile Include="2018-12-T4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="2018-9-T1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2018-9-T2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
