@@ -8,6 +8,7 @@
 | **Ford-Fulkerson**求解最大流算法         | [Ford-Folkerson](Ford=Folkerson) |
 | **Busacker-Gowan**算法求解最小费用最大流 | [Busacker-Gowan](Busacker-Gowan) |
 | **匈牙利算法**求解最大二分匹配           | [Hungarian](Hungarian)           |
+| **Kuhn-Munkres算法**求解带权最大匹配问题 | [Kuhn-Munkres](Kuhn-Munkres)     |
 
 
 
