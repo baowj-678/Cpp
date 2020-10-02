@@ -1,13 +1,15 @@
-#pragma once
-
 /**
-* 数字基本存储结构
+* s_int,u_int定义
+* @Author: Bao Wenjie
+* @Email: bwj_678@qq.com
+* @Date: 2020/10/2
 */
+#pragma once
 
 struct s_int
 {
-	int f : 1; // 符号位
-	int x : 31;// 数字位
+	int x : 31; // 数字位
+	int f : 1;  // 符号位
 };
 
 typedef struct s_int s_int;

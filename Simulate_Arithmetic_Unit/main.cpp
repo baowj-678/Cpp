@@ -6,12 +6,10 @@ using namespace::std;
 
 int main()
 {
-	int a = -899;
-	//u_int b;
-	//b.x = 9;
-	//printf("%d", b.s.x);
-	Num::num_to_binary(&a, 32);
-	for (int i(0); i < 32; i++)
-		printf("%d", (a >> (31- i)) & 1);
-
+	Int a = -909;
+	a.print_codes_binary();
+	//Float c = 909;
+	//c.print_codes_binary();
+	Num* b = a.convert_to_float();
+	b->print_codes_binary();
 }

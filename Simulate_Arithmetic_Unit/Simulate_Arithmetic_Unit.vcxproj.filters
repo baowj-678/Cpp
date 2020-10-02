@@ -30,6 +30,15 @@
     <ClCompile Include="Num.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="FLOAT.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Int.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Float.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Num.h">

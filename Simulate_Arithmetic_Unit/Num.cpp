@@ -1,8 +1,9 @@
 #pragma once
 #include "Num.h"
 #include <stdio.h>
+#include <iostream>
 
-
+using namespace::std;
 /************************************* 数字超类 ******************************************/
 
 Num::Num()
@@ -27,24 +28,20 @@ void Num::num_to_binary(void* p, int n)
 	printf("\n");
 }
 
-/************************************* 整数类 ******************************************/
-
-Int::Int()
+/**
+* 打印原码、反码、补码
+*/
+void Num::print_codes_binary()
 {
-	// 是整数
-	this->is_float = NumType::float_;
+	this->print_num();
+	printf("原码:\n");
+	this->convert_to_true_code();
+	this->print_code_binary();
+	printf("反码:\n");
+	this->convert_to_inverse_code();
+	this->print_code_binary();
+	printf("补码:\n");
+	this->convert_to_complement_code();
+	this->print_code_binary();
 }
 
-Int::~Int()
-{
-}
-
-/************************************* 浮点数类 ******************************************/
-Float::Float()
-{
-	this->is_float = NumType::float_;
-}
-
-Float::~Float()
-{
-}
