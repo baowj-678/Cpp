@@ -144,7 +144,12 @@ void Int::convert_to_complement_code()
 */
 void Int::print_code_binary()
 {
-	this->num_to_binary(&this->num.s, 32);
+	// 符号位
+	this->num_to_binary(&this->num.x, 32, 31);
+	printf(" ");
+	// 数字位
+	this->num_to_binary(&this->num.x, 31, 0);
+	printf("\n");
 }
 
 /**
@@ -152,7 +157,8 @@ void Int::print_code_binary()
 */
 void Int::print_num()
 {
-	
+	// 转补码
+	this->convert_to_complement_code();
 	printf("十进制为:%d\n", this->num.x);
 }
 
@@ -165,7 +171,7 @@ Float* Int::convert_to_float()
 	u_float num;
 	// 符号位
 	num.s.f = this->num.s.f;
-	// 阶码
+	// 阶码10010101000001010001111010111000010100011110101110001
 	unsigned long long tmp = this->num.s.x;
 	unsigned long long i = 0;
 	while (tmp > 1)

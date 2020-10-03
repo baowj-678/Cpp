@@ -59,7 +59,7 @@ public:
 
 	/***** 静态方法 *****/
 	// 输出数字存储的二进制形式
-	static void num_to_binary(void* p, int n);
+	static void num_to_binary(void* p, int high, int low = 0);
 
 	/***** 普通方法 *****/
 	// 打印所有编码情况
@@ -127,6 +127,7 @@ public:
 	void print_code_binary();
 	// 十进制打印数字
 	void print_num();
+
 };
 
 

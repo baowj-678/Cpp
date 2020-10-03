@@ -16,7 +16,7 @@ Float::Float()
 	// 浮点数
 	this->num_type = NumType::float_;
 	// 补码
-	this->code_type = CodeType::complement_;
+	this->code_type = CodeType::true_;
 	this->num.num = (double)0;
 }
 
@@ -25,7 +25,7 @@ Float::Float(double num)
 	// 浮点数
 	this->num_type = NumType::float_;
 	// 编码类型
-	this->code_type = CodeType::complement_;
+	this->code_type = CodeType::true_;
 	this->num.num = num;
 }
 
@@ -123,7 +123,15 @@ void Float::convert_to_complement_code()
 */
 void Float::print_code_binary()
 {
-	this->num_to_binary(&this->num, 64);
+	// 打印符号位
+	this->num_to_binary(&this->num, 64, 63);
+	printf(" ");
+	// 打印阶码
+	this->num_to_binary(&this->num, 63, 52);
+	printf(" ");
+	// 打印小数
+	this->num_to_binary(&this->num, 52, 0);
+	printf("\n");
 }
 
 /**
@@ -131,6 +139,8 @@ void Float::print_code_binary()
 */
 void Float::print_num()
 {
+	// 转补码
+	this->convert_to_true_code();
 	printf("十进制为:%lf\n", this->num.num);
 }
 // 转浮点数
@@ -142,5 +152,43 @@ Float* Float::convert_to_float()
 // 转整数
 Int* Float::convert_to_int()
 {
-	return NULL;
+	u_int num;
+	num.x = 0;
+	this->convert_to_true_code();
+	// e: 保存阶码
+	unsigned int e = this->num.s.e;
+	// x第一位置1
+	num.s.x |= 0X40000000;
+	// x其余位取小数前30位
+	num.s.x |= (this->num.s.num >> 22);
+	// 向左移
+	if (e >= E_BASE)
+	{
+		e = e - E_BASE;
+		// 如果左移不足30
+		if (e < 30)
+		{
+			num.x >>= (30 - e);
+		}
+		// 否则
+		else
+		{
+			e -= 30;
+			num.x <<= e;
+		}
+
+	}
+	// 向右移（为0）
+	else
+	{
+		num.s.x = 0;
+	}
+	// 符号位
+	if (this->num.s.f == 0)
+		num.s.f = 0;
+	else
+		num.s.f = 1;
+	Int* ans = new Int(num.x, CodeType::true_);
+	return ans;
 }
+

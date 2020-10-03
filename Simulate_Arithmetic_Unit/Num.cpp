@@ -17,15 +17,15 @@ Num::~Num()
 /**
 * 将内存中的信息以二进制输出
 * @param p: 起始地址
-* @param n: 输出的位数
+* @param high: 高地址位（不包括）
+* @param low: 低地址位（包括）
 * @return void
 */
-void Num::num_to_binary(void* p, int n)
+void Num::num_to_binary(void* p, int high, int low)
 {
 	unsigned long long num = *(unsigned long long*)p;
-	for (int i(0); i < n; i++)
-		printf("%lld", (num >> (n - 1 - i)) & 1);
-	printf("\n");
+	for (int i(high - 1); i >= low; i--)
+		printf("%lld", (num >> i) & 1);
 }
 
 /**

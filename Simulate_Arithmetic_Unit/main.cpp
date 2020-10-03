@@ -6,10 +6,9 @@ using namespace::std;
 
 int main()
 {
-	Int a = -909;
+	Float a = -157689.6;
 	a.print_codes_binary();
-	//Float c = 909;
-	//c.print_codes_binary();
-	Num* b = a.convert_to_float();
+	Int* b = a.convert_to_int();
 	b->print_codes_binary();
+
 }
