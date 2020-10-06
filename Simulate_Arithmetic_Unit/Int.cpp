@@ -7,6 +7,7 @@
 
 #pragma once
 #include "Num.h"
+#include <string>
 
 const unsigned int ONES = 0X7FFFFFFF; //01..31..1
 const unsigned int FFFF = 0XFFFFFFFF; //111111111
@@ -19,7 +20,7 @@ Int::Int()
 	this->num_type = NumType::int_;
 	// 补码
 	this->code_type = CodeType::complement_;
-	this->num.x = 0;
+	this->num.num = 0;
 }
 
 Int::Int(int num)
@@ -28,7 +29,7 @@ Int::Int(int num)
 	this->num_type = NumType::int_;
 	// 补码
 	this->code_type = CodeType::complement_;
-	this->num.x = num;
+	this->num.num = num;
 }
 
 Int::Int(int num, CodeType type)
@@ -37,7 +38,7 @@ Int::Int(int num, CodeType type)
 	this->num_type = NumType::int_;
 	// 补码
 	this->code_type = type;
-	this->num.x = num;
+	this->num.num = num;
 
 }
 
@@ -145,10 +146,10 @@ void Int::convert_to_complement_code()
 void Int::print_code_binary()
 {
 	// 符号位
-	this->num_to_binary(&this->num.x, 32, 31);
+	this->num_to_binary(&this->num.num, 32, 31);
 	printf(" ");
 	// 数字位
-	this->num_to_binary(&this->num.x, 31, 0);
+	this->num_to_binary(&this->num.num, 31, 0);
 	printf("\n");
 }
 
@@ -159,7 +160,7 @@ void Int::print_num()
 {
 	// 转补码
 	this->convert_to_complement_code();
-	printf("十进制为:%d\n", this->num.x);
+	printf("十进制为:%d\n", this->num.num);
 }
 
 /**
@@ -194,4 +195,61 @@ Float* Int::convert_to_float()
 Int* Int::convert_to_int()
 {
 	return this;
+}
+
+/**
+* 获取十进制数字的字符串
+*/
+string Int::get_string()
+{
+	string ans = "";
+	ans += std::to_string(this->num.num);
+	return ans;
+}
+
+/**
+* << 重载
+*/
+ostream& operator<<(ostream& os, Int num)
+{
+	os << num.get_string();
+	return os;
+}
+
+/**
+* 获取num
+*/
+long long Int::get_num()
+{
+	long long ans = 0;
+	ans |= this->num.num;
+	return ans;
+}
+
+/**
+* + 重载
+*/
+Int Int::operator+(Int& num)
+{
+	// 获取A的补码
+	this->convert_to_complement_code();
+	long long a = this->get_num();
+	// 获取B的补码
+	num.convert_to_complement_code();
+	long long b = num.get_num();
+	int s = 0;
+	int c = 0;
+	for (int i(0); i < 32; i++)
+	{
+		int a_ = (a >> i) & 1;
+		int b_ = (b >> i) & 1;
+		// 本位和
+		int c1 = (a_) ^ (b_) ^ s;
+		// 进位
+		s = (a_ & b_) | (a_ & s) | (b_ & s);
+		// 
+		c |= (c1 << i);
+	}
+	Int ans = { c, CodeType::complement_ };
+	return ans;
 }

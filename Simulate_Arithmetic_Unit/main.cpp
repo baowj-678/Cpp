@@ -3,12 +3,14 @@
 
 using namespace::std;
 
+using std::cout;
+using std::cin;
+
 
 int main()
 {
-	Float a = -157689.6;
-	a.print_codes_binary();
-	Int* b = a.convert_to_int();
-	b->print_codes_binary();
+	Int a = -9950;
+	Int b = -9;
+	cout << a + b;
 
 }

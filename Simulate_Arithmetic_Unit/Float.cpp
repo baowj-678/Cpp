@@ -7,6 +7,7 @@
 
 #pragma once
 #include "Num.h"
+#include <string>
 
 const unsigned long long FLOAT_ONES = 0XFFFFFFFFFFFFFFFF;
 const unsigned int E_BASE = 1023;
@@ -153,7 +154,7 @@ Float* Float::convert_to_float()
 Int* Float::convert_to_int()
 {
 	u_int num;
-	num.x = 0;
+	num.num = 0;
 	this->convert_to_true_code();
 	// e: 保存阶码
 	unsigned int e = this->num.s.e;
@@ -168,13 +169,13 @@ Int* Float::convert_to_int()
 		// 如果左移不足30
 		if (e < 30)
 		{
-			num.x >>= (30 - e);
+			num.num >>= (30 - e);
 		}
 		// 否则
 		else
 		{
 			e -= 30;
-			num.x <<= e;
+			num.num <<= e;
 		}
 
 	}
@@ -188,7 +189,38 @@ Int* Float::convert_to_int()
 		num.s.f = 0;
 	else
 		num.s.f = 1;
-	Int* ans = new Int(num.x, CodeType::true_);
+	Int* ans = new Int(num.num, CodeType::true_);
 	return ans;
 }
 
+/**
+* 获取十进制数字的字符串
+*/
+string Float::get_string()
+{
+	string ans = "";
+	ans += std::to_string(this->num.num);
+	return ans;
+}
+
+
+/**
+* << 重载
+*/
+ostream& operator<<(ostream& os, Float num)
+{
+	os << num.get_string();
+	return os;
+}
+
+/**
+* 获取num
+*/
+long long Float::get_num()
+{
+	long long ans = 0;
+	ans |= (this->num.s.f << 63);
+	ans |= (this->num.s.e << 51);
+	ans |= this->num.s.num;
+	return ans;
+}

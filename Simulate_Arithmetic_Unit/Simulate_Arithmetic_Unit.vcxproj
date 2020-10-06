@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Complement.cpp" />
     <ClCompile Include="Float.cpp" />
     <ClCompile Include="FLOAT.h" />
     <ClCompile Include="Int.cpp" />

@@ -17,7 +17,7 @@ typedef struct s_int s_int;
 union u_int
 {
 	s_int s;
-	int x;
+	int num;
 };
 
 typedef union u_int u_int;

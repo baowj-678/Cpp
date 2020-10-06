@@ -10,23 +10,46 @@
 #include "FLOAT.h"
 #include <iostream>
 #include <ostream>
+#include <string.h>
 
 using std::ostream;
 using std::istream;
+using std::string;
+using std::operator+;
+using std::operator-;
+
+/**
+* 数字类别【浮点数、整数】
+*/
 enum class NumType
 {
 	int_ = 1,
 	float_ = 2
 };
 
+/**
+* 编码类别【原码、反码、补码】
+*/
 enum class CodeType
 {
 	true_ = 1,
 	inverse_ = 2,
 	complement_ = 3
 };
+
+/**
+* 数字超类
+*/
 class Num;
+
+/**
+* 整数类
+*/
 class Int;
+
+/**
+* 浮点数类
+*/
 class Float;
 
 /************************************* 数字超类 ******************************************/
@@ -56,6 +79,8 @@ public:
 	virtual void print_code_binary() = 0;
 	// 十进制打印数字
 	virtual void print_num() = 0;
+	// 获取num
+	virtual long long get_num() = 0;
 
 	/***** 静态方法 *****/
 	// 输出数字存储的二进制形式
@@ -63,7 +88,14 @@ public:
 
 	/***** 普通方法 *****/
 	// 打印所有编码情况
-	void print_codes_binary();
+	void print_codes_binary();	
+
+	/***** 友元方法 *****/
+	// << 重载
+	friend ostream& operator<<(ostream& os, Num* num);
+
+
+
 };
 
 
@@ -91,11 +123,24 @@ public:
 	Float* convert_to_float();
 	// 转整数
 	Int* convert_to_int();
+	// 输出数字
+	string get_string();
 
 	// 打印数字
 	void print_code_binary();
 	// 十进制打印数字
 	void print_num();
+	// 获取num
+	long long get_num();
+
+	// << 重载
+	friend ostream& operator<<(ostream& os, Int num);
+	// >> 重载
+	friend ostream& operator<<(ostream& os, Int num);
+	// + 重载
+	Int operator+(Int& num);
+	// - 重载
+	Int operator-(Int& num);
 
 };
 
@@ -127,7 +172,13 @@ public:
 	void print_code_binary();
 	// 十进制打印数字
 	void print_num();
+	// 输出数字
+	string get_string();
+	// 获取num
+	long long get_num();
 
+	// 友元输出流重载
+	friend ostream& operator<<(ostream& os, Float num);
 };
 
 

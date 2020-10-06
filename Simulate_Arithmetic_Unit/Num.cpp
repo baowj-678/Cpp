@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <iostream>
 
-using namespace::std;
+
 /************************************* Êý×Ö³¬Àà ******************************************/
 
 Num::Num()
@@ -45,3 +45,9 @@ void Num::print_codes_binary()
 	this->print_code_binary();
 }
 
+
+ostream& operator<<(ostream& os, Num* num)
+{
+	os << num->get_num();
+	return os;
+}
