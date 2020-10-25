@@ -135,6 +135,9 @@
     <ClCompile Include="1276. 不浪费原料的汉堡制作方案.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="845. 数组中的最长山脉.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
