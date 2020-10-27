@@ -141,6 +141,9 @@
     <ClCompile Include="1365. 有多少小于当前数字的数字.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="144. 二叉树的前序遍历.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
