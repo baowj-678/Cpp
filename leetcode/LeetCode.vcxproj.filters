@@ -144,6 +144,9 @@
     <ClCompile Include="144. 二叉树的前序遍历.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="1207. 独一无二的出现次数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
