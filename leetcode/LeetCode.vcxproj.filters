@@ -147,6 +147,9 @@
     <ClCompile Include="1207. 独一无二的出现次数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="129. 求根到叶子节点数字之和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
