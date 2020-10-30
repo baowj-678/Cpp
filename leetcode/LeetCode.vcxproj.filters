@@ -150,6 +150,9 @@
     <ClCompile Include="129. 求根到叶子节点数字之和.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="463. 岛屿的周长.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
