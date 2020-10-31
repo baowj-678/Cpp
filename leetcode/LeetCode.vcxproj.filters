@@ -153,6 +153,9 @@
     <ClCompile Include="463. 岛屿的周长.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="381. O(1) 时间插入、删除和获取随机元素 - 允许重复.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
