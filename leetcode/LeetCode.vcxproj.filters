@@ -156,6 +156,12 @@
     <ClCompile Include="381. O(1) 时间插入、删除和获取随机元素 - 允许重复.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="140. 单词拆分 II.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="349. 两个数组的交集.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
