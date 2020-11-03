@@ -162,6 +162,9 @@
     <ClCompile Include="349. 两个数组的交集.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="941. 有效的山脉数组.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
