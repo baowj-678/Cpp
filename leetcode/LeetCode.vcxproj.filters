@@ -165,6 +165,9 @@
     <ClCompile Include="941. 有效的山脉数组.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="57. 插入区间.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
