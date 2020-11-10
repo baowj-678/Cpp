@@ -168,6 +168,12 @@
     <ClCompile Include="57. 插入区间.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="127. 单词接龙.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="973. 最接近原点的 K 个点.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
