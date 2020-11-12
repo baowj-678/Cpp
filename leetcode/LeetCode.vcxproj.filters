@@ -177,6 +177,9 @@
     <ClCompile Include="514. 自由之路.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="922. 按奇偶排序数组 II.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
