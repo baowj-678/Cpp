@@ -79,8 +79,14 @@ public:
 	virtual void print_code_binary() = 0;
 	// 十进制打印数字
 	virtual void print_num() = 0;
-	// 获取num
+	// 获取整个数
 	virtual long long get_num() = 0;
+	// 获取符号位
+	virtual long long get_sign() = 0;
+	// 获取数字位
+	virtual long long get_x() = 0;
+	// 获取阶码位
+	virtual long long get_e() = 0;
 
 	/***** 静态方法 *****/
 	// 输出数字存储的二进制形式
@@ -130,8 +136,14 @@ public:
 	void print_code_binary();
 	// 十进制打印数字
 	void print_num();
-	// 获取num
+	// 获取整个数
 	long long get_num();
+	// 获取符号位
+	long long get_sign();
+	// 获取数字位
+	long long get_x();
+	// 获取阶码位
+	long long get_e();
 
 	// << 重载
 	friend ostream& operator<<(ostream& os, Int num);
@@ -152,7 +164,10 @@ public:
 	Float(double num);
 	Float(double num, CodeType type);
 	~Float();
-
+	// 原码一位乘法
+	static Float multiply_true_code(Float a, Float b);
+	// 补码一位乘法
+	static Float multiply_complement_code(Float a, Float b);
 private:
 	// 浮点数
 	u_float num;
@@ -174,8 +189,15 @@ public:
 	void print_num();
 	// 输出数字
 	string get_string();
-	// 获取num
+
+	// 获取整个数
 	long long get_num();
+	// 获取符号位
+	long long get_sign();
+	// 获取数字位
+	long long get_x();
+	// 获取阶码位
+	long long get_e();
 
 	// 友元输出流重载
 	friend ostream& operator<<(ostream& os, Float num);

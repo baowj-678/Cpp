@@ -44,6 +44,28 @@ Float::~Float()
 }
 
 /**
+* 补码乘法
+* :param a: Float原数据
+* :param b: Float原数据
+*/
+Float Float::multiply_true_code(Float a, Float b)
+{
+	// 转补码
+	a.convert_to_complement_code();
+	
+}
+
+/**
+* 补码乘法
+* :param a: Float原数据
+* :param b: Float原数据
+*/
+Float Float::multiply_complement_code(Float a, Float b)
+{
+	long long 
+}
+
+/**
 * 浮点数: 转原码
 */
 void Float::convert_to_true_code()
@@ -214,7 +236,7 @@ ostream& operator<<(ostream& os, Float num)
 }
 
 /**
-* 获取num
+* 获取num(将double变成long long)
 */
 long long Float::get_num()
 {
@@ -223,4 +245,28 @@ long long Float::get_num()
 	ans |= (this->num.s.e << 51);
 	ans |= this->num.s.num;
 	return ans;
+}
+
+/**
+* 获取符号位
+*/
+long long Float::get_sign()
+{
+	return this->num.s.f;
+}
+
+/**
+* 获取数字位
+*/
+long long Float::get_x()
+{
+	return this->num.s.num;
+}
+
+/**
+* 获取阶码
+*/
+long long Float::get_e()
+{
+	return this->num.s.f;
 }

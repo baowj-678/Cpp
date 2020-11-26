@@ -183,6 +183,12 @@
     <ClCompile Include="328. 奇偶链表.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="164.最大间距.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="1370. 上升下降字符串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
