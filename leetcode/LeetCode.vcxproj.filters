@@ -189,6 +189,9 @@
     <ClCompile Include="1370. 上升下降字符串.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="454. 四数相加 II.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
