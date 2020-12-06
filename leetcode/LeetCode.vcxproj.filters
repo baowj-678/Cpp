@@ -210,6 +210,9 @@
     <ClCompile Include="659. 分割数组为连续子序列.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="118. 杨辉三角.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
