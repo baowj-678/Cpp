@@ -213,6 +213,9 @@
     <ClCompile Include="118. 杨辉三角.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="861. 翻转矩阵后的得分.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
