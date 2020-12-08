@@ -193,11 +193,18 @@ public:
 	// 获取整个数
 	long long get_num();
 	// 获取符号位
-	long long get_sign();
-	// 获取数字位
-	long long get_x();
-	// 获取阶码位
-	long long get_e();
+	unsigned long long get_sign();
+	// 获取小数部分(存储形式)
+	unsigned long long get_x();
+	// 获取小数部分(原码形式)
+	unsigned long long get_x_true();
+	// 获取小数部分(补码形式)
+	unsigned long long get_x_complement();
+	// 获取阶码(移码形式)
+	unsigned long long get_e();
+	// 获取阶码(原码形式)
+	unsigned long long get_e_true();
+
 
 	// 友元输出流重载
 	friend ostream& operator<<(ostream& os, Float num);

@@ -44,15 +44,17 @@ Float::~Float()
 }
 
 /**
-* 补码乘法
+* 浮点数原码乘法
 * :param a: Float原数据
 * :param b: Float原数据
 */
 Float Float::multiply_true_code(Float a, Float b)
 {
-	// 转补码
-	a.convert_to_complement_code();
 	
+	unsigned int e = a.get_e_true() + b.get_e_true();
+	unsigned long long A = a.get_num();
+	unsigned long long B = b.get_num();
+
 }
 
 /**
@@ -62,7 +64,7 @@ Float Float::multiply_true_code(Float a, Float b)
 */
 Float Float::multiply_complement_code(Float a, Float b)
 {
-	long long 
+	return a;
 }
 
 /**
@@ -250,7 +252,7 @@ long long Float::get_num()
 /**
 * 获取符号位
 */
-long long Float::get_sign()
+unsigned long long Float::get_sign()
 {
 	return this->num.s.f;
 }
@@ -258,15 +260,41 @@ long long Float::get_sign()
 /**
 * 获取数字位
 */
-long long Float::get_x()
+unsigned long long Float::get_x()
 {
 	return this->num.s.num;
 }
 
 /**
-* 获取阶码
+* 获取小数部分(原码形式)
 */
-long long Float::get_e()
+unsigned long long Float::get_x_true()
+{
+	return 0;
+}
+
+
+/**
+* 获取小数部分(补码形式)
+*/
+unsigned long long Float::get_x_complement()
+{
+	return 0;
+}
+
+/**
+* 获取阶码(移码)
+*/
+unsigned long long Float::get_e()
 {
 	return this->num.s.f;
+}
+
+
+/**
+* 获取阶码(原码)
+*/
+unsigned long long Float::get_e_true()
+{
+	return this->num.s.f - E_BASE;
 }
