@@ -219,6 +219,9 @@
     <ClCompile Include="842. 将数组拆分成斐波那契序列.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="860. 柠檬水找零.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">

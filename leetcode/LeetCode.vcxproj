@@ -329,10 +329,13 @@
     <ClCompile Include="83. 删除排序链表中的重复元素.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="842. 将数组拆分成斐波那契序列.cpp" />
+    <ClCompile Include="842. 将数组拆分成斐波那契序列.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="845. 数组中的最长山脉.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="860. 柠檬水找零.cpp" />
     <ClCompile Include="861. 翻转矩阵后的得分.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
