@@ -16,4 +16,5 @@
 | [CSP](CSP)                                                 | **CCF CSP认证考试**历年题目     |
 | [Algorithm](Algorithm)                                     | 经典**算法**代码                |
 | [Simulate_Arithmetic_Unit](Simulate_Arithmetic_Unit)       | 用C++模拟**计算机硬件算术计算** |
+| [算法笔记](算法笔记)                                       | 《算法笔记》代码                |
 
