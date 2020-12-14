@@ -225,6 +225,9 @@
     <ClCompile Include="217. 存在重复元素.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="49. 字母异位词分组.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">

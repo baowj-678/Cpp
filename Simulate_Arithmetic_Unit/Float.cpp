@@ -51,10 +51,29 @@ Float::~Float()
 Float Float::multiply_true_code(Float a, Float b)
 {
 	
+	// e为阶码的原码
+	a.print_codes_binary();
+	b.print_codes_binary();
 	unsigned int e = a.get_e_true() + b.get_e_true();
-	unsigned long long A = a.get_num();
-	unsigned long long B = b.get_num();
-
+	unsigned long long A = a.get_x_true();
+	//Num::num_to_binary(&A, 63);
+	//printf("\n");
+	unsigned long long B = b.get_x_true();
+	//Num::num_to_binary(&B, 63);
+	//printf("\n");
+	unsigned long long C = 0;
+	while (A)
+	{
+		if (A & 1)
+			C = C + B;
+		C >>= 1;
+		A >>= 1;
+	}
+	Float F;
+	F.set_x(C);
+	e += E_BASE;
+	F.set_e(e);
+	return F;
 }
 
 /**
@@ -238,7 +257,7 @@ ostream& operator<<(ostream& os, Float num)
 }
 
 /**
-* 获取num(将double变成long long)
+* 获取num(将double变成long long,二进制存储不变)
 */
 long long Float::get_num()
 {
@@ -254,24 +273,25 @@ long long Float::get_num()
 */
 unsigned long long Float::get_sign()
 {
-	return this->num.s.f;
+	return (unsigned long long)this->num.s.f;
 }
 
 /**
-* 获取数字位
+* 获取数字位(原码/原存储形式)
 */
 unsigned long long Float::get_x()
 {
-	return this->num.s.num;
+	this->convert_to_true_code();
+	return (unsigned long long)this->num.s.num;
 }
 
-/**
-* 获取小数部分(原码形式)
-*/
+// 获取小数部分(0.x形式)
 unsigned long long Float::get_x_true()
 {
-	return 0;
+	this->convert_to_true_code();
+	return (this->num.s.num | ((unsigned long long)1 << 52));
 }
+
 
 
 /**
@@ -279,15 +299,16 @@ unsigned long long Float::get_x_true()
 */
 unsigned long long Float::get_x_complement()
 {
-	return 0;
+	this->convert_to_complement_code();
+	return this->num.s.num;
 }
 
 /**
-* 获取阶码(移码)
+* 获取阶码(移码/硬件存储形式)
 */
 unsigned long long Float::get_e()
 {
-	return this->num.s.f;
+	return (unsigned long long)this->num.s.e;
 }
 
 
@@ -296,5 +317,21 @@ unsigned long long Float::get_e()
 */
 unsigned long long Float::get_e_true()
 {
-	return this->num.s.f - E_BASE;
+	return this->num.s.e - E_BASE;
+}
+
+/**
+* 设置阶码(移码/硬件存储形式)
+*/
+void Float::set_e(unsigned long long e)
+{
+	this->num.s.e = e;
+}
+
+/**
+* 设置小数(原码/硬件存储形式)
+*/
+void Float::set_x(unsigned long long x)
+{
+	this->num.s.num = x;
 }

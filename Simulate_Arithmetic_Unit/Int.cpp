@@ -229,7 +229,7 @@ long long Int::get_num()
 /**
 * 获取符号位
 */
-long long Int::get_sign()
+unsigned long long Int::get_sign()
 {
 	return this->num.s.f;
 }
@@ -237,7 +237,7 @@ long long Int::get_sign()
 /**
 * 获取数字位
 */
-long long Int::get_x()
+unsigned long long Int::get_x()
 {
 	return this->num.s.x;
 }
@@ -245,7 +245,7 @@ long long Int::get_x()
 /**
 * 获取阶码
 */
-long long Int::get_e()
+unsigned long long Int::get_e()
 {
 	return 0;
 }

@@ -82,11 +82,11 @@ public:
 	// 获取整个数
 	virtual long long get_num() = 0;
 	// 获取符号位
-	virtual long long get_sign() = 0;
+	virtual unsigned long long get_sign() = 0;
 	// 获取数字位
-	virtual long long get_x() = 0;
+	virtual unsigned long long get_x() = 0;
 	// 获取阶码位
-	virtual long long get_e() = 0;
+	virtual unsigned long long get_e() = 0;
 
 	/***** 静态方法 *****/
 	// 输出数字存储的二进制形式
@@ -99,8 +99,6 @@ public:
 	/***** 友元方法 *****/
 	// << 重载
 	friend ostream& operator<<(ostream& os, Num* num);
-
-
 
 };
 
@@ -139,11 +137,11 @@ public:
 	// 获取整个数
 	long long get_num();
 	// 获取符号位
-	long long get_sign();
+	unsigned long long get_sign();
 	// 获取数字位
-	long long get_x();
+	unsigned long long get_x();
 	// 获取阶码位
-	long long get_e();
+	unsigned long long get_e();
 
 	// << 重载
 	friend ostream& operator<<(ostream& os, Int num);
@@ -205,6 +203,10 @@ public:
 	// 获取阶码(原码形式)
 	unsigned long long get_e_true();
 
+	// 设置阶码
+	void set_e(unsigned long long e);
+	// 设置小数
+	void set_x(unsigned long long x);
 
 	// 友元输出流重载
 	friend ostream& operator<<(ostream& os, Float num);

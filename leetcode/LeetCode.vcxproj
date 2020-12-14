@@ -269,6 +269,7 @@
     <ClCompile Include="463. 岛屿的周长.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="49. 字母异位词分组.cpp" />
     <ClCompile Include="493. 翻转对.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
