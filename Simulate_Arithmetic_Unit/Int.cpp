@@ -171,7 +171,7 @@ Float* Int::convert_to_float()
 	this->convert_to_true_code();
 	u_float num;
 	// 符号位
-	num.s.f = this->num.s.f;
+	num.s.sign = this->num.s.f;
 	// 阶码10010101000001010001111010111000010100011110101110001
 	unsigned long long tmp = this->num.s.x;
 	unsigned long long i = 0;
@@ -181,9 +181,9 @@ Float* Int::convert_to_float()
 		i++;
 	}
 	tmp = this->num.s.x;
-	num.s.e = i + E_BASE;
+	num.s.exponent = i + E_BASE;
 	// 小数
-	num.s.num = (tmp << (52 - i));
+	num.s.decimal = (tmp << (52 - i));
 	// new对象
 	Float* ans = new Float(num.num, CodeType::true_);
 	return ans;
@@ -229,7 +229,7 @@ long long Int::get_num()
 /**
 * 获取符号位
 */
-unsigned long long Int::get_sign()
+unsigned int Int::get_sign()
 {
 	return this->num.s.f;
 }
@@ -237,7 +237,7 @@ unsigned long long Int::get_sign()
 /**
 * 获取数字位
 */
-unsigned long long Int::get_x()
+unsigned long long Int::get_decimal()
 {
 	return this->num.s.x;
 }
@@ -245,7 +245,7 @@ unsigned long long Int::get_x()
 /**
 * 获取阶码
 */
-unsigned long long Int::get_e()
+unsigned int Int::get_exponent()
 {
 	return 0;
 }

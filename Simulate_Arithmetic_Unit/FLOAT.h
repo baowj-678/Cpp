@@ -9,9 +9,9 @@
 
 struct s_float
 {
-	unsigned long long num : 52; // Ð¡Êý
-	unsigned long long e : 11;   // ½×Âë
-	unsigned long long f : 1;    // ·ûºÅ
+	unsigned long long decimal : 52; // Ð¡Êý
+	unsigned long long exponent : 11;   // ½×Âë
+	unsigned long long sign : 1;    // ·ûºÅ
 };
 
 typedef struct s_float s_float;

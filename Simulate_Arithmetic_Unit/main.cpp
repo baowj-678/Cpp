@@ -9,7 +9,7 @@ using std::cin;
 
 int main()
 {
-	Float a = 0.998;
+	Float a = -0.998;
 	Float b = 9;
 	cout << a.multiply_true_code(a, b);
 }

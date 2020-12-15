@@ -82,11 +82,11 @@ public:
 	// 获取整个数
 	virtual long long get_num() = 0;
 	// 获取符号位
-	virtual unsigned long long get_sign() = 0;
+	virtual unsigned int get_sign() = 0;
 	// 获取数字位
-	virtual unsigned long long get_x() = 0;
+	virtual unsigned long long get_decimal() = 0;
 	// 获取阶码位
-	virtual unsigned long long get_e() = 0;
+	virtual unsigned int get_exponent() = 0;
 
 	/***** 静态方法 *****/
 	// 输出数字存储的二进制形式
@@ -137,11 +137,11 @@ public:
 	// 获取整个数
 	long long get_num();
 	// 获取符号位
-	unsigned long long get_sign();
+	unsigned int get_sign();
 	// 获取数字位
-	unsigned long long get_x();
+	unsigned long long get_decimal();
 	// 获取阶码位
-	unsigned long long get_e();
+	unsigned int get_exponent();
 
 	// << 重载
 	friend ostream& operator<<(ostream& os, Int num);
@@ -162,15 +162,29 @@ public:
 	Float(double num);
 	Float(double num, CodeType type);
 	~Float();
-	// 原码一位乘法
+	/* 原码一位乘法 */
 	static Float multiply_true_code(Float a, Float b);
-	// 补码一位乘法
+	/* 补码一位乘法 */
 	static Float multiply_complement_code(Float a, Float b);
 private:
 	// 浮点数
 	u_float num;
 	
 public:
+	/* 常数 */
+	// 小数位数
+	static const int Decimal_Num = 52;
+	// 阶码位数
+	static const int Exponent_Num = 11;
+	// 符号位数
+	static const int Sign_Num = 1;
+	// 移码偏移值
+	static const unsigned int E_BASE = 1023;
+	// 全为1
+	static const unsigned long long FLOAT_ONES = 0XFFFFFFFFFFFFFFFF;
+
+
+	/* 函数 */
 	// 转原码
 	void convert_to_true_code();
 	// 转反码
@@ -191,23 +205,24 @@ public:
 	// 获取整个数
 	long long get_num();
 	// 获取符号位
-	unsigned long long get_sign();
+	unsigned int get_sign();
 	// 获取小数部分(存储形式)
-	unsigned long long get_x();
+	unsigned long long get_decimal();
 	// 获取小数部分(原码形式)
-	unsigned long long get_x_true();
+	unsigned long long get_decimal_true();
 	// 获取小数部分(补码形式)
-	unsigned long long get_x_complement();
+	unsigned long long get_decimal_complement();
 	// 获取阶码(移码形式)
-	unsigned long long get_e();
+	unsigned int get_exponent();
 	// 获取阶码(原码形式)
-	unsigned long long get_e_true();
+	unsigned int get_exponent_true();
 
 	// 设置阶码
-	void set_e(unsigned long long e);
+	void set_exponent(unsigned long long e);
 	// 设置小数
-	void set_x(unsigned long long x);
-
+	void set_decimal(unsigned long long x);
+	// 设置符号位
+	void set_sign(unsigned int sign);
 	// 友元输出流重载
 	friend ostream& operator<<(ostream& os, Float num);
 };
