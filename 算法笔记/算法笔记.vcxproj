@@ -25,7 +25,10 @@
     <ClCompile Include="第三章\1032 挖掘机技术哪家强.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="第三章\1036 跟奥巴马一起编程.cpp" />
+    <ClCompile Include="第三章\1036 跟奥巴马一起编程.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="第三章\codeup 1928 日期差值.cpp" />
     <ClCompile Include="第三章\codeup 1934 找x.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
