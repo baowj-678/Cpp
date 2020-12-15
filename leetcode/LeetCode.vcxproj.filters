@@ -228,6 +228,9 @@
     <ClCompile Include="49. 字母异位词分组.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="738. 单调递增的数字.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
