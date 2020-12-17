@@ -234,6 +234,9 @@
     <ClCompile Include="290. 单词规律.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="714. 买卖股票的最佳时机含手续费.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
