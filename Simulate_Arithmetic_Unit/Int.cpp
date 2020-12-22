@@ -55,18 +55,18 @@ void Int::convert_to_inverse_code()
 	if (this->code_type == CodeType::true_)
 	{
 		// 负数
-		if (this->num.s.f != 0)
+		if (this->num.s.sign != 0)
 		{
-			this->num.s.x ^= ONES;
+			this->num.s.decimal ^= ONES;
 		}
 	}
 	// 补码 -> 反码
 	else if (this->code_type == CodeType::complement_)
 	{
 		// 负数
-		if (this->num.s.f != 0)
+		if (this->num.s.sign != 0)
 		{
-			this->num.s.x -= 1;
+			this->num.s.decimal -= 1;
 		}
 	}
 	// 反码 -> 反码
@@ -87,16 +87,16 @@ void Int::convert_to_true_code()
 	if (this->code_type == CodeType::inverse_)
 	{
 		// 负数
-		if (this->num.s.f != 0)
+		if (this->num.s.sign != 0)
 		{
-			this->num.s.x ^= ONES;
+			this->num.s.decimal ^= ONES;
 		}
 	}
 	// 补码 -> 原码
 	else if (this->code_type == CodeType::complement_)
 	{
 		// 负数
-		if (this->num.s.f != 0)
+		if (this->num.s.sign != 0)
 		{
 			this->convert_to_inverse_code();
 			this->convert_to_true_code();
@@ -126,9 +126,9 @@ void Int::convert_to_complement_code()
 	else if (this->code_type == CodeType::inverse_)
 	{
 		// 负数
-		if (this->num.s.f != 0)
+		if (this->num.s.sign != 0)
 		{
-			this->num.s.x += 1;
+			this->num.s.decimal += 1;
 		}
 	}
 	// 补码 -> 补码
@@ -171,16 +171,16 @@ Float* Int::convert_to_float()
 	this->convert_to_true_code();
 	u_float num;
 	// 符号位
-	num.s.sign = this->num.s.f;
+	num.s.sign = this->num.s.sign;
 	// 阶码10010101000001010001111010111000010100011110101110001
-	unsigned long long tmp = this->num.s.x;
+	unsigned long long tmp = this->num.s.decimal;
 	unsigned long long i = 0;
 	while (tmp > 1)
 	{
 		tmp >>= 1;
 		i++;
 	}
-	tmp = this->num.s.x;
+	tmp = this->num.s.decimal;
 	num.s.exponent = i + E_BASE;
 	// 小数
 	num.s.decimal = (tmp << (52 - i));
@@ -231,7 +231,7 @@ long long Int::get_num()
 */
 unsigned int Int::get_sign()
 {
-	return this->num.s.f;
+	return this->num.s.sign;
 }
 
 /**
@@ -239,7 +239,7 @@ unsigned int Int::get_sign()
 */
 unsigned long long Int::get_decimal()
 {
-	return this->num.s.x;
+	return this->num.s.decimal;
 }
 
 /**

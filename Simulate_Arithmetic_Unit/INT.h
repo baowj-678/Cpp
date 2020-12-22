@@ -8,8 +8,8 @@
 
 struct s_int
 {
-	int x : 31; // 数字位
-	int f : 1;  // 符号位
+	int decimal : 31; // 数字位
+	int sign : 1;  // 符号位
 };
 
 typedef struct s_int s_int;

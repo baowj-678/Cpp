@@ -166,6 +166,7 @@ public:
 	static Float multiply_true_code(Float a, Float b);
 	/* 补码一位乘法 */
 	static Float multiply_complement_code(Float a, Float b);
+
 private:
 	// 浮点数
 	u_float num;
@@ -208,9 +209,9 @@ public:
 	unsigned int get_sign();
 	// 获取小数部分(存储形式)
 	unsigned long long get_decimal();
-	// 获取小数部分(原码形式)
+	// 获取小数部分(原码形式/不包括符号位)
 	unsigned long long get_decimal_true();
-	// 获取小数部分(补码形式)
+	// 获取小数部分(补码形式/双符号形式)
 	unsigned long long get_decimal_complement();
 	// 获取阶码(移码形式)
 	unsigned int get_exponent();

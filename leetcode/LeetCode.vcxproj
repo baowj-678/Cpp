@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="103. 二叉树的锯齿形层序遍历.cpp" />
     <ClCompile Include="11. 盛最多水的容器.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -375,6 +376,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TreeNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

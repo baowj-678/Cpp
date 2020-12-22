@@ -48,7 +48,6 @@ Float::~Float()
 */
 Float Float::multiply_true_code(Float a, Float b)
 {
-	
 	// e为阶码的原码
 	unsigned int Exponent = (a.get_exponent_true() + 1) + (b.get_exponent_true() + 1);
 	unsigned long long A = a.get_decimal_true();
@@ -77,16 +76,46 @@ Float Float::multiply_true_code(Float a, Float b)
 	// 符号位判断
 	F.set_sign(a.get_sign() ^ b.get_sign());
 	return F;
+	return Float();
 }
 
 /**
-* 补码乘法
+* 浮点数补码乘法
 * :param a: Float原数据
 * :param b: Float原数据
 */
 Float Float::multiply_complement_code(Float a, Float b)
 {
-	return a;
+	// e为阶码的原码
+	unsigned int Exponent = (a.get_exponent_true() + 1) + (b.get_exponent_true() + 1);
+	unsigned long long A = a.get_decimal_complement();
+	double B_tmp = (double)b.get_num();
+	unsigned long long B_ = b.get_decimal_complement();
+	unsigned long long B = b.get_decimal_complement();
+	unsigned long long Decimal = 0;
+	while (A)
+	{
+		if (A & 1)
+		{
+			Decimal = Decimal + B;
+		}
+		Decimal >>= 1;
+		A >>= 1;
+	}
+	while ((Decimal >> (Float::Decimal_Num)) == 0)
+	{
+		Decimal <<= 1;
+		Exponent -= 1;
+	}
+	Float F;
+	// 小数位
+	F.set_decimal(Decimal);
+	// 阶码位
+	Exponent += (Float::E_BASE - 1);
+	F.set_exponent(Exponent);
+	// 符号位判断
+	F.set_sign(a.get_sign() ^ b.get_sign());
+	return F;
 }
 
 /**
@@ -199,15 +228,15 @@ Float* Float::convert_to_float()
 // 转整数
 Int* Float::convert_to_int()
 {
-	u_int num;
-	num.num = 0;
+	u_int int_num;
+	int_num.num = 0;
 	this->convert_to_true_code();
 	// e: 保存阶码
 	unsigned int e = this->num.s.exponent;
 	// x第一位置1
-	num.s.x |= 0X40000000;
+	int_num.s.decimal |= 0X40000000;
 	// x其余位取小数前30位
-	num.s.x |= (this->num.s.decimal >> 22);
+	int_num.s.decimal |= (this->num.s.decimal >> 22);
 	// 向左移
 	if (e >= E_BASE)
 	{
@@ -215,27 +244,27 @@ Int* Float::convert_to_int()
 		// 如果左移不足30
 		if (e < 30)
 		{
-			num.num >>= (30 - e);
+			int_num.num >>= (30 - e);
 		}
 		// 否则
 		else
 		{
 			e -= 30;
-			num.num <<= e;
+			int_num.num <<= e;
 		}
 
 	}
 	// 向右移（为0）
 	else
 	{
-		num.s.x = 0;
+		int_num.s.decimal = 0;
 	}
 	// 符号位
 	if (this->num.s.sign == 0)
-		num.s.f = 0;
+		int_num.s.sign = 0;
 	else
-		num.s.f = 1;
-	Int* ans = new Int(num.num, CodeType::true_);
+		int_num.s.sign = 1;
+	Int* ans = new Int(int_num.num, CodeType::true_);
 	return ans;
 }
 
@@ -292,18 +321,29 @@ unsigned long long Float::get_decimal()
 unsigned long long Float::get_decimal_true()
 {
 	this->convert_to_true_code();
-	return (this->num.s.decimal | ((unsigned long long)1 << 52));
+	return (this->num.s.decimal | ((unsigned long long)0b1 << Float::Decimal_Num));
 }
 
 
 
 /**
-* 获取小数部分(补码形式)
+* 获取小数部分(补码形式/双符号形式)
 */
 unsigned long long Float::get_decimal_complement()
 {
 	this->convert_to_complement_code();
-	return this->num.s.decimal;
+	unsigned long long tmp = this->num.s.decimal;
+	if (this->num.s.sign == 1)
+	{
+		// 负数
+		tmp = tmp | (unsigned long long)0b11 << (Float::Decimal_Num + 1);
+	}
+	else
+	{
+		// 正数
+		tmp = tmp | (unsigned long long)0b00 << (Float::Decimal_Num + 1);
+	}
+	return tmp;
 }
 
 /**

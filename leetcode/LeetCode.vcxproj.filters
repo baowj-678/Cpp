@@ -237,10 +237,18 @@
     <ClCompile Include="714. 买卖股票的最佳时机含手续费.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="103. 二叉树的锯齿形层序遍历.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeetCode.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TreeNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

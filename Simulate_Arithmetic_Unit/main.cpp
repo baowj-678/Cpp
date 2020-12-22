@@ -11,5 +11,5 @@ int main()
 {
 	Float a = -0.998;
 	Float b = 9;
-	cout << a.multiply_true_code(a, b);
+	cout << a.multiply_complement_code(a, b);
 }
