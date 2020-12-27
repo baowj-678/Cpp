@@ -246,6 +246,15 @@
     <ClCompile Include="455. 分发饼干.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="84. 柱状图中最大的矩形.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="85. 最大矩形.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="205. 同构字符串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">

@@ -45,7 +45,7 @@ public:
         int i = 0, j = 0, cnt = 0;
         for (; i < g.size(), j < s.size();)
         {
-            if (g[i] <= s[i])
+            if (g[i] <= s[j])
             {
                 cnt++;
                 i++;
@@ -53,7 +53,7 @@ public:
             }
             else
             {
-                i++;
+                j++;
             }
         }
         return cnt;
