@@ -255,6 +255,15 @@
     <ClCompile Include="205. 同构字符串.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="435. 无重叠区间.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="188. 买卖股票的最佳时机 IV.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="330. 按要求补齐数组.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">
