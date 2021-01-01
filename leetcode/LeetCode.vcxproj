@@ -315,6 +315,7 @@
     <ClCompile Include="58.最后一个单词的长度.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="605. 种花问题.cpp" />
     <ClCompile Include="659. 分割数组为连续子序列.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

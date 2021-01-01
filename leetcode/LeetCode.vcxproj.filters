@@ -264,6 +264,9 @@
     <ClCompile Include="330. 按要求补齐数组.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="605. 种花问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">
