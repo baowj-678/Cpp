@@ -267,6 +267,12 @@
     <ClCompile Include="605. 种花问题.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="239. 滑动窗口最大值.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="509. 斐波那契数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">
