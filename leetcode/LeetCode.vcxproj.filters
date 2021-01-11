@@ -273,6 +273,9 @@
     <ClCompile Include="509. 斐波那契数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="1202. 交换字符串中的元素.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">

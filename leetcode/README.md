@@ -13,6 +13,7 @@
 | [435. 无重叠区间](435. 无重叠区间.cpp)                       | **中等**:low_brightness: | **贪心算法**:bear:          | [LeetCode](https://leetcode-cn.com/problems/non-overlapping-intervals/) |
 | [188. 买卖股票的最佳时机 IV](188. 买卖股票的最佳时机 IV.cpp) | **难**:boom:             | **动态规划**:star:          | [LeetCode](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/submissions/) |
 | [330. 按要求补齐数组](330. 按要求补齐数组.cpp)               | **难**:boom:             | **贪心算法**:bear:          | [LeetCode](https://leetcode-cn.com/problems/patching-array/) |
+| [1202. 交换字符串中的元素](1202. 交换字符串中的元素.cpp)     | **中等**:low_brightness: | **并查集**:unicorn:         | [LeetCode](https://leetcode-cn.com/problems/smallest-string-with-swaps/) |
 
 
 
