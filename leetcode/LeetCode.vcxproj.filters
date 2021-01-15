@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="69. x 的平方根.cpp">
+    <ClCompile Include="Code/69. x 的平方根.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="283. 移动零.cpp">
