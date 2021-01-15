@@ -40,10 +40,17 @@
     <ClCompile Include="第三章\codeup 5901 回文串.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="第三章\PAT-B1009-说反话.cpp" />
+    <ClCompile Include="第三章\PAT-B1009-说反话.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="第四章\1025-PAT-Ranking.cpp" />
+    <ClCompile Include="第四章\insertSort.cpp" />
+    <ClCompile Include="第四章\selectSort.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="第三章\README.md" />
+    <None Include="第四章\README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -16,6 +16,9 @@
     <Filter Include="源文件\第三章">
       <UniqueIdentifier>{a9007ab7-359a-4556-aa07-58d2dbe53be2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\第四章">
+      <UniqueIdentifier>{b6bbbf0d-485e-463b-bf66-b31ef31e0bda}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="第三章\1001 害死人不偿命的(3n+1)猜想.cpp">
@@ -42,10 +45,25 @@
     <ClCompile Include="第三章\PAT-B1009-说反话.cpp">
       <Filter>源文件\第三章</Filter>
     </ClCompile>
+    <ClCompile Include="第四章\selectSort.cpp">
+      <Filter>源文件\第四章</Filter>
+    </ClCompile>
+    <ClCompile Include="第四章\insertSort.cpp">
+      <Filter>源文件\第四章</Filter>
+    </ClCompile>
+    <ClCompile Include="第四章\1025-PAT-Ranking.cpp">
+      <Filter>源文件\第四章</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="第三章\README.md">
       <Filter>源文件\第三章</Filter>
+    </None>
+    <None Include="第四章\README.md">
+      <Filter>源文件\第四章</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>源文件</Filter>
     </None>
   </ItemGroup>
 </Project>
