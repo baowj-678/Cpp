@@ -276,6 +276,15 @@
     <ClCompile Include="1202. 交换字符串中的元素.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="1203. 项目管理.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="684. 冗余连接.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="947. 移除最多的同行或同列石头.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">

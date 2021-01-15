@@ -19,11 +19,13 @@ public:
     {
         for(int i(0); i < startId.size(); i++)
         {
-            if(startId[i] == 0)
-                if(topSort(graph, startId, q, i) == false)
+            if (startId[i] == 0)
+            {
+                if (topSort(graph, startId, q, i) == false)
                 {
                     return false;
                 }
+            }
         }
         return true;
     }
@@ -32,16 +34,16 @@ public:
     {
         if(isSorted[id] == -1)
             return false;
-        else
+        if (isSorted[id] == -2)
+            return true;
+        q.push(id);
+        isSorted[id] = -1;
+        for(int x:graph[id])
         {
-            isSorted[id] = -1;
-            for(int x:graph[id])
-            {
-                q.push(x);
-                if(topSort(graph, isSorted, q, x) == false)
-                    return false;
-            }
+            if(topSort(graph, isSorted, q, x) == false)
+                return false;
         }
+        isSorted[id] = -2;
         return true;
     }
     vector<int> sortItems(int n, int m, vector<int>& group, vector<vector<int>>& beforeItems) {
@@ -74,12 +76,14 @@ public:
                     }
                     else
                     {
+                        group_degree[i] = -1;
                         group_graph[x].push_back(group_id + n);
                         group_degree[group_id + n]++;
                     }
                 }
                 else
                 {
+                    group_degree[x] = -1;
                     if(group_id == -1)
                     {
                         group_graph[x_group_id + n].push_back(i);
@@ -87,6 +91,7 @@ public:
                     }
                     else
                     {
+                        group_degree[i] = -1;
                         if(x_group_id == group_id)
                         {
                             inner_graph[x].push_back(i);
@@ -103,31 +108,50 @@ public:
         }
         // Tuopu sort
         queue<int> group_q;
-        topSort(group_q, group_graph, group_degree);
+        if (!topSort(group_q, group_graph, group_degree))
+            return vector<int>();
         queue<int> inner_q;
         vector<int> ans(n, 0);
         int i = 0;
         while(!group_q.empty())
         {
             int group_id = group_q.front();
+            group_q.pop();
             if(group_id < n)
-                ans[i] = group_id;
+                ans[i++] = group_id;
             else
             {
                 group_id -= n;
                 vector<int> &ids = group_2_id[group_id];
-                for()
+                bool hasEntrance = false;
+                for (int j : ids)
+                {
+                    if (inner_degree[j] == 0)
+                    {
+                        hasEntrance = true;
+                        if (!topSort(inner_graph, inner_degree, inner_q, j))
+                            return vector<int>();
+
+                    }
+                }
+                if (!hasEntrance)
+                    return vector<int>();
+                while (!inner_q.empty())
+                {
+                    ans[i++] = inner_q.front();
+                    inner_q.pop();
+                }
             }
-            
-            
-            if(ids.size() == 0)
-                ans[i] = 
-            topSort(inner_graph, inner_degree, inner_q, group_id);
-
         }
-        
-        topSort(inner_q, inner_graph, inner_degree);
-
-
+        return ans;
     }
 };
+
+int main()
+{
+    int m = 3, n = 5;
+    vector<int>group = { 1,0,-1,2,0 };
+    vector<vector<int>>beforeItem = { {2, 1, 3},{2, 4},{},{},{} };
+    Solution so;
+    so.sortItems(n, m, group, beforeItem);
+}
