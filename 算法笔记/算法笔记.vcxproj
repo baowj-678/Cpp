@@ -43,9 +43,15 @@
     <ClCompile Include="第三章\PAT-B1009-说反话.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="第四章\1025-PAT-Ranking.cpp" />
+    <ClCompile Include="第四章\1025-PAT-Ranking.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="第四章\insertSort.cpp" />
     <ClCompile Include="第四章\selectSort.cpp" />
+    <ClCompile Include="第四章\问题A-吃糖果.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="第四章\问题A-谁是你的潜在朋友.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
