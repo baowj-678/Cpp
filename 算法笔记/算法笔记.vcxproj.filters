@@ -60,6 +60,27 @@
     <ClCompile Include="第四章\问题A-谁是你的潜在朋友.cpp">
       <Filter>源文件\第四章</Filter>
     </ClCompile>
+    <ClCompile Include="第四章\PAT-B-1020.cpp">
+      <Filter>源文件\第四章</Filter>
+    </ClCompile>
+    <ClCompile Include="第四章\PAT-B-1023-组个最小数.cpp">
+      <Filter>源文件\第四章</Filter>
+    </ClCompile>
+    <ClCompile Include="第四章\快速幂.cpp">
+      <Filter>源文件\第四章</Filter>
+    </ClCompile>
+    <ClCompile Include="第四章\mergeSortRecursive.cpp">
+      <Filter>源文件\第四章</Filter>
+    </ClCompile>
+    <ClCompile Include="第四章\mergeSortLoop.cpp">
+      <Filter>源文件\第四章</Filter>
+    </ClCompile>
+    <ClCompile Include="第四章\quickSort.cpp">
+      <Filter>源文件\第四章</Filter>
+    </ClCompile>
+    <ClCompile Include="第四章\PAT-B-1040.cpp">
+      <Filter>源文件\第四章</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="第三章\README.md">
