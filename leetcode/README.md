@@ -17,6 +17,7 @@
 | [684. 冗余连接](Code/684.%20冗余连接.cpp)                    | **中等**:low_brightness: | **并查集**:unicorn:【方法好】 | [LeetCode](https://leetcode-cn.com/problems/redundant-connection/) |
 | [947. 移除最多的同行或同列石头](Code/947.%20移除最多的同行或同列石头.cpp) | **中等**:low_brightness: | **并查集**:unicorn:           | [LeetCode](https://leetcode-cn.com/problems/most-stones-removed-with-same-row-or-column/) |
 | [399. 除法求值](399.%20除法求值.cpp)                         | **中等**:low_brightness: | **有向图**:framed_picture:    | [LeetCode](https://leetcode-cn.com/problems/evaluate-division/submissions/) |
+| [803. 打砖块](Code/803.%20打砖块.cpp)                        | **困难**:boom:           | **并查集**:unicorn:           | [LeetCode](https://leetcode-cn.com/problems/bricks-falling-when-hit/submissions/) |
 
 
 

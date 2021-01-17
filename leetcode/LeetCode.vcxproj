@@ -154,7 +154,9 @@
     <ClInclude Include="TreeNode.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\399. 除法求值.cpp" />
+    <ClCompile Include="Code\399. 除法求值.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Code\803. 打砖块.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
