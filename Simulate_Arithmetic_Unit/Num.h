@@ -85,8 +85,6 @@ public:
 	virtual unsigned int get_sign() = 0;
 	// 获取数字位
 	virtual unsigned long long get_decimal() = 0;
-	// 获取阶码位
-	virtual unsigned int get_exponent() = 0;
 
 	/***** 静态方法 *****/
 	// 输出数字存储的二进制形式
@@ -136,22 +134,29 @@ public:
 	void print_num();
 	// 获取整个数
 	long long get_num();
+	// 设置整数
+	void set_num(unsigned int num);
+	// 设置符号位
+	void set_sign(unsigned int sign);
 	// 获取符号位
 	unsigned int get_sign();
+	// 设置CodeType
+	void set_codetype(CodeType type);
 	// 获取数字位
 	unsigned long long get_decimal();
-	// 获取阶码位
-	unsigned int get_exponent();
 
 	// << 重载
 	friend ostream& operator<<(ostream& os, Int num);
 	// >> 重载
-	friend ostream& operator<<(ostream& os, Int num);
+	friend ostream& operator>>(ostream& os, Int num);
 	// + 重载
 	Int operator+(Int& num);
 	// - 重载
 	Int operator-(Int& num);
-
+	// * 重载
+	Int operator*(Int& num);
+	// / 重载
+	Int operator/(Int& num);
 };
 
 /************************************* 浮点数类 ******************************************/

@@ -203,18 +203,11 @@ Int* Int::convert_to_int()
 string Int::get_string()
 {
 	string ans = "";
+	this->convert_to_complement_code();
 	ans += std::to_string(this->num.num);
 	return ans;
 }
 
-/**
-* << 重载
-*/
-ostream& operator<<(ostream& os, Int num)
-{
-	os << num.get_string();
-	return os;
-}
 
 /**
 * 获取num
@@ -243,11 +236,27 @@ unsigned long long Int::get_decimal()
 }
 
 /**
-* 获取阶码
+* 设置符号位[0,1]
 */
-unsigned int Int::get_exponent()
+void Int::set_sign(unsigned int sign)
 {
-	return 0;
+	this->num.s.sign = sign;
+}
+
+/**
+* 设置整数位
+*/
+void Int::set_num(unsigned int num)
+{
+	this->num.s.decimal = num;
+}
+
+/**
+* 设置CodeType
+*/
+void Int::set_codetype(CodeType type)
+{
+	this->code_type = type;
 }
 
 /**
@@ -276,4 +285,64 @@ Int Int::operator+(Int& num)
 	}
 	Int ans = { c, CodeType::complement_ };
 	return ans;
+}
+
+/**
+* - 重载
+*/
+Int Int::operator-(Int& num)
+{
+	// 获取A的补码
+	this->convert_to_complement_code();
+	long long a = this->get_num();
+	// 对num原码符号位取反
+	Int tmp_num = num;
+	tmp_num.convert_to_true_code();
+	tmp_num.set_sign(~tmp_num.get_sign());
+	tmp_num.convert_to_complement_code();
+	return *this + tmp_num;
+}
+
+/**
+* * 重载
+*/
+Int Int::operator*(Int& num)
+{
+	this->convert_to_true_code();
+	unsigned int a = this->get_num();
+	num.convert_to_true_code();
+	unsigned int b = num.get_num();
+	Int B, C;
+	B.set_num(b), B.set_sign(0);
+	C.set_num(0), C.set_sign(0);
+	while (a > 0)
+	{
+		if (a & 1)
+		{
+			C = C + B;
+		}
+		B.set_num(B.get_num() << 1);
+		a >>= 1;
+	}
+	C.set_sign(this->get_sign() ^ num.get_sign());
+	C.set_codetype(CodeType::true_);
+	return C;
+}
+
+/**
+* / 重载
+*/
+Int Int::operator/(Int& num)
+{
+
+}
+
+
+/**
+* << 重载
+*/
+ostream& operator<<(ostream& os, Int num)
+{
+	os << num.get_string();
+	return os;
 }

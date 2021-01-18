@@ -76,7 +76,6 @@ Float Float::multiply_true_code(Float a, Float b)
 	// ·ûºÅÎ»ÅÐ¶Ï
 	F.set_sign(a.get_sign() ^ b.get_sign());
 	return F;
-	return Float();
 }
 
 /**
