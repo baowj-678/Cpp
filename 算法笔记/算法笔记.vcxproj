@@ -43,13 +43,20 @@
     <ClCompile Include="第三章\PAT-B1009-说反话.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="第五章\codeup-1818.cpp" />
+    <ClCompile Include="第五章\LCm.cpp" />
+    <ClCompile Include="第五章\PAT-B-1019.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="第四章\1025-PAT-Ranking.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="第四章\insertSort.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="第四章\mergeSortLoop.cpp" />
+    <ClCompile Include="第四章\mergeSortLoop.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="第四章\mergeSortRecursive.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -59,7 +66,9 @@
     <ClCompile Include="第四章\PAT-B-1023-组个最小数.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="第四章\PAT-B-1040.cpp" />
+    <ClCompile Include="第四章\PAT-B-1040.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="第四章\quickSort.cpp" />
     <ClCompile Include="第四章\selectSort.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -77,6 +86,7 @@
   <ItemGroup>
     <None Include="README.md" />
     <None Include="第三章\README.md" />
+    <None Include="第五章\README.md" />
     <None Include="第四章\README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -19,6 +19,9 @@
     <Filter Include="源文件\第四章">
       <UniqueIdentifier>{b6bbbf0d-485e-463b-bf66-b31ef31e0bda}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\第五章">
+      <UniqueIdentifier>{e0e38e9c-62b6-4e0c-9dcd-b8d864496735}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="第三章\1001 害死人不偿命的(3n+1)猜想.cpp">
@@ -81,6 +84,15 @@
     <ClCompile Include="第四章\PAT-B-1040.cpp">
       <Filter>源文件\第四章</Filter>
     </ClCompile>
+    <ClCompile Include="第五章\PAT-B-1019.cpp">
+      <Filter>源文件\第五章</Filter>
+    </ClCompile>
+    <ClCompile Include="第五章\codeup-1818.cpp">
+      <Filter>源文件\第五章</Filter>
+    </ClCompile>
+    <ClCompile Include="第五章\LCm.cpp">
+      <Filter>源文件\第五章</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="第三章\README.md">
@@ -91,6 +103,9 @@
     </None>
     <None Include="README.md">
       <Filter>源文件</Filter>
+    </None>
+    <None Include="第五章\README.md">
+      <Filter>源文件\第五章</Filter>
     </None>
   </ItemGroup>
 </Project>
