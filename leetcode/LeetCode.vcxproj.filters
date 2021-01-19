@@ -26,6 +26,12 @@
     <ClCompile Include="Code\399. 除法求值.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\721. 账户合并.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\1584. 连接所有点的最小费用.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
