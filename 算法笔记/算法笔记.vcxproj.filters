@@ -93,6 +93,15 @@
     <ClCompile Include="第五章\LCm.cpp">
       <Filter>源文件\第五章</Filter>
     </ClCompile>
+    <ClCompile Include="Fraction.cpp">
+      <Filter>源文件\第五章</Filter>
+    </ClCompile>
+    <ClCompile Include="第五章\PAT-B-1013.cpp">
+      <Filter>源文件\第五章</Filter>
+    </ClCompile>
+    <ClCompile Include="第五章\PAT-A-1059.cpp">
+      <Filter>源文件\第五章</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="第三章\README.md">
