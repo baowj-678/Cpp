@@ -19,6 +19,8 @@
 | [399. 除法求值](399.%20除法求值.cpp)                         | **中等**:low_brightness: | **有向图**:framed_picture:      | [LeetCode](https://leetcode-cn.com/problems/evaluate-division/submissions/) |
 | [803. 打砖块](Code/803.%20打砖块.cpp)                        | **困难**:boom:           | **并查集**:unicorn:             | [LeetCode](https://leetcode-cn.com/problems/bricks-falling-when-hit/submissions/) |
 | [721. 账户合并](Code/721.%20账户合并.cpp)                    | **中等**:low_brightness: | **哈希表**、**并查集**:unicorn: | [LeetCode](https://leetcode-cn.com/problems/accounts-merge/) |
+| [1584. 连接所有点的最小费用](Code/1584.%20连接所有点的最小费用.cpp) | **中等**:low_brightness: | **Kruskal**、**并查集**:unlock: | [LeetCode](https://leetcode-cn.com/problems/min-cost-to-connect-all-points/) |
+| [357. 计算各个位数不同的数字个数](1584.%20连接所有点的最小费用.cpp) | **中等**:low_brightness: | **组合数**:nut_and_bolt:        | [LeetCode](https://leetcode-cn.com/problems/count-numbers-with-unique-digits) |
 
 
 
