@@ -43,3 +43,27 @@
 | [PAT A1059**Prime Factors**](第五章/PAT-A-1059.cpp)         | **简单**:one: | [PAT](https://pintia.cn/problem-sets/994805342720868352/problems/994805415005503488) |
 | [练习](http://codeup.cn/contest.php?cid=100000592):no_good: |               |                                                              |
 
+
+
+### 5.6 大整数运算:bike:
+
+| 题目                                                    | 难度 | 链接 |
+| ------------------------------------------------------- | ---- | ---- |
+| [练习](http://codeup.cn/contest.php?cid=100000593):bus: |      |      |
+
+
+
+### 5.7 [扩展欧几里得算法](https://github.com/baowj-678/cpp_algorithm/tree/master/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/%E7%AC%AC%E4%BA%94%E7%AB%A0/EEA.md):badminton:
+
+| 题目                                                    | 难度 | 链接 |
+| ------------------------------------------------------- | ---- | ---- |
+| [练习](http://codeup.cn/contest.php?cid=100000594):bug: |      |      |
+
+
+
+### 5.8 [组合数](https://github.com/baowj-678/cpp_algorithm/tree/master/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/%E7%AC%AC%E4%BA%94%E7%AB%A0/CN.md):zap:
+
+| 题目                                                    | 难度 | 链接 |
+| ------------------------------------------------------- | ---- | ---- |
+| [练习](http://codeup.cn/contest.php?cid=100000595):bug: |      |      |
+

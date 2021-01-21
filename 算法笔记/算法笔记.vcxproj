@@ -46,13 +46,22 @@
     <ClCompile Include="第三章\PAT-B1009-说反话.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="第五章\BigNum.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="第五章\CN.cpp" />
     <ClCompile Include="第五章\codeup-1818.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="第五章\EEA.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="第五章\LCm.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="第五章\PAT-A-1059.cpp" />
+    <ClCompile Include="第五章\PAT-A-1059.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="第五章\PAT-B-1013.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -97,8 +106,13 @@
   <ItemGroup>
     <None Include="README.md" />
     <None Include="第三章\README.md" />
+    <None Include="第五章\CN.md" />
+    <None Include="第五章\EEA.md" />
     <None Include="第五章\README.md" />
     <None Include="第四章\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="第五章\BigNum.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

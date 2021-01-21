@@ -102,6 +102,15 @@
     <ClCompile Include="第五章\PAT-A-1059.cpp">
       <Filter>源文件\第五章</Filter>
     </ClCompile>
+    <ClCompile Include="第五章\BigNum.cpp">
+      <Filter>源文件\第五章</Filter>
+    </ClCompile>
+    <ClCompile Include="第五章\EEA.cpp">
+      <Filter>源文件\第五章</Filter>
+    </ClCompile>
+    <ClCompile Include="第五章\CN.cpp">
+      <Filter>源文件\第五章</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="第三章\README.md">
@@ -116,5 +125,16 @@
     <None Include="第五章\README.md">
       <Filter>源文件\第五章</Filter>
     </None>
+    <None Include="第五章\EEA.md">
+      <Filter>源文件\第五章</Filter>
+    </None>
+    <None Include="第五章\CN.md">
+      <Filter>源文件\第五章</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="第五章\BigNum.h">
+      <Filter>源文件\第五章</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
