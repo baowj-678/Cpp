@@ -1,5 +1,8 @@
 #pragma once
 #define MAX_BIG_NUM_LEN	1000
+
+using std::istream;
+using std::ostream;
 class BigNum
 {
 public:
@@ -7,9 +10,11 @@ public:
 	BigNum(int x);
 	BigNum(long long x);
 	~BigNum();
-	void setNum(char str[]);
+	void setNum(const char str[]);
 	/***************** ±È½ÏÔËËã ************************/
+	// ²»¿¼ÂÇ·ûºÅ
 	friend int compare(BigNum& a, BigNum& b);
+	// ¿¼ÂÇ·ûºÅ
 	friend bool operator< (BigNum& a, BigNum& b);
 	friend bool operator> (BigNum& a, BigNum& b);
 	friend bool operator<= (BigNum& a, BigNum& b);
@@ -27,8 +32,8 @@ public:
 	friend BigNum operator+(BigNum& a, BigNum& b);
 	friend BigNum operator-(BigNum& a, BigNum& b);
 	/******************* ÊäÈëÊä³ö ***************************/
-	ostream operator<< (ostream& os);
-	istream operator>> (istream& in);
+	friend ostream& operator<< (ostream& os, BigNum& num);
+	friend istream& operator>> (istream& in, BigNum& num);
 
 private:
 	// 0-1000£ºlow-high

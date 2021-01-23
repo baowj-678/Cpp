@@ -5,6 +5,7 @@
 */
 
 #include <cstring>
+#include <string>
 #include <iostream>
 #include "BigNum.h"
 using namespace::std;
@@ -13,13 +14,26 @@ BigNum::BigNum()
 {
 	memset(this->num, 0, sizeof(this->num));
 	this->len = 0;
+	this->sign = true;
 }
 
 BigNum::~BigNum()
 {
 }
 
-void BigNum::setNum(char str[])
+BigNum::BigNum(int x)
+{
+	string str = to_string(x);
+	this->setNum(str.c_str());
+}
+
+BigNum::BigNum(long long x)
+{
+	string str = to_string(x);
+	this->setNum(str.c_str());
+}
+
+void BigNum::setNum(const char str[])
 {
 	this->len = strlen(str);
 	for (int i(0); i < this->len; i++)
@@ -50,24 +64,62 @@ int compare(BigNum& a, BigNum& b)
 
 bool operator< (BigNum& a, BigNum& b)
 {
-	return compare(a, b) == -1;
+	if (a.sign == true && b.sign == false)
+		return false;
+	else if (a.sign == true && b.sign == true)
+		return compare(a, b) == -1;
+	else if (a.sign == false && b.sign == true)
+		return true;
+	else
+		return compare(a, b) == 1;
 }
 
 bool operator> (BigNum& a, BigNum& b)
 {
-	return compare(a, b) == 1;
+	if (a.sign == true && b.sign == false)
+		return true;
+	else if (a.sign == true && b.sign == true)
+		return compare(a, b) == 1;
+	else if (a.sign == false && b.sign == true)
+		return false;
+	else
+		return compare(a, b) == -1;
 }
 
 bool operator<= (BigNum& a, BigNum& b)
 {
-	int tmp = compare(a, b);
-	return (tmp == -1 || tmp == 0);
+	if (a.sign == true && b.sign == false)
+		return false;
+	else if (a.sign == true && b.sign == true)
+	{
+		int tmp = compare(a, b);
+		return (tmp == -1 || tmp == 0);
+	}
+	else if (a.sign == false && b.sign == true)
+		return true;
+	else
+	{
+		int tmp = compare(a, b);
+		return (tmp == 1 || tmp == 0);
+	}
 }
 
 bool operator>= (BigNum& a, BigNum& b)
 {
-	int tmp = compare(a, b);
-	return (tmp == 1 || tmp == 0);
+	if (a.sign == true && b.sign == false)
+		return true;
+	else if (a.sign == true && b.sign == true)
+	{
+		int tmp = compare(a, b);
+		return (tmp == 1 || tmp == 0);
+	}
+	else if (a.sign == false && b.sign == true)
+		return false;
+	else
+	{
+		int tmp = compare(a, b);
+		return (tmp == -1 || tmp == 0);
+	}
 }
 
 bool operator== (BigNum& a, BigNum& b)
@@ -145,7 +197,28 @@ BigNum mul(BigNum& a, BigNum& b)
 
 BigNum operator+(BigNum& a, BigNum& b)
 {
-	return add(a, b);
+	if (a.sign == false && b.sign == false)
+	{
+		BigNum num = add(a, b);
+		num.sign = false;
+		return num;
+	}
+	else if (a.sign == true && b.sign == true)
+	{
+		BigNum num = add(a, b);
+		num.sign = true;
+		return num;
+	}
+	else if (a.sign == false && b.sign == true)
+	{
+		BigNum num = sub(b, a);
+		return num;
+	}
+	else
+	{
+		BigNum num = sub(a, b);
+		return num;
+	}
 }
 
 BigNum divInt(BigNum& a, int b, int& r)
@@ -168,7 +241,31 @@ BigNum divInt(BigNum& a, int b, int& r)
 	}
 	return c;
 }
+
+ostream& operator<< (ostream& out, BigNum& num)
+{
+	string str;
+	for (int i(num.len-1); i >= 0; i--)
+	{
+		str += to_string(num.num[i]);
+	}
+	out << str;
+	return out;
+}
+
+
+istream& operator>> (istream& in, BigNum& num)
+{
+	string str;
+	in >> str;
+	num.setNum(str.c_str());
+	return in;
+}
+
 int main()
 {
-
+	BigNum a, b;
+	cin >> a>>b;
+	a = a + b;
+	cout << a;
 }
