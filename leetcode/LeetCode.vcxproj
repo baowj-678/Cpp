@@ -159,6 +159,7 @@
     <ClCompile Include="Code\1584. 连接所有点的最小费用.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Code\221. 最大正方形.cpp" />
     <ClCompile Include="Code\357. 计算各个位数不同的数字个数.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

@@ -41,6 +41,9 @@
     <ClCompile Include="Code\1319. 连通网络的操作次数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\221. 最大正方形.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
