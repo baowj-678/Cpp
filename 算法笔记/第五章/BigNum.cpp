@@ -35,10 +35,23 @@ BigNum::BigNum(long long x)
 
 void BigNum::setNum(const char str[])
 {
-	this->len = strlen(str);
-	for (int i(0); i < this->len; i++)
+	if(str[0] == '-')
 	{
-		this->num[i] = str[this->len - i - 1] - '0';
+		this->len = strlen(str) - 1;
+		this->sign = false;
+		for (int i(0); i < this->len; i++)
+		{
+			this->num[i] = str[this->len - i] - '0';
+		}
+	}
+	else
+	{
+		this->len = strlen(str);
+		this->sign = true;
+		for (int i(0); i < this->len; i++)
+		{
+			this->num[i] = str[this->len - i - 1] - '0';
+		}
 	}
 }
 
@@ -211,14 +224,103 @@ BigNum operator+(BigNum& a, BigNum& b)
 	}
 	else if (a.sign == false && b.sign == true)
 	{
-		BigNum num = sub(b, a);
+		int tmp = compare(a, b);
+		if(tmp == 1)
+		{
+			BigNum num = sub(a, b);
+			num.sign = false;
+			return num;
+		}
+		else if(tmp == -1)
+		{
+			BigNum num = sub(b, a);
+			num.sign = true;
+			return num;
+		}
+		else
+		{
+			BigNum num = sub(a, b);
+			num.sign = true;
+			return num;
+		}
+	}
+	else
+	{
+		int tmp = compare(a, b);
+		if (tmp == 1)
+		{
+			BigNum num = sub(a, b);
+			num.sign = true;
+			return num;
+		}
+		else if (tmp == -1)
+		{
+			BigNum num = sub(b, a);
+			num.sign = false;
+			return num;
+		}
+		else
+		{
+			BigNum num = sub(a, b);
+			num.sign = true;
+			return num;
+		}
+	}
+}
+
+BigNum operator-(BigNum& a, BigNum& b)
+{
+	if(a.sign == true && b.sign == false)
+	{
+		BigNum num = add(a, b);
+		num.sign = true;
+		return num;
+	}
+	else if(a.sign == true && b.sign == true)
+	{
+		int tmp = compare(a, b);
+		if(tmp == 1 || tmp == 0)
+		{
+			BigNum num = sub(a, b);
+			num.sign = true;
+			return num;
+		}
+		else
+		{
+			BigNum num = sub(b, a);
+			num.sign = false;
+			return num;
+		}
+	}
+	else if(a.sign == false && b.sign == true)
+	{
+		BigNum num = add(a, b);
+		num.sign = false;
 		return num;
 	}
 	else
 	{
-		BigNum num = sub(a, b);
-		return num;
+		int tmp = compare(a, b);
+		if(tmp == 1)
+		{
+			BigNum num = sub(a, b);
+			num.sign = false;
+			return num;
+		}
+		else
+		{
+			BigNum num = sub(b, a);
+			num.sign = true;
+			return num;
+		}
 	}
+}
+
+BigNum operator*(BigNum& a, BigNum& b)
+{
+	BigNum num = (mul(a, b));
+	num.sign = !(a.sign ^ b.sign);
+	return num;
 }
 
 BigNum divInt(BigNum& a, int b, int& r)
@@ -245,7 +347,9 @@ BigNum divInt(BigNum& a, int b, int& r)
 ostream& operator<< (ostream& out, BigNum& num)
 {
 	string str;
-	for (int i(num.len-1); i >= 0; i--)
+	if (num.sign == false)
+		str += "-";
+	for (int i(num.len - 1); i >= 0; i--)
 	{
 		str += to_string(num.num[i]);
 	}
@@ -266,6 +370,7 @@ int main()
 {
 	BigNum a, b;
 	cin >> a>>b;
-	a = a + b;
+	cout << a << endl << b << endl;
+	a = a * b;
 	cout << a;
 }

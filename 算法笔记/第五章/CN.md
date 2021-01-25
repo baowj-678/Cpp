@@ -28,3 +28,12 @@ $$=\frac{\frac{\frac{\frac{(n-m+1)}{1}\times(n-m+2)}{2}\times\dots}{\dots}\times
 
 ## 计算$C_n^m\%p$
 
+### Lucas定理
+
+如果$p$是**素数**，将m，n表示为p进制：
+
+$m=m_kp^k+m_{k-1}p^{k-1}+\dots+m_0$
+
+$n=n_kp^k+n_{k-1}p^{k-1}+\dots+n_0$
+
+则有：$C_n^m=C_{n_k}^{m_k}\times C_{n_{k-1}}^{m_{k-1}}\times\dots\times C_{n_0}^{m_0}(mod\bold{p})$

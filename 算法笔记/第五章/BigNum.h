@@ -31,8 +31,9 @@ public:
 	// ¿¼ÂÇ·ûºÅ
 	friend BigNum operator+(BigNum& a, BigNum& b);
 	friend BigNum operator-(BigNum& a, BigNum& b);
+	friend BigNum operator*(BigNum& a, BigNum& b);
 	/******************* ÊäÈëÊä³ö ***************************/
-	friend ostream& operator<< (ostream& os, BigNum& num);
+	friend ostream& operator<< (ostream& out, BigNum& num);
 	friend istream& operator>> (istream& in, BigNum& num);
 
 private:

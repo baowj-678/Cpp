@@ -61,3 +61,9 @@ long long C_3(long long n, long long m)
 
 
 /********************************** 计算组合数的模 ***************************************/
+int Lucas(const int n, const int m, const int p)
+{
+	if (m == 0)
+		return 1;
+	return C_1(n % p, m % p) * Lucas(n / p, m / p, p) % p;
+}
