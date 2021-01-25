@@ -44,6 +44,9 @@
     <ClCompile Include="Code\221. 最大正方形.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\959. 由斜杠划分区域.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">

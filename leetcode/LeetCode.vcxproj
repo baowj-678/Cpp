@@ -154,12 +154,18 @@
     <ClInclude Include="TreeNode.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\1319. 连通网络的操作次数.cpp" />
-    <ClCompile Include="Code\1489. 找到最小生成树里的关键边和伪关键边.cpp" />
+    <ClCompile Include="Code\1319. 连通网络的操作次数.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Code\1489. 找到最小生成树里的关键边和伪关键边.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Code\1584. 连接所有点的最小费用.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Code\221. 最大正方形.cpp" />
+    <ClCompile Include="Code\221. 最大正方形.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Code\357. 计算各个位数不同的数字个数.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -171,6 +177,9 @@
     </ClCompile>
     <ClCompile Include="Code\803. 打砖块.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Code\959. 由斜杠划分区域.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

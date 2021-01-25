@@ -24,6 +24,7 @@
 | [1584. 连接所有点的最小费用](Code/1584.%20连接所有点的最小费用.cpp) | **中等**:low_brightness: | **最小生成树**、**并查集**:unicorn: | [LeetCode](https://leetcode-cn.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/) |
 | [1319. 连通网络的操作次数](Code/1319.%20连通网络的操作次数.cpp) | **简单**:smile:          | **连通图**、**并查集**:unicorn:     | [LeetCode](https://leetcode-cn.com/problems/number-of-operations-to-make-network-connected/) |
 | [221. 最大正方形](Code/221.%20最大正方形.cpp)                | **中等**:low_brightness: | **动态规划**:bear:                  | [LeetCode](https://leetcode-cn.com/problems/maximal-square/submissions/) |
+| [959. 由斜杠划分区域](Code/959.%20由斜杠划分区域.cpp)        | **中等**:low_brightness: | **并查集**:unicorn:                 | [LeetCode](https://leetcode-cn.com/problems/regions-cut-by-slashes/) |
 
 
 
