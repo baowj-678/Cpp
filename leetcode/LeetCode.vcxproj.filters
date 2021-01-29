@@ -53,6 +53,9 @@
     <ClCompile Include="Code\1579. 保证图可完全遍历.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\1631. 最小体力消耗路径.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
