@@ -1,9 +1,8 @@
 /**
  * Author: Bao Wenjie
- * Date: 2021/1/29
- * Link: https://leetcode-cn.com/problems/path-with-minimum-effort/
+ * Date: 2021/1/30
+ * Link: https://leetcode-cn.com/problems/swim-in-rising-water/
  */
-
 
 #include <iostream>
 #include <vector>
@@ -48,34 +47,34 @@ void Union(vector<int>& UF, int x, int y)
 
 class Solution {
 public:
-    int minimumEffortPath(vector<vector<int>>& heights) {
-        int row = heights.size();
-        int col = heights[0].size();
+    int swimInWater(vector<vector<int>>& grid) {
+        int row = grid.size();
+        int col = grid[0].size();
         vector<Edge> graph(row * col * 4 - 2 * col - 2 * row);
         vector<int> UF(row * col, 0);
         for (int i = 0; i < UF.size(); i++)
             UF[i] = i;
         int k = 0;
-    	for(int i = 0; i < row; i++)
-    	{
-            vector<int>& height = heights[i];
-    		for(int j = 0; j < col; j++)
-    		{
+        for (int i = 0; i < row; i++)
+        {
+            vector<int>& height = grid[i];
+            for (int j = 0; j < col; j++)
+            {
                 if (i - 1 >= 0)
-                    graph[k++] = { i * col + j, i * col - col + j, abs(heights[i][j] - heights[i - 1][j])};
+                    graph[k++] = { i * col + j, i * col - col + j, max(grid[i][j],grid[i - 1][j]) };
                 if (j - 1 >= 0)
-                    graph[k++] = { i * col + j, i * col + j - 1,abs(heights[i][j] - heights[i][j - 1]) };
-    		}
-    	}
+                    graph[k++] = { i * col + j, i * col + j - 1,max(grid[i][j],grid[i][j - 1]) };
+            }
+        }
         sort(graph.begin(), graph.end(), compare);
         int s = 0, e = row * col - 1;
-    	for(Edge& p: graph)
-    	{
+        for (Edge& p : graph)
+        {
             Union(UF, p.x, p.y);
             if (Find(UF, s) == Find(UF, e))
                 return p.delta;
-    	}
-        return 0;
+        }
+        return -1;
     }
 };
 
@@ -83,5 +82,5 @@ int main()
 {
     vector<vector<int>> heights = { {1, 2, 2},{3, 8, 2},{5, 3, 5} };
     Solution so;
-    so.minimumEffortPath(heights);
+    so.swimInWater(heights);
 }

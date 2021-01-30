@@ -56,6 +56,9 @@
     <ClCompile Include="Code\1631. 最小体力消耗路径.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\778. 水位上升的泳池中游泳.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
