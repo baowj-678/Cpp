@@ -59,6 +59,9 @@
     <ClCompile Include="Code\778. 水位上升的泳池中游泳.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\880. 索引处的解码字符串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
