@@ -62,6 +62,9 @@
     <ClCompile Include="Code\880. 索引处的解码字符串.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\424. 替换后的最长重复字符.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
