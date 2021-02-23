@@ -71,6 +71,9 @@
     <ClCompile Include="Code\1004. 最大连续1的个数 III.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\1052. 爱生气的书店老板.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
