@@ -74,6 +74,9 @@
     <ClCompile Include="Code\1052. 爱生气的书店老板.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\1208. 尽可能使字符串相等.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">

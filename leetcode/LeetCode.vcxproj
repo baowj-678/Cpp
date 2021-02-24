@@ -154,8 +154,13 @@
     <ClInclude Include="TreeNode.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\1004. 最大连续1的个数 III.cpp" />
-    <ClCompile Include="Code\1052. 爱生气的书店老板.cpp" />
+    <ClCompile Include="Code\1004. 最大连续1的个数 III.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Code\1052. 爱生气的书店老板.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Code\1208. 尽可能使字符串相等.cpp" />
     <ClCompile Include="Code\127. 单词接龙.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
