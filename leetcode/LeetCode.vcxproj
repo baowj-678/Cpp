@@ -169,7 +169,9 @@
     <ClCompile Include="Code\1319. 连通网络的操作次数.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Code\1423. 可获得的最大点数.cpp" />
+    <ClCompile Include="Code\1423. 可获得的最大点数.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Code\1489. 找到最小生成树里的关键边和伪关键边.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -212,6 +214,7 @@
     <ClCompile Include="Code\959. 由斜杠划分区域.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Code\剑指 Offer 63. 股票的最大利润.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
