@@ -83,6 +83,9 @@
     <ClCompile Include="Code\剑指 Offer 63. 股票的最大利润.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\304. 二维区域和检索 - 矩阵不可变.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
