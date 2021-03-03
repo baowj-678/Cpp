@@ -26,7 +26,13 @@
       <UniqueIdentifier>{35bcf218-ba7d-407f-8789-f8f2cb9b756c}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\第七章">
-      <UniqueIdentifier>{a92cc34e-50f9-4840-afc9-9f10c06838b7}</UniqueIdentifier>
+      <UniqueIdentifier>{48a26f0e-3543-4554-8f42-bb773faf98e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\第八章">
+      <UniqueIdentifier>{eab1b1ad-6578-428c-818f-debdccb721c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\第九章">
+      <UniqueIdentifier>{565a4253-ef71-4fa3-b1d7-f67f0d628321}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +132,12 @@
     <ClCompile Include="第七章\PAT-A-1032.cpp">
       <Filter>源文件\第七章</Filter>
     </ClCompile>
+    <ClCompile Include="第七章\PAT-A-1052.cpp">
+      <Filter>源文件\第七章</Filter>
+    </ClCompile>
+    <ClCompile Include="第九章\PAT-A-1020.cpp">
+      <Filter>源文件\第九章</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="第三章\README.md">
@@ -151,6 +163,12 @@
     </None>
     <None Include="第七章\README.md">
       <Filter>源文件\第七章</Filter>
+    </None>
+    <None Include="第八章\README.md">
+      <Filter>源文件\第八章</Filter>
+    </None>
+    <None Include="第九章\README.md">
+      <Filter>源文件\第九章</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

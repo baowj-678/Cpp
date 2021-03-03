@@ -25,7 +25,12 @@
     <ClCompile Include="第七章\codeup-1918.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="第七章\PAT-A-1032.cpp" />
+    <ClCompile Include="第七章\PAT-A-1032.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="第七章\PAT-A-1052.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="第三章\1001 害死人不偿命的(3n+1)猜想.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -50,6 +55,7 @@
     <ClCompile Include="第三章\PAT-B1009-说反话.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="第九章\PAT-A-1020.cpp" />
     <ClCompile Include="第五章\BigNum.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -116,9 +122,11 @@
     <None Include="README.md" />
     <None Include="第七章\README.md" />
     <None Include="第三章\README.md" />
+    <None Include="第九章\README.md" />
     <None Include="第五章\CN.md" />
     <None Include="第五章\EEA.md" />
     <None Include="第五章\README.md" />
+    <None Include="第八章\README.md" />
     <None Include="第六章\README.md" />
     <None Include="第四章\README.md" />
   </ItemGroup>
