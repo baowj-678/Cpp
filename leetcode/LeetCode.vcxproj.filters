@@ -86,6 +86,9 @@
     <ClCompile Include="Code\304. 二维区域和检索 - 矩阵不可变.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\338. 比特位计数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">

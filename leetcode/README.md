@@ -28,6 +28,7 @@
 | [959. 由斜杠划分区域](Code/959.%20由斜杠划分区域.cpp)        | **中等**:low_brightness: | **并查集**:unicorn:                    | [LeetCode](https://leetcode-cn.com/problems/regions-cut-by-slashes/) |
 | [1579. 保证图可完全遍历](Code/1579.%20保证图可完全遍历.cpp)  | **中等**:low_brightness: | **并查集**、**无向图**:framed_picture: | [LeetCode](https://leetcode-cn.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/) |
 | [424. 替换后的最长重复字符](Code/424.%20替换后的最长重复字符.cpp) | **难**:low_brightness:   | **滑动窗口**:wine_glass:               | [LeetCode](https://leetcode-cn.com/problems/longest-repeating-character-replacement/) |
+| [338. 比特位计数](Code/338.%20比特位计数.cpp)                | **中等**:low_brightness: | **动态规划**:bear:                     | [LeetCode](https://leetcode-cn.com/problems/counting-bits/)  |
 
 
 
