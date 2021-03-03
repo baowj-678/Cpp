@@ -6,10 +6,12 @@
 
 #### 文件：
 
-| 文件夹                   | 简介           |
-| ------------------------ | -------------- |
-| [source](source)         | **源代码文件** |
-| [EyeProtect](EyeProtect) | **安装文件**   |
+| 文件夹                           | 简介             |
+| -------------------------------- | ---------------- |
+| [source](source)                 | **源代码文件**   |
+| [EyeProtect.exe](EyeProtect.exe) | **安装程序**     |
+| [EyeProtect.rar](EyeProtect.rar) | 安装文件的压缩包 |
+| [EyeProtect.iss](EyeProtect.iss) | **打包代码**     |
 
 #### 安装方法：
 
