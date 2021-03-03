@@ -12,9 +12,10 @@
 
 #### 文件：
 
-| 文件名                             | 详情               |
-| ---------------------------------- | ------------------ |
-| [source](source)                   | 源代码文件         |
-| [SystemMonitor](SystemMonitor)     | **安装文件**       |
-| [SystemMonitor](SystemMonitor.rar) | 安装文件**压缩包** |
+| 文件名                                 | 详情               |
+| -------------------------------------- | ------------------ |
+| [source](source)                       | 源代码文件         |
+| [SystemMonitor.exe](SystemMonitor.exe) | **安装程序**       |
+| [SystemMonitor.rar](SystemMonitor.rar) | 安装文件**压缩包** |
+| [SystemMonitor.iss](SystemMonitor.iss) | **打包代码**       |
 
