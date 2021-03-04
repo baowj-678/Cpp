@@ -89,6 +89,9 @@
     <ClCompile Include="Code\338. 比特位计数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\354. 俄罗斯套娃信封问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">

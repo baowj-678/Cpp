@@ -187,8 +187,13 @@
     <ClCompile Include="Code\221. 最大正方形.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Code\304. 二维区域和检索 - 矩阵不可变.cpp" />
-    <ClCompile Include="Code\338. 比特位计数.cpp" />
+    <ClCompile Include="Code\304. 二维区域和检索 - 矩阵不可变.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Code\338. 比特位计数.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Code\354. 俄罗斯套娃信封问题.cpp" />
     <ClCompile Include="Code\357. 计算各个位数不同的数字个数.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
