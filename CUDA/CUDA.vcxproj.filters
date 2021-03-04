@@ -13,32 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\Get_CUDA_Info">
+      <UniqueIdentifier>{6c298de4-9320-4b41-8fc2-6c62d8a6679f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Freshman">
+      <UniqueIdentifier>{0c0594ee-c5ed-4d38-86ed-bdf7ac1af98d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ParallelCompute">
+      <UniqueIdentifier>{e4dcb799-ed08-4b53-a7f7-46438e35fa84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HelloWorld.cu">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Kernel.cu">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="README.md">
-      <Filter>源文件</Filter>
-    </None>
     <None Include=".gitignore">
       <Filter>源文件</Filter>
     </None>
+    <None Include="Freshman\README.md">
+      <Filter>源文件\Freshman</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="Get_CUDA_Info\README.md">
+      <Filter>源文件\Get_CUDA_Info</Filter>
+    </None>
+    <None Include="ParallelCompute\README.md">
+      <Filter>源文件\ParallelCompute</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <CudaCompile Include="Add.cu">
-      <Filter>源文件</Filter>
+    <CudaCompile Include="Freshman\Add.cu">
+      <Filter>源文件\Freshman</Filter>
     </CudaCompile>
-    <CudaCompile Include="VecAdd.cu">
-      <Filter>源文件</Filter>
+    <CudaCompile Include="Freshman\HelloWorld.cu">
+      <Filter>源文件\Freshman</Filter>
     </CudaCompile>
-    <CudaCompile Include="MatrixAdd.cu">
-      <Filter>源文件</Filter>
+    <CudaCompile Include="Freshman\Kernel.cu">
+      <Filter>源文件\Freshman</Filter>
+    </CudaCompile>
+    <CudaCompile Include="Freshman\MatrixAdd.cu">
+      <Filter>源文件\Freshman</Filter>
+    </CudaCompile>
+    <CudaCompile Include="Freshman\VecAdd.cu">
+      <Filter>源文件\Freshman</Filter>
+    </CudaCompile>
+    <CudaCompile Include="Get_CUDA_Info\GetCUDAInfo.cu">
+      <Filter>源文件\Get_CUDA_Info</Filter>
+    </CudaCompile>
+    <CudaCompile Include="ParallelCompute\ThreadParallel.cu">
+      <Filter>源文件\ParallelCompute</Filter>
     </CudaCompile>
   </ItemGroup>
 </Project>
