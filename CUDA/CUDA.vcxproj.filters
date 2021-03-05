@@ -62,5 +62,14 @@
     <CudaCompile Include="ParallelCompute\ThreadParallel.cu">
       <Filter>源文件\ParallelCompute</Filter>
     </CudaCompile>
+    <CudaCompile Include="ParallelCompute\BlockParallel.cu">
+      <Filter>源文件\ParallelCompute</Filter>
+    </CudaCompile>
+    <CudaCompile Include="ParallelCompute\StreamParallel.cu">
+      <Filter>源文件\ParallelCompute</Filter>
+    </CudaCompile>
+    <CudaCompile Include="ParallelCompute\ThreadComunication.cu">
+      <Filter>源文件\ParallelCompute</Filter>
+    </CudaCompile>
   </ItemGroup>
 </Project>
