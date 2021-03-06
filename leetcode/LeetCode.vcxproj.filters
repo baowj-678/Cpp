@@ -95,6 +95,9 @@
     <ClCompile Include="Code\1018. 可被 5 整除的二进制前缀.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\503. 下一个更大元素 II.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">

@@ -30,6 +30,7 @@
 | [424. 替换后的最长重复字符](Code/424.%20替换后的最长重复字符.cpp) | **难**:low_brightness:   | **滑动窗口**:wine_glass:               | [LeetCode](https://leetcode-cn.com/problems/longest-repeating-character-replacement/) |
 | [338. 比特位计数](Code/338.%20比特位计数.cpp)                | **中等**:low_brightness: | **动态规划**:bear:                     | [LeetCode](https://leetcode-cn.com/problems/counting-bits/)  |
 | [354. 俄罗斯套娃信封问题](Code/354.%20俄罗斯套娃信封问题.cpp) | **难**:low_brightness:   | **动态规划**:bear:                     | [LeetCode](https://leetcode-cn.com/problems/russian-doll-envelopes/) |
+| [503. 下一个更大元素 II](Code/503.%20下一个更大元素%20II.cpp) | **中等**:low_brightness: | **单调栈**:arrow_double_down:          | [LeetCode](https://leetcode-cn.com/problems/next-greater-element-ii/submissions/) |
 
 
 
