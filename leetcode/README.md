@@ -33,6 +33,7 @@
 | [503. 下一个更大元素 II](Code/503.%20下一个更大元素%20II.cpp) | **中等**:low_brightness: | **单调栈**:arrow_double_down:          | [LeetCode](https://leetcode-cn.com/problems/next-greater-element-ii/submissions/) |
 | [131. 分割回文串](Code/131.分割回文串.cpp)                   | **中等**:low_brightness: | **回溯**:man_playing_water_polo:       | [LeetCode](https://leetcode-cn.com/problems/palindrome-partitioning/) |
 | [132. 分割回文串 II](Code/132.%20分割回文串 II.cpp)          | **难**:sun_with_face:    | **动态规划**:bear:                     | [LeetCode](https://leetcode-cn.com/problems/palindrome-partitioning-ii/) |
+| [1514. 概率最大的路径](1514.%20概率最大的路径.cpp)           | **中等**:low_brightness: | **Dijkstra**:diamonds:                 | [LeetCode](https://leetcode-cn.com/problems/path-with-maximum-probability/) |
 
 
 
