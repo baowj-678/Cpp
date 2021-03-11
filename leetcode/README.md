@@ -34,6 +34,8 @@
 | [131. 分割回文串](Code/131.分割回文串.cpp)                   | **中等**:low_brightness: | **回溯**:man_playing_water_polo:       | [LeetCode](https://leetcode-cn.com/problems/palindrome-partitioning/) |
 | [132. 分割回文串 II](Code/132.%20分割回文串 II.cpp)          | **难**:sun_with_face:    | **动态规划**:bear:                     | [LeetCode](https://leetcode-cn.com/problems/palindrome-partitioning-ii/) |
 | [1514. 概率最大的路径](1514.%20概率最大的路径.cpp)           | **中等**:low_brightness: | **Dijkstra**:diamonds:                 | [LeetCode](https://leetcode-cn.com/problems/path-with-maximum-probability/) |
+| [224. 基本计算器](Code/224. 基本计算器.cpp)                  | **中等**:low_brightness: | **栈**:stadium:                        | [LeetCode](https://leetcode-cn.com/problems/basic-calculator/) |
+| [227. 基本计算器](Code/227.%20基本计算器%20II.cpp)           | **难**:sun_with_face:    | **栈**:stadium:                        | [LeetCode](https://leetcode-cn.com/problems/basic-calculator-ii/) |
 
 
 
