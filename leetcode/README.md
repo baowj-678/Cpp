@@ -34,6 +34,7 @@
 | [131. 分割回文串](Code/131.分割回文串.cpp)                   | **中等**:low_brightness: | **回溯**:man_playing_water_polo:       | [LeetCode](https://leetcode-cn.com/problems/palindrome-partitioning/) |
 | [132. 分割回文串 II](Code/132.%20分割回文串 II.cpp)          | **难**:sun_with_face:    | **动态规划**:bear:                     | [LeetCode](https://leetcode-cn.com/problems/palindrome-partitioning-ii/) |
 | [1514. 概率最大的路径](1514.%20概率最大的路径.cpp)           | **中等**:low_brightness: | **Dijkstra**:diamonds:                 | [LeetCode](https://leetcode-cn.com/problems/path-with-maximum-probability/) |
+| [331. 验证二叉树的前序序列化](Code/331.%20验证二叉树的前序序列化.cpp) | **中等**:low_brightness: | **队列**:black_large_square:           | [LeetCode](https://leetcode-cn.com/problems/verify-preorder-serialization-of-a-binary-tree/) |
 
 
 
@@ -41,7 +42,7 @@
 
 * C++ vector push_back()无论传入参数是什么（引用、原数据），都会调用拷贝构造函数，重新生成数据:sob:。​
 
-* **STL**的**sort**函数的**cmp**函数相等时返回**false**；
+* **STL**的**sort**函331. 验证二叉树的前序序列化数的**cmp**函数相等时返回**false**；
 
     
 
