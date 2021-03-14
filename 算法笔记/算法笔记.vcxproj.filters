@@ -34,6 +34,9 @@
     <Filter Include="源文件\第九章">
       <UniqueIdentifier>{565a4253-ef71-4fa3-b1d7-f67f0d628321}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\第十章">
+      <UniqueIdentifier>{ce35198d-e71a-4289-862f-629a6394bd64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="第三章\1001 害死人不偿命的(3n+1)猜想.cpp">
@@ -147,6 +150,9 @@
     <ClCompile Include="第九章\好朋友.cpp">
       <Filter>源文件\第九章</Filter>
     </ClCompile>
+    <ClCompile Include="第十章\PAT-A-1034.cpp">
+      <Filter>源文件\第十章</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="第三章\README.md">
@@ -178,6 +184,9 @@
     </None>
     <None Include="第九章\README.md">
       <Filter>源文件\第九章</Filter>
+    </None>
+    <None Include="第十章\README.md">
+      <Filter>源文件\第十章</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
