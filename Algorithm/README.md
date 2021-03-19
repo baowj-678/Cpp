@@ -25,6 +25,13 @@
 
 
 
+### 数论算法
+
+| 算法名称       | 文件                                                         |
+| -------------- | ------------------------------------------------------------ |
+| **最大公约数** | [GCD](https://github.com/baowj-678/cpp_algorithm/blob/master/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/%E7%AC%AC%E4%BA%94%E7%AB%A0/codeup-1818.cpp) |
+| **最小公倍数** | [LCM](https://github.com/baowj-678/cpp_algorithm/blob/master/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/%E7%AC%AC%E4%BA%94%E7%AB%A0/LCm.cpp) |
+
 
 
 **链接**
