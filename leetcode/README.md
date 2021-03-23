@@ -36,6 +36,7 @@
 | [1514. 概率最大的路径](1514.%20概率最大的路径.cpp)           | **中等**:low_brightness: | **Dijkstra**:diamonds:                 | [LeetCode](https://leetcode-cn.com/problems/path-with-maximum-probability/) |
 | [331. 验证二叉树的前序序列化](Code/331.%20验证二叉树的前序序列化.cpp) | **中等**:low_brightness: | **队列**:black_large_square:           | [LeetCode](https://leetcode-cn.com/problems/verify-preorder-serialization-of-a-binary-tree/) |
 | [115. 不同的子序列](Code/115. 不同的子序列.cpp)              | **难**:sun_with_face:    | **动态规划**:bear:                     | [LeetCode](https://leetcode-cn.com/problems/distinct-subsequences/) |
+| [剑指 Offer 63. 股票的最大利润](Code/剑指 Offer 63. 股票的最大利润.cpp) | **难**:sun_with_face:    | **异或运算**:diamonds:                 | [LeetCode](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/) |
 
 
 
