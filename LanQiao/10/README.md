@@ -82,3 +82,20 @@
 
 
 
+### I
+
+**题目**：
+
+![attachment-img](D:\cpp\cpp algorithm\LanQiao\10\.md\emm.png)
+
+**程序**：[Code][I.cpp]
+
+
+
+### J
+
+**题目**：
+
+![attachment-img](D:\cpp\cpp algorithm\LanQiao\10\.md\G)
+
+**程序**：[Code](J.cpp)
