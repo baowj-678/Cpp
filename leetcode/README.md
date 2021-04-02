@@ -39,6 +39,7 @@
 | [剑指 Offer 63. 股票的最大利润](Code/剑指 Offer 63. 股票的最大利润.cpp) | **难**:sun_with_face:    | **异或运算**:diamonds:                 | [LeetCode](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/) |
 | [456. 132 模式](Code/456.%20132 模式.cpp)                    | **难**:sun_with_face:    | **单调栈**:arrow_double_down:          | [LeetCode](https://leetcode-cn.com/problems/132-pattern/submissions/) |
 | [1340. 跳跃游戏 V](Code/1340.%20跳跃游戏 V.cpp)              | **难**:sun_with_face:    | **动态规划**:bear:                     | [LeetCode](https://leetcode-cn.com/problems/jump-game-v/submissions/) |
+| [90. 子集 II](Code/90.%20子集%20II.cpp)                      | **难**:sun_with_face:    |                                        | [LeetCode](https://leetcode-cn.com/problems/subsets-ii/)     |
 
 
 
