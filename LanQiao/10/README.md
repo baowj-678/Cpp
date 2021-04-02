@@ -86,7 +86,7 @@
 
 **题目**：
 
-![attachment-img](D:\cpp\cpp algorithm\LanQiao\10\.md\emm.png)
+![attachment-img](.md\emm.png)
 
 **程序**：[Code][I.cpp]
 
@@ -96,6 +96,6 @@
 
 **题目**：
 
-![attachment-img](D:\cpp\cpp algorithm\LanQiao\10\.md\G)
+![attachment-img](.md\G)
 
 **程序**：[Code](J.cpp)
