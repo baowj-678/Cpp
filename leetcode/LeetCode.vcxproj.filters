@@ -116,9 +116,15 @@
     <ClCompile Include="Code\502. IPO.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\377. 组合总和 Ⅳ.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="Code\91. 解码方法.cpp">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

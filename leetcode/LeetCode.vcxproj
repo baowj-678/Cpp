@@ -215,6 +215,7 @@
     <ClCompile Include="Code\357. 计算各个位数不同的数字个数.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Code\377. 组合总和 Ⅳ.cpp" />
     <ClCompile Include="Code\399. 除法求值.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -250,7 +251,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\502. IPO.cpp" />
+    <ClCompile Include="Code\502. IPO.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <None Include="Code\91. 解码方法.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
     <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
