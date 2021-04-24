@@ -106,6 +106,7 @@
     <ClCompile Include="第十章\PAT-A-1076.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="第十章\问题 C-畅通工程.cpp" />
     <ClCompile Include="第四章\1025-PAT-Ranking.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

@@ -162,6 +162,9 @@
     <ClCompile Include="第十章\PAT-A-1003.cpp">
       <Filter>源文件\第十章</Filter>
     </ClCompile>
+    <ClCompile Include="第十章\问题 C-畅通工程.cpp">
+      <Filter>源文件\第十章</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="第三章\README.md">
