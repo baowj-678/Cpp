@@ -94,6 +94,10 @@
     <ClCompile Include="第六章\PAT-A-1060.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="第十一章\Bottom-up Approach.cpp" />
+    <ClCompile Include="第十章\kruskal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="第十章\PAT-A-1003.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -106,7 +110,9 @@
     <ClCompile Include="第十章\PAT-A-1076.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="第十章\问题 C-畅通工程.cpp" />
+    <ClCompile Include="第十章\问题 C-畅通工程.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="第四章\1025-PAT-Ranking.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -152,6 +158,7 @@
     <None Include="第五章\README.md" />
     <None Include="第八章\README.md" />
     <None Include="第六章\README.md" />
+    <None Include="第十一章\README.md" />
     <None Include="第十章\README.md" />
     <None Include="第四章\README.md" />
   </ItemGroup>

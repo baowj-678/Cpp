@@ -157,6 +157,7 @@
     <ClCompile Include="Code\1004. 最大连续1的个数 III.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Code\1011. 在 D 天内送达包裹的能力.cpp" />
     <ClCompile Include="Code\1018. 可被 5 整除的二进制前缀.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
