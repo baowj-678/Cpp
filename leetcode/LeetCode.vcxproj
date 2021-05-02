@@ -239,6 +239,7 @@
     <ClCompile Include="Code\503. 下一个更大元素 II.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Code\554. 砖墙.cpp" />
     <ClCompile Include="Code\633. 平方数之和.cpp" />
     <ClCompile Include="Code\721. 账户合并.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
