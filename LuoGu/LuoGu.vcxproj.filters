@@ -33,6 +33,9 @@
     <ClCompile Include="数学1-基础数学问题\P1572-计算分数.cpp">
       <Filter>源文件\数学1-基础数学问题</Filter>
     </ClCompile>
+    <ClCompile Include="数学1-基础数学问题\P1414-又是毕业季II.cpp">
+      <Filter>源文件\数学1-基础数学问题</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="数学1-基础数学问题\README.md">

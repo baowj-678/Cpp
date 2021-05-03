@@ -145,10 +145,13 @@
     <ClCompile Include="数学1-基础数学问题\P1246-编码.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="数学1-基础数学问题\P1414-又是毕业季II.cpp" />
     <ClCompile Include="数学1-基础数学问题\P1469-找筷子.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="数学1-基础数学问题\P1572-计算分数.cpp" />
+    <ClCompile Include="数学1-基础数学问题\P1572-计算分数.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="数学1-基础数学问题\P2926-[USACO08DEC]Patting Heads S.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

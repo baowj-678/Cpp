@@ -6,4 +6,5 @@
 | [P1017-进制转换](P1017-进制转换.cpp)                         | [LuoGu](https://www.luogu.com.cn/problem/P1017)              | **求余**       |
 | [P2926-[USACO08DEC]Patting Heads S](P2926-[USACO08DEC]Patting Heads S.cpp) | [P2926 [USACO08DEC\]Patting Heads S - 洛谷 \|计算机科学教育新生态 (luogu.com.cn)](https://www.luogu.com.cn/problem/P2926) | **数组**       |
 | [P1572-计算分数](P1572-计算分数.cpp)                         | [P1572 计算分数 - 洛谷 \|计算机科学教育新生态 (luogu.com.cn)](https://www.luogu.com.cn/problem/P1572) | **最大公约数** |
+| [P1414-又是毕业季II](P1414-又是毕业季II.cpp)                 | [P1414 又是毕业季II - 洛谷 \|计算机科学教育新生态 (luogu.com.cn)](https://www.luogu.com.cn/problem/P1414) | **因数**       |
 
