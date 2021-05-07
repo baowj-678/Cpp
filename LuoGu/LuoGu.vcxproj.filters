@@ -16,6 +16,9 @@
     <Filter Include="源文件\数学1-基础数学问题">
       <UniqueIdentifier>{dd6b7d6e-de86-499e-a524-a7f9754e0e88}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\动态规划1">
+      <UniqueIdentifier>{b6535677-301e-4d79-860c-fdb68fb8f5c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="数学1-基础数学问题\P1469-找筷子.cpp">
@@ -36,10 +39,16 @@
     <ClCompile Include="数学1-基础数学问题\P1414-又是毕业季II.cpp">
       <Filter>源文件\数学1-基础数学问题</Filter>
     </ClCompile>
+    <ClCompile Include="动态规划1\P1216-[USACO1.5][IOI1994]数字三角形 Number Triangles.cpp">
+      <Filter>源文件\动态规划1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="数学1-基础数学问题\README.md">
       <Filter>源文件\数学1-基础数学问题</Filter>
+    </None>
+    <None Include="动态规划1\README.md">
+      <Filter>源文件\动态规划1</Filter>
     </None>
   </ItemGroup>
 </Project>
