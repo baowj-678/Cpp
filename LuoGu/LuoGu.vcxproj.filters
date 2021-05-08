@@ -19,6 +19,9 @@
     <Filter Include="源文件\动态规划1">
       <UniqueIdentifier>{b6535677-301e-4d79-860c-fdb68fb8f5c7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\数据结构2-2: 线段树与树状数组">
+      <UniqueIdentifier>{1c650db6-890b-48f1-954c-5911bcc9e85f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="数学1-基础数学问题\P1469-找筷子.cpp">

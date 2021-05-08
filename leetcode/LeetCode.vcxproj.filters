@@ -140,6 +140,9 @@
     <ClCompile Include="Code\740. 删除并获得点数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\1723. 完成所有工作的最短时间.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
