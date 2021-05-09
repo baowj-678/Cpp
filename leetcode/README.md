@@ -40,6 +40,7 @@
 | [456. 132 模式](Code/456.%20132 模式.cpp)                    | **难**:sun_with_face:    | **单调栈**:arrow_double_down:          | [LeetCode](https://leetcode-cn.com/problems/132-pattern/submissions/) |
 | [1340. 跳跃游戏 V](Code/1340.%20跳跃游戏 V.cpp)              | **难**:sun_with_face:    | **动态规划**:bear:                     | [LeetCode](https://leetcode-cn.com/problems/jump-game-v/submissions/) |
 | [90. 子集 II](Code/90.%20子集%20II.cpp)                      | **难**:sun_with_face:    |                                        | [LeetCode](https://leetcode-cn.com/problems/subsets-ii/)     |
+| [1482. 制作m束花所需的最少天数](Code/1482.%20制作m束花所需的最少天数.cpp) | **难**:sun_with_face:    | **二分法**                             | [LeetCode](https://leetcode-cn.com/problems/minimum-number-of-days-to-make-m-bouquets/) |
 
 
 
