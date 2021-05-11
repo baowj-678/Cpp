@@ -146,6 +146,9 @@
     <ClCompile Include="Code\1482. 制作m束花所需的最少天数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\1734. 解码异或后的排列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
