@@ -169,6 +169,7 @@
     <ClCompile Include="Code\1208. 尽可能使字符串相等.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Code\1269. 停在原地的方案数.cpp" />
     <ClCompile Include="Code\127. 单词接龙.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -203,7 +204,9 @@
     <ClCompile Include="Code\1723. 完成所有工作的最短时间.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Code\1734. 解码异或后的排列.cpp" />
+    <ClCompile Include="Code\1734. 解码异或后的排列.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Code\221. 最大正方形.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -237,6 +240,7 @@
     <ClCompile Include="Code\403. 青蛙过河.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Code\421. 数组中两个数的最大异或值.cpp" />
     <ClCompile Include="Code\424. 替换后的最长重复字符.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
