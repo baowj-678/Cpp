@@ -155,6 +155,9 @@
     <ClCompile Include="Code\421. 数组中两个数的最大异或值.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\1442. 形成两个异或相等数组的三元组数目.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">

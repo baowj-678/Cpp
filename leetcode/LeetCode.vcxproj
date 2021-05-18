@@ -183,6 +183,7 @@
     <ClCompile Include="Code\1423. 可获得的最大点数.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Code\1442. 形成两个异或相等数组的三元组数目.cpp" />
     <ClCompile Include="Code\1473. 粉刷房子 III.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
