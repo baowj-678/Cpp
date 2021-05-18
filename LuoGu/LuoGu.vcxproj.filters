@@ -63,6 +63,15 @@
     <ClCompile Include="动态规划1\P1002-[NOIP2002 普及组]过河卒.cpp">
       <Filter>源文件\动态规划1</Filter>
     </ClCompile>
+    <ClCompile Include="动态规划1\P1434-[SHOI2002]滑雪.cpp">
+      <Filter>源文件\动态规划1</Filter>
+    </ClCompile>
+    <ClCompile Include="动态规划1\P2196-[NOIP1996 提高组]挖地雷.cpp">
+      <Filter>源文件\动态规划1</Filter>
+    </ClCompile>
+    <ClCompile Include="动态规划1\P4017-最大食物链计数.cpp">
+      <Filter>源文件\动态规划1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="数学1-基础数学问题\README.md">

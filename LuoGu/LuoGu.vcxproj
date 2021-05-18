@@ -139,11 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="动态规划1\P1002-[NOIP2002 普及组]过河卒.cpp" />
+    <ClCompile Include="动态规划1\P1002-[NOIP2002 普及组]过河卒.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="动态规划1\P1048-[NOIP2005 普及组] 采药.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="动态规划1\P1216-[USACO1.5][IOI1994]数字三角形 Number Triangles.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="动态规划1\P1434-[SHOI2002]滑雪.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="动态规划1\P1616-疯狂的采药.cpp">
@@ -152,6 +157,10 @@
     <ClCompile Include="动态规划1\P1802-5倍经验日.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="动态规划1\P2196-[NOIP1996 提高组]挖地雷.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="动态规划1\P4017-最大食物链计数.cpp" />
     <ClCompile Include="动态规划2\P1020-[NOIP1999 普及组]导弹拦截.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
