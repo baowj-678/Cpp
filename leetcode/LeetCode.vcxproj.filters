@@ -158,6 +158,9 @@
     <ClCompile Include="Code\1442. 形成两个异或相等数组的三元组数目.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\692. 前K个高频单词.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
