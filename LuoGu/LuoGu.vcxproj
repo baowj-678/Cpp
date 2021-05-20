@@ -160,8 +160,14 @@
     <ClCompile Include="动态规划1\P2196-[NOIP1996 提高组]挖地雷.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="动态规划1\P4017-最大食物链计数.cpp" />
+    <ClCompile Include="动态规划1\P4017-最大食物链计数.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="动态规划2\P1020-[NOIP1999 普及组]导弹拦截.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="动态规划2\P1077-[NOIP2012 普及组]摆花.cpp" />
+    <ClCompile Include="动态规划2\P2758-编辑距离.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="数学1-基础数学问题\P1017-进制转换.cpp">

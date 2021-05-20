@@ -72,6 +72,12 @@
     <ClCompile Include="动态规划1\P4017-最大食物链计数.cpp">
       <Filter>源文件\动态规划1</Filter>
     </ClCompile>
+    <ClCompile Include="动态规划2\P2758-编辑距离.cpp">
+      <Filter>源文件\动态规划2</Filter>
+    </ClCompile>
+    <ClCompile Include="动态规划2\P1077-[NOIP2012 普及组]摆花.cpp">
+      <Filter>源文件\动态规划2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="数学1-基础数学问题\README.md">
