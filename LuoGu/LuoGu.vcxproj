@@ -166,7 +166,13 @@
     <ClCompile Include="动态规划2\P1020-[NOIP1999 普及组]导弹拦截.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="动态规划2\P1077-[NOIP2012 普及组]摆花.cpp" />
+    <ClCompile Include="动态规划2\P1077-[NOIP2012 普及组]摆花.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="动态规划2\P1091-[NOIP2004 提高组] 合唱队形.cpp" />
+    <ClCompile Include="动态规划2\P1233-木棍加工.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="动态规划2\P2758-编辑距离.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

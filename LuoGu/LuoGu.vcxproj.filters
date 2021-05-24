@@ -78,6 +78,12 @@
     <ClCompile Include="动态规划2\P1077-[NOIP2012 普及组]摆花.cpp">
       <Filter>源文件\动态规划2</Filter>
     </ClCompile>
+    <ClCompile Include="动态规划2\P1233-木棍加工.cpp">
+      <Filter>源文件\动态规划2</Filter>
+    </ClCompile>
+    <ClCompile Include="动态规划2\P1091-[NOIP2004 提高组] 合唱队形.cpp">
+      <Filter>源文件\动态规划2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="数学1-基础数学问题\README.md">
