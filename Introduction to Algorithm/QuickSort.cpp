@@ -1,63 +1,74 @@
-#include <iostream>
-#include <cstdlib>
-#include "basic_array_function.h"
-using namespace::std;
+/**
+ * @author: Bao Wenjie
+ * @date: 2021/5/21
+ */
 
+#include <cstdio>
+#include <algorithm>
+#define MAXN 1000
 
-int* quick_sort(int* nums, int left, int right);
-int main_quick_sort()
+bool cmp(int a, int b)
 {
-	cout << "Quick sort" << endl << "n: " << endl;
-	int n;
-	cin >> n;
-	while (n != 0)
-	{
-		int* s = new int[n];
-		for (int i(0); i < n; i++)
-		{
-			cin >> s[i];
-		}
-		quick_sort(s, 0, n - 1);
-		cout << "ans:" << endl;
-		for (int i(0); i < n; i++)
-		{
-			cout << s[i] << " ";
-		}
-		cout << endl;
-		cout << "n:" << endl;
-		cin >> n;
-	}
-	return 0;
+	return a > b;
 }
 
-int* quick_sort(int* nums, int left, int right)
+int get_mid(int* nums, int left, int right)
 {
-	int p = left;
-	int q = right;
-	if (p >= q)
-		return nums;
-	int key = nums[right];
+	int mid = (left + right);
+	if(cmp(nums[right], nums[left]))
+	{
+		std::swap(nums[left], nums[right]);
+	}
+	if(cmp(nums[mid], nums[left]))
+	{
+		std::swap(nums[left], nums[mid]);
+	}
+	if(cmp(nums[right], nums[mid]))
+	{
+		std::swap(nums[mid], nums[right]);
+	}
+	return mid;
+}
+
+void quick_sort(int* nums, int left, int right)
+{
+	int p = left, q = right;
+	int mid = get_mid(nums, left, right - 1);
+	if (right - left <= 2)
+		return;
+	std::swap(nums[mid], nums[right - 2]);
+	int key = nums[right - 2];
 	while (true)
 	{
-		while (p < right && nums[p] <= key)
+		while (p < right && cmp(nums[p], key))
 			p++;
-		while (q > 0 && nums[q] >= key)
+		while (q > left && (!cmp(nums[q], key)))
 			q--;
 		if (p < q)
 		{
-			int temp = nums[p];
-			nums[p] = nums[q];
-			nums[q] = temp;
+			std::swap(nums[p], nums[q]);
 		}
 		else
 		{
 			break;
 		}
 	}
-	nums[right] = nums[p];
+	nums[right - 2] = nums[p];
 	nums[p] = key;
-	quick_sort(nums, left, p - 1);
+	quick_sort(nums, left, p + 1);
 	quick_sort(nums, p + 1, right);
-	return nums;
+	return;
 }
 
+int nums[MAXN];
+int main()
+{
+	int n;
+	scanf_s("%d", &n);
+	for (int i = 0; i < n; i++)
+		scanf_s("%d", nums + i);
+	quick_sort(nums, 0, n);
+	for (int i = 0; i < n; i++)
+		printf("%d ", nums[i]);
+	
+}
