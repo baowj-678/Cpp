@@ -202,7 +202,13 @@
     <ClCompile Include="数学1-基础数学问题\P2926-[USACO08DEC]Patting Heads S.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="算法1-4-递推与递归\P1255-数楼梯.cpp" />
+    <ClCompile Include="算法1-4-递推与递归\P1028-[NOIP2001 普及组]数的计算.cpp" />
+    <ClCompile Include="算法1-4-递推与递归\P1044-[NOIP2003 普及组]栈.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="算法1-4-递推与递归\P1255-数楼梯.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="动态规划1\README.md" />
