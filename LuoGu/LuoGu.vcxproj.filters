@@ -13,37 +13,40 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="源文件\数学1-基础数学问题">
-      <UniqueIdentifier>{dd6b7d6e-de86-499e-a524-a7f9754e0e88}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\动态规划1">
-      <UniqueIdentifier>{b6535677-301e-4d79-860c-fdb68fb8f5c7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\数据结构2-2: 线段树与树状数组">
       <UniqueIdentifier>{1c650db6-890b-48f1-954c-5911bcc9e85f}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\动态规划2">
       <UniqueIdentifier>{e91bef03-9717-4c99-ae7b-ce39821d7cc1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\【算法1-4】递推与递归">
+      <UniqueIdentifier>{3748ff46-a27a-4aac-aa73-d294a8831d65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\动态规划1">
+      <UniqueIdentifier>{b6535677-301e-4d79-860c-fdb68fb8f5c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\【数学1】基础数学问题">
+      <UniqueIdentifier>{dd6b7d6e-de86-499e-a524-a7f9754e0e88}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="数学1-基础数学问题\P1469-找筷子.cpp">
-      <Filter>源文件\数学1-基础数学问题</Filter>
+      <Filter>源文件\【数学1】基础数学问题</Filter>
     </ClCompile>
     <ClCompile Include="数学1-基础数学问题\P1017-进制转换.cpp">
-      <Filter>源文件\数学1-基础数学问题</Filter>
+      <Filter>源文件\【数学1】基础数学问题</Filter>
     </ClCompile>
     <ClCompile Include="数学1-基础数学问题\P1246-编码.cpp">
-      <Filter>源文件\数学1-基础数学问题</Filter>
+      <Filter>源文件\【数学1】基础数学问题</Filter>
     </ClCompile>
     <ClCompile Include="数学1-基础数学问题\P2926-[USACO08DEC]Patting Heads S.cpp">
-      <Filter>源文件\数学1-基础数学问题</Filter>
+      <Filter>源文件\【数学1】基础数学问题</Filter>
     </ClCompile>
     <ClCompile Include="数学1-基础数学问题\P1572-计算分数.cpp">
-      <Filter>源文件\数学1-基础数学问题</Filter>
+      <Filter>源文件\【数学1】基础数学问题</Filter>
     </ClCompile>
     <ClCompile Include="数学1-基础数学问题\P1414-又是毕业季II.cpp">
-      <Filter>源文件\数学1-基础数学问题</Filter>
+      <Filter>源文件\【数学1】基础数学问题</Filter>
     </ClCompile>
     <ClCompile Include="动态规划1\P1216-[USACO1.5][IOI1994]数字三角形 Number Triangles.cpp">
       <Filter>源文件\动态规划1</Filter>
@@ -84,10 +87,19 @@
     <ClCompile Include="动态规划2\P1091-[NOIP2004 提高组] 合唱队形.cpp">
       <Filter>源文件\动态规划2</Filter>
     </ClCompile>
+    <ClCompile Include="动态规划2\P1439-【模板】最长公共子序列.cpp">
+      <Filter>源文件\动态规划2</Filter>
+    </ClCompile>
+    <ClCompile Include="动态规划2\P1280-尼克的任务.cpp">
+      <Filter>源文件\动态规划2</Filter>
+    </ClCompile>
+    <ClCompile Include="算法1-4-递推与递归\P1255-数楼梯.cpp">
+      <Filter>源文件\【算法1-4】递推与递归</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="数学1-基础数学问题\README.md">
-      <Filter>源文件\数学1-基础数学问题</Filter>
+      <Filter>源文件\【数学1】基础数学问题</Filter>
     </None>
     <None Include="动态规划1\README.md">
       <Filter>源文件\动态规划1</Filter>

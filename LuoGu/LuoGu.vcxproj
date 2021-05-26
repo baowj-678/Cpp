@@ -169,8 +169,16 @@
     <ClCompile Include="动态规划2\P1077-[NOIP2012 普及组]摆花.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="动态规划2\P1091-[NOIP2004 提高组] 合唱队形.cpp" />
+    <ClCompile Include="动态规划2\P1091-[NOIP2004 提高组] 合唱队形.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="动态规划2\P1233-木棍加工.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="动态规划2\P1280-尼克的任务.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="动态规划2\P1439-【模板】最长公共子序列.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="动态规划2\P2758-编辑距离.cpp">
@@ -194,6 +202,7 @@
     <ClCompile Include="数学1-基础数学问题\P2926-[USACO08DEC]Patting Heads S.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="算法1-4-递推与递归\P1255-数楼梯.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="动态规划1\README.md" />
