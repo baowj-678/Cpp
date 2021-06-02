@@ -187,6 +187,7 @@
     <ClCompile Include="数学1-基础数学问题\P1017-进制转换.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="数学1-基础数学问题\P1143-进制转换.cpp" />
     <ClCompile Include="数学1-基础数学问题\P1246-编码.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -202,7 +203,9 @@
     <ClCompile Include="数学1-基础数学问题\P2926-[USACO08DEC]Patting Heads S.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="数学2-3-概率与统计\P4316-绿豆蛙的归宿.cpp" />
+    <ClCompile Include="数学2-3-概率与统计\P4316-绿豆蛙的归宿.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="算法1-4-递推与递归\P1028-[NOIP2001 普及组]数的计算.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
