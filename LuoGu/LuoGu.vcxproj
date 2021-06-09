@@ -217,7 +217,9 @@
     <ClCompile Include="数学2-3-概率与统计\P4316-绿豆蛙的归宿.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="数据结构1-2-二叉树\P1827-[USACO3.4]美国血统 American Heritage.cpp" />
+    <ClCompile Include="数据结构1-2-二叉树\P1827-[USACO3.4]美国血统 American Heritage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="算法1-4-递推与递归\P1028-[NOIP2001 普及组]数的计算.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -228,6 +230,28 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="算法1-4-递推与递归\P1464-Function.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="算法1-5-贪心\P1223-排队接水.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="算法1-5-贪心\P1478-陶陶摘苹果（升级版）.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="算法1-5-贪心\P1803-凌乱的yyy线段覆盖.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="算法1-5-贪心\P3817-小A的糖果.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="算法1-5-贪心\P5019-[NOIP2018 提高组] 铺设道路.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="算法1-6-二分查找与二分答案\P1024-[NOIP2001 提高组] 一元三次方程求解.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="算法1-6-二分查找与二分答案\P1102-A-B 数对.cpp" />
+    <ClCompile Include="算法1-6-二分查找与二分答案\P2249-【深基13.例1】查找.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
