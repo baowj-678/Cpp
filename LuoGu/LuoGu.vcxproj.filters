@@ -40,6 +40,12 @@
     <Filter Include="源文件\【算法1-6】二分查找与二分答案">
       <UniqueIdentifier>{0538bd12-2da2-4c1e-9d87-4355938a4468}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\【算法1-3】暴力枚举">
+      <UniqueIdentifier>{06555de4-83bd-4df9-81ab-0a336a667265}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\【算法2-3】分治">
+      <UniqueIdentifier>{d558ab21-6745-4047-bf6f-d8bc6e01d7e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="数学1-基础数学问题\P1469-找筷子.cpp">
@@ -158,6 +164,18 @@
     </ClCompile>
     <ClCompile Include="算法1-6-二分查找与二分答案\P1102-A-B 数对.cpp">
       <Filter>源文件\【算法1-6】二分查找与二分答案</Filter>
+    </ClCompile>
+    <ClCompile Include="算法1-3-暴力枚举\P2241-统计方形（数据加强版）.cpp">
+      <Filter>源文件\【算法1-3】暴力枚举</Filter>
+    </ClCompile>
+    <ClCompile Include="算法1-3-暴力枚举\P2089-烤鸡.cpp">
+      <Filter>源文件\【算法1-3】暴力枚举</Filter>
+    </ClCompile>
+    <ClCompile Include="算法1-6-二分查找与二分答案\P1678-烦恼的高考志愿.cpp">
+      <Filter>源文件\【算法1-6】二分查找与二分答案</Filter>
+    </ClCompile>
+    <ClCompile Include="算法2-3-分治\P2415-集合求和.cpp">
+      <Filter>源文件\【算法2-3】分治</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

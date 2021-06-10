@@ -260,6 +260,7 @@
     <ClCompile Include="Code\503. 下一个更大元素 II.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Code\518. 零钱兑换 II.cpp" />
     <ClCompile Include="Code\554. 砖墙.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

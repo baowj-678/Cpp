@@ -220,6 +220,12 @@
     <ClCompile Include="数据结构1-2-二叉树\P1827-[USACO3.4]美国血统 American Heritage.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="算法1-3-暴力枚举\P2089-烤鸡.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="算法1-3-暴力枚举\P2241-统计方形（数据加强版）.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="算法1-4-递推与递归\P1028-[NOIP2001 普及组]数的计算.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -250,10 +256,16 @@
     <ClCompile Include="算法1-6-二分查找与二分答案\P1024-[NOIP2001 提高组] 一元三次方程求解.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="算法1-6-二分查找与二分答案\P1102-A-B 数对.cpp" />
+    <ClCompile Include="算法1-6-二分查找与二分答案\P1102-A-B 数对.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="算法1-6-二分查找与二分答案\P1678-烦恼的高考志愿.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="算法1-6-二分查找与二分答案\P2249-【深基13.例1】查找.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="算法2-3-分治\P2415-集合求和.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="动态规划1\README.md" />
