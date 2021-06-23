@@ -164,6 +164,9 @@
     <ClCompile Include="Code\518. 零钱兑换 II.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\剑指 Offer 38. 字符串的排列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">

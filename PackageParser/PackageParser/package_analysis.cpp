@@ -7,6 +7,7 @@
 
 long long traffic_logger(const struct pcap_pkthdr* header, const u_char* pkt_data)
 {
+	header->caplen
 	static long long total_len = 0;
 	u_int ip_len;
 	u_short sport, dport;

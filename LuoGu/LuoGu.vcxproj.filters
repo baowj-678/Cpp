@@ -46,6 +46,9 @@
     <Filter Include="源文件\【算法2-3】分治">
       <UniqueIdentifier>{d558ab21-6745-4047-bf6f-d8bc6e01d7e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\【数据结构1-4】图的基本应用">
+      <UniqueIdentifier>{31a02f80-8943-4d54-a7af-e22aaa773b2c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="数学1-基础数学问题\P1469-找筷子.cpp">
@@ -175,6 +178,21 @@
       <Filter>源文件\【算法1-6】二分查找与二分答案</Filter>
     </ClCompile>
     <ClCompile Include="算法2-3-分治\P2415-集合求和.cpp">
+      <Filter>源文件\【算法2-3】分治</Filter>
+    </ClCompile>
+    <ClCompile Include="算法2-3-分治\P1177-【模板】快速排序.cpp">
+      <Filter>源文件\【算法2-3】分治</Filter>
+    </ClCompile>
+    <ClCompile Include="数据结构1-4-图的基本应用\P5318-【深基18.例3】查找文献.cpp">
+      <Filter>源文件\【数据结构1-4】图的基本应用</Filter>
+    </ClCompile>
+    <ClCompile Include="数据结构1-4-图的基本应用\P3916-图的遍历.cpp">
+      <Filter>源文件\【数据结构1-4】图的基本应用</Filter>
+    </ClCompile>
+    <ClCompile Include="算法2-3-分治\P1226-【模板】快速幂取余运算.cpp">
+      <Filter>源文件\【算法2-3】分治</Filter>
+    </ClCompile>
+    <ClCompile Include="算法2-3-分治\P1115-最大子段和.cpp">
       <Filter>源文件\【算法2-3】分治</Filter>
     </ClCompile>
   </ItemGroup>
