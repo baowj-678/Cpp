@@ -281,6 +281,7 @@
     <ClCompile Include="Code\740. 删除并获得点数.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Code\752. 打开转盘锁.cpp" />
     <ClCompile Include="Code\778. 水位上升的泳池中游泳.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

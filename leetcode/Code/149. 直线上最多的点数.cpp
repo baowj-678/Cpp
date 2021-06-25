@@ -29,7 +29,7 @@ public:
     			if(S.find(j) != S.end())
                     continue;
                 S.insert(j);
-                int cnt = 2;
+                int cnt = 2 ;
     			for(int k = i + 1; k < points.size(); k++)
     			{
     				if(k == j)

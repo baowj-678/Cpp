@@ -170,6 +170,9 @@
     <ClCompile Include="Code\149. 直线上最多的点数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\752. 打开转盘锁.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
