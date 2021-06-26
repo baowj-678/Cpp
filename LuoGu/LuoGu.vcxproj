@@ -214,7 +214,16 @@
     <ClCompile Include="数学1-基础数学问题\P3913-车的攻击.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="数学2-3-概率与统计\P1199-[NOIP2010 普及组] 三国游戏 题解.cpp" />
+    <ClCompile Include="数学2-3-概率与统计\P1199-[NOIP2010 普及组] 三国游戏 题解.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="数学2-3-概率与统计\P1288-取数游戏II.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="数学2-3-概率与统计\P1297-[国家集训队]单选错位.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="数学2-3-概率与统计\P2197-【模板】nim 游戏.cpp" />
     <ClCompile Include="数学2-3-概率与统计\P4316-绿豆蛙的归宿.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -288,6 +297,7 @@
   <ItemGroup>
     <None Include="动态规划1\README.md" />
     <None Include="数学1-基础数学问题\README.md" />
+    <None Include="数学2-3-概率与统计\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
