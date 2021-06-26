@@ -195,6 +195,9 @@
     <ClCompile Include="算法2-3-分治\P1115-最大子段和.cpp">
       <Filter>源文件\【算法2-3】分治</Filter>
     </ClCompile>
+    <ClCompile Include="数学2-3-概率与统计\P1199-[NOIP2010 普及组] 三国游戏 题解.cpp">
+      <Filter>源文件\【数学2-3】概率与统计</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="数学1-基础数学问题\README.md">

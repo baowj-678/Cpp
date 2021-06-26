@@ -173,6 +173,9 @@
     <ClCompile Include="Code\752. 打开转盘锁.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\773. 滑动谜题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
