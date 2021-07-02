@@ -49,6 +49,9 @@
     <Filter Include="源文件\【数据结构1-4】图的基本应用">
       <UniqueIdentifier>{31a02f80-8943-4d54-a7af-e22aaa773b2c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\【算法2-1】前缀和与差分">
+      <UniqueIdentifier>{bd1355cb-4cef-4a75-a309-b3eeadbfea17}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="数学1-基础数学问题\P1469-找筷子.cpp">
@@ -206,6 +209,30 @@
     </ClCompile>
     <ClCompile Include="数学2-3-概率与统计\P2197-【模板】nim 游戏.cpp">
       <Filter>源文件\【数学2-3】概率与统计</Filter>
+    </ClCompile>
+    <ClCompile Include="数学2-3-概率与统计\P3802-小魔女帕琪.cpp">
+      <Filter>源文件\【数学2-3】概率与统计</Filter>
+    </ClCompile>
+    <ClCompile Include="算法1-4-递推与递归\P2437-蜜蜂路线.cpp">
+      <Filter>源文件\【算法1-4】递推与递归</Filter>
+    </ClCompile>
+    <ClCompile Include="算法1-4-递推与递归\P1164 小A点菜.cpp">
+      <Filter>源文件\【算法1-4】递推与递归</Filter>
+    </ClCompile>
+    <ClCompile Include="算法2-1-前缀和与差分\P5638-【CSGRound2】光骓者的荣耀.cpp">
+      <Filter>源文件\【算法2-1】前缀和与差分</Filter>
+    </ClCompile>
+    <ClCompile Include="算法2-1-前缀和与差分\P1115-最大子段和.cpp">
+      <Filter>源文件\【算法2-1】前缀和与差分</Filter>
+    </ClCompile>
+    <ClCompile Include="算法2-1-前缀和与差分\P3397-地毯.cpp">
+      <Filter>源文件\【算法2-1】前缀和与差分</Filter>
+    </ClCompile>
+    <ClCompile Include="数学1-基础数学问题\P1029-[NOIP2001 普及组] 最大公约数和最小公倍数问题.cpp">
+      <Filter>源文件\【数学1】基础数学问题</Filter>
+    </ClCompile>
+    <ClCompile Include="数学1-基础数学问题\P4057-晨跑.cpp">
+      <Filter>源文件\【数学1】基础数学问题</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

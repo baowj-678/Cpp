@@ -176,6 +176,24 @@
     <ClCompile Include="Code\773. 滑动谜题.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Code\909. 蛇梯棋.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\815. 公交路线.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\168. Excel表列名称.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\297. 二叉树的序列化与反序列化.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\LCP 07. 传递信息.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\1833. 雪糕的最大数量.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
