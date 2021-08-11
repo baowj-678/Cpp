@@ -21,5 +21,11 @@
     <ClCompile Include="2021\313. 超级丑数.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\413. 等差数列划分.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\446. 等差数列划分 II - 子序列.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
