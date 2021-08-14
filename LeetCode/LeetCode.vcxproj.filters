@@ -27,5 +27,11 @@
     <ClCompile Include="2021\446. 等差数列划分 II - 子序列.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\516. 最长回文子序列.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\1583. 统计不开心的朋友.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
