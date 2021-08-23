@@ -33,5 +33,23 @@
     <ClCompile Include="2021\1583. 统计不开心的朋友.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\526. 优美的排列.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\551. 学生出勤记录 I.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\552. 学生出勤记录 II.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\443. 压缩字符串.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\789. 逃脱阻碍者.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\1646. 获取生成数组中的最大值.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
