@@ -51,5 +51,8 @@
     <ClCompile Include="2021\1646. 获取生成数组中的最大值.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\787. K 站中转内最便宜的航班.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
