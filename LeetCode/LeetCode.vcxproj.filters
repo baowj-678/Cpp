@@ -54,5 +54,8 @@
     <ClCompile Include="2021\787. K 站中转内最便宜的航班.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\797. 所有可能的路径.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
