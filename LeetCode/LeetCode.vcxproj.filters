@@ -57,5 +57,17 @@
     <ClCompile Include="2021\797. 所有可能的路径.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\881. 救生艇.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\1480. 一维数组的动态和.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\295. 数据流的中位数.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\1588. 所有奇数长度子数组的和.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
