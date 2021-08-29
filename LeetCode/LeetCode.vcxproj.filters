@@ -69,5 +69,11 @@
     <ClCompile Include="2021\1588. 所有奇数长度子数组的和.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\743. 网络延迟时间.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\581. 最短无序连续子数组.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
