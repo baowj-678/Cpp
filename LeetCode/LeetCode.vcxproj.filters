@@ -75,5 +75,14 @@
     <ClCompile Include="2021\581. 最短无序连续子数组.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\528. 按权重随机选择.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\1109. 航班预订统计.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\611. 有效三角形的个数.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
