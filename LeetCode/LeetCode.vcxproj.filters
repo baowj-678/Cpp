@@ -84,5 +84,8 @@
     <ClCompile Include="2021\611. 有效三角形的个数.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\165. 比较版本号.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
