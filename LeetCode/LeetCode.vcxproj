@@ -205,7 +205,12 @@
     <ClCompile Include="2021\797. 所有可能的路径.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="2021\847. 访问所有节点的最短路径.cpp" />
     <ClCompile Include="2021\881. 救生艇.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 22. 链表中倒数第k个节点.cpp" />
+    <ClCompile Include="面试\面试题 17.14. 最小K个数.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>

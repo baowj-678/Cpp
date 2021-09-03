@@ -16,6 +16,12 @@
     <Filter Include="源文件\2021">
       <UniqueIdentifier>{94a69761-dbf3-45c7-acec-b42c849346bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\剑指 Offer">
+      <UniqueIdentifier>{84d283b0-e4dd-41c3-ae40-b26128d2e1ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\面试">
+      <UniqueIdentifier>{54f31f8f-6f96-45db-a30f-87bb0f1e13c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2021\313. 超级丑数.cpp">
@@ -86,6 +92,15 @@
     </ClCompile>
     <ClCompile Include="2021\165. 比较版本号.cpp">
       <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 22. 链表中倒数第k个节点.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\847. 访问所有节点的最短路径.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="面试\面试题 17.14. 最小K个数.cpp">
+      <Filter>源文件\面试</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
