@@ -102,5 +102,11 @@
     <ClCompile Include="面试\面试题 17.14. 最小K个数.cpp">
       <Filter>源文件\面试</Filter>
     </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 10- I. 斐波那契数列.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\457. 环形数组是否存在循环.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
