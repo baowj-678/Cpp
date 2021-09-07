@@ -145,6 +145,9 @@
     <ClCompile Include="2021\1137. 第 N 个泰波那契数.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="2021\1221. 分割平衡字符串.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="2021\1480. 一维数组的动态和.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -223,6 +226,9 @@
     <ClCompile Include="2021\881. 救生艇.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 03. 数组中重复的数字.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="剑指 Offer\剑指 Offer 05. 替换空格.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -247,7 +253,13 @@
     <ClCompile Include="剑指 Offer\剑指 Offer 35. 复杂链表的复制.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="剑指 Offer\剑指 Offer 58 - II. 左旋转字符串.cpp" />
+    <ClCompile Include="剑指 Offer\剑指 Offer 53 - I. 在排序数组中查找数字 I.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 53 - II. 0～n-1中缺失的数字.cpp" />
+    <ClCompile Include="剑指 Offer\剑指 Offer 58 - II. 左旋转字符串.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="剑指 Offer\剑指 Offer II 113. 课程顺序.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
