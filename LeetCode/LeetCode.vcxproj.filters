@@ -153,5 +153,17 @@
     <ClCompile Include="剑指 Offer\剑指 Offer 53 - II. 0～n-1中缺失的数字.cpp">
       <Filter>源文件\剑指 Offer</Filter>
     </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 11. 旋转数组的最小数字.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 50. 第一个只出现一次的字符.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 04. 二维数组中的查找.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\502. IPO.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

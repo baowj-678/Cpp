@@ -184,6 +184,9 @@
     <ClCompile Include="2021\470. 用 Rand7() 实现 Rand10().cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="2021\502. IPO.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="2021\516. 最长回文子序列.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -229,6 +232,7 @@
     <ClCompile Include="剑指 Offer\剑指 Offer 03. 数组中重复的数字.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 04. 二维数组中的查找.cpp" />
     <ClCompile Include="剑指 Offer\剑指 Offer 05. 替换空格.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -239,6 +243,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="剑指 Offer\剑指 Offer 10- I. 斐波那契数列.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 11. 旋转数组的最小数字.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="剑指 Offer\剑指 Offer 22. 链表中倒数第k个节点.cpp">
@@ -253,10 +260,15 @@
     <ClCompile Include="剑指 Offer\剑指 Offer 35. 复杂链表的复制.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 50. 第一个只出现一次的字符.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="剑指 Offer\剑指 Offer 53 - I. 在排序数组中查找数字 I.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="剑指 Offer\剑指 Offer 53 - II. 0～n-1中缺失的数字.cpp" />
+    <ClCompile Include="剑指 Offer\剑指 Offer 53 - II. 0～n-1中缺失的数字.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="剑指 Offer\剑指 Offer 58 - II. 左旋转字符串.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
