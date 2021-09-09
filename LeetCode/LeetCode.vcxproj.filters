@@ -165,5 +165,17 @@
     <ClCompile Include="2021\502. IPO.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 32 - I. 从上到下打印二叉树.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 32 - II. 从上到下打印二叉树 II.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 32 - III. 从上到下打印二叉树 III.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\68. 文本左右对齐.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
