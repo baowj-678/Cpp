@@ -177,5 +177,26 @@
     <ClCompile Include="2021\68. 文本左右对齐.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\1894. 找到需要补充粉笔的学生编号.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\600. 不含连续1的非负整数.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 26. 树的子结构.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 27. 二叉树的镜像.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 28. 对称的二叉树.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 10- II. 青蛙跳台阶问题.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 63. 股票的最大利润.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
