@@ -198,5 +198,14 @@
     <ClCompile Include="剑指 Offer\剑指 Offer 63. 股票的最大利润.cpp">
       <Filter>源文件\剑指 Offer</Filter>
     </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 42. 连续子数组的最大和.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 47. 礼物的最大价值.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\678. 有效的括号字符串.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
