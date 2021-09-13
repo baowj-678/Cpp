@@ -207,5 +207,14 @@
     <ClCompile Include="2021\678. 有效的括号字符串.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 46. 把数字翻译成字符串.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 48. 最长不含重复字符的子字符串.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\447. 回旋镖的数量.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
