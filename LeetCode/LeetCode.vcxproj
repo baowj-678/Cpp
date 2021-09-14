@@ -196,6 +196,7 @@
     <ClCompile Include="2021\516. 最长回文子序列.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="2021\524. 通过删除字母匹配到字典里最长单词.cpp" />
     <ClCompile Include="2021\526. 优美的排列.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -266,6 +267,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="剑指 Offer\剑指 Offer 11. 旋转数组的最小数字.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 18. 删除链表的节点.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="剑指 Offer\剑指 Offer 22. 链表中倒数第k个节点.cpp">

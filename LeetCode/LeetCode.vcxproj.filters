@@ -216,5 +216,11 @@
     <ClCompile Include="2021\447. 回旋镖的数量.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 18. 删除链表的节点.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\524. 通过删除字母匹配到字典里最长单词.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
