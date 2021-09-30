@@ -222,5 +222,47 @@
     <ClCompile Include="2021\524. 通过删除字母匹配到字典里最长单词.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\650. 只有两个键的键盘.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 25. 合并两个排序的链表.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 52. 两个链表的第一个公共节点.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 21. 调整数组顺序使奇数位于偶数前面.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 57. 和为s的两个数字.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 58 - I. 翻转单词顺序.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 12. 矩阵中的路径.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 13. 机器人的运动范围.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="2021\673. 最长递增子序列的个数.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 34. 二叉树中和为某一值的路径.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 54. 二叉搜索树的第k大节点.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 36. 二叉搜索树与双向链表.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 45. 把数组排成最小的数.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 61. 扑克牌中的顺子.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
