@@ -270,5 +270,14 @@
     <ClCompile Include="2021\352. 将数据流变为多个不相交区间.cpp">
       <Filter>源文件\2021</Filter>
     </ClCompile>
+    <ClCompile Include="2021\441. 排列硬币.cpp">
+      <Filter>源文件\2021</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 40. 最小的k个数.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
+    <ClCompile Include="剑指 Offer\剑指 Offer 41. 数据流中的中位数.cpp">
+      <Filter>源文件\剑指 Offer</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

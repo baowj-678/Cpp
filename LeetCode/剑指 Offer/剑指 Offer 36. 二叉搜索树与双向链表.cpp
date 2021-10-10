@@ -28,25 +28,40 @@
 
 class Solution {
 public:
+    Node* head = NULL;
+    Node* last = NULL;
+    Node* tail = NULL;
+	
     Node* treeToDoublyList(Node* root) {
-
+        if (!root)
+            return NULL;
+        tail = subTree(root);
+        head->left = tail;
+        tail->right = head;
+        return head;
     }
 
-	Node* subTree(Node* root, Node* fa, Node*& last)
+	Node* subTree(Node* root)
     {
-    	if(root->left)
-    	{
-            subTree(root->left, root, last);
-        }
-
-        root->left = last;
-        last->right = root;
-        last = root;
+        if (root->left)
+            subTree(root->left);
     	
-    	if(root->right)
+    	if(!head)
     	{
-            subTree(root->right, root, last);
+            head = root;
+            last = root;
     	}
+        else
+        {
+            last->right = root;
+            root->left = last;
+            last = root;
+        }
+    	
+        if (root->right)
+            return subTree(root->right);
+        else
+            return root;
     }
 
 };
