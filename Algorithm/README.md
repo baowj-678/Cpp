@@ -10,6 +10,7 @@
 | **匈牙利算法**求解最大二分匹配           | [Hungarian](Hungarian)           |
 | **Kuhn-Munkres算法**求解带权最大匹配问题 | [Kuhn-Munkres](Kuhn-Munkres)     |
 | **A***算法                               | [A*](A_star)                     |
+| **树状数组**                             | [树状数组](树状数组)             |
 
 
 
